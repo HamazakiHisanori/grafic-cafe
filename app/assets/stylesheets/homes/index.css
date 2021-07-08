@@ -5,39 +5,93 @@ html {
 body {
   min-height: 100vh;
   width: 100%;
-  background-image: url("/images/book.jpg");
+  background: linear-gradient(-45deg, rgba(235, 114, 219, 0.8), rgba(153, 134, 241, 0.8)) fixed, url(/images/renga.jpg) fixed;
   background-size: cover;
   margin: 0;
   padding: 0;
   font-family: "Amatic SC", cursive;
 }
 
-.background-anime {
-  min-height: 1554px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(315deg, #00ccff, #0e1538, #d400d4);
-  opacity: 0.7;
-}
-
-.background-image {
-  display: block;
-  position: relative;
-  z-index: 1;
-}
-
 img {
   height: 0;
   width: 0;
 }
+/* ホームのタイトル */
 
+.home-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-title-name {
+  position: relative;
+  left: 38%;
+}
+
+.home-title-date {
+  position: relative;
+  right: 10%;
+  color: aqua;
+  font-size: 30px;
+}
 
 h1 {
   color: aqua;
   font-size: 70px;
 }
+
+/* メニューバー */
+
+.menu-bar {
+  height: 15vh;
+  width: 100%;
+}
+
+.menu-bar ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-bar li {
+  font-size: 35px;
+  margin-right: 10%;
+  color: aqua;
+  list-style: none;
+}
+
+.menu-bar li a {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  color: aqua;
+  text-decoration: none;
+}
+
+.menu-bar li a:hover {
+  transition: ease 0.3s;
+  transform: scale(1.4);
+  color: white;
+}
+
+.menu-bar li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -1px;
+  width: 100%;
+  height: 1.3px;
+  background-color:rgb(235, 238, 41);
+  transform: translate(-100%, 0);
+  transition: transform 0.6s;
+}
+
+.menu-bar li a:hover:after {
+  transform: translate(0);
+}
+
+/* ホームの画像 */
 
 .home {
   height: 50vh;
@@ -86,3 +140,73 @@ h1 {
   transition: 0.3s;
 }
 
+/* フッター */
+footer {
+  height: 40vh;
+  width: 100%;
+}
+
+.footer-contents {
+  position: relative;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-contents div {
+  background-color: coral;
+  position: relative;
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.footer-bar {
+  width: 100%;
+}
+
+.footer-bar ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-bar li {
+  font-size: 20px;
+  margin-right: 5%;
+  color: aqua;
+  list-style: none;
+}
+
+.footer-bar li a {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  color: aqua;
+  text-decoration: none;
+}
+
+.footer-bar li a:hover {
+  transition: ease 0.3s;
+  transform: scale(1.4);
+  color: white;
+}
+
+.footer-bar li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -1px;
+  width: 100%;
+  height: 1.3px;
+  background-color:rgb(235, 238, 41);
+  transform: translate(-100%, 0);
+  transition: transform 0.6s;
+}
+
+.footer-bar li a:hover:after {
+  transform: translate(0);
+}
