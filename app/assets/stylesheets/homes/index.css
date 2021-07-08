@@ -156,12 +156,13 @@ footer {
 }
 
 .footer-contents div {
-  background-color: coral;
+  border: solid 1px aqua;
   position: relative;
   height: 50%;
   width: 50%;
   border-radius: 50%;
   text-align: center;
+  color: aqua;
 }
 
 .footer-bar {
