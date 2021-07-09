@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     collection do
       get 'access'
       get 'contact'
+      get 'news'
     end
   end
   resources :menus, only: [:index, :show]

@@ -15,4 +15,5 @@ Rails.application.config.assets.precompile += %w(
   homes/index.css
   homes/access.css
   homes/contact.css
+  homes/news.css
 )

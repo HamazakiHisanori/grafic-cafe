@@ -28,13 +28,16 @@
 
     <div class="menu-bar">
       <ul >
-        <li><a>news</a></li>
+        <li><%= link_to "news", news_homes_path %></li>
         <li><a>menu</a></li>
         <li><%= link_to "contact", contact_homes_path %></li>
         <li><%= link_to "access", access_homes_path %></li>
       </ul>
     </div>
 
+    <div class="menu-title">
+      <h1>access</h1>
+    </div>
 
     <footer>
 
@@ -45,12 +48,13 @@
 
     <div class="footer-bar">
       <ul>
-        <li><a>news</a></li>
+        <li><%= link_to "news", news_homes_path %></li>
         <li><a>menu</a></li>
         <li><%= link_to "contact", contact_homes_path %></li>
         <li><%= link_to "access", access_homes_path %></li>
       </ul>
     </div>
+
 
     </footer>
 

@@ -9,4 +9,7 @@ class HomesController < ApplicationController
   def contact
   end
 
+  def news
+  end
+
 end

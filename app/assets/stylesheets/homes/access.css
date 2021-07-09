@@ -73,6 +73,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Amatic SC", cursive;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ホームのタイトル */
@@ -154,6 +156,20 @@ h1 {
   transform: translate(0);
 }
 
+/* タイトル */
+
+.menu-title {
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-title h1 {
+  background: linear-gradient(transparent 80%, yellow 100%);
+}
+
 /* フッター */
 
 footer {
@@ -162,6 +178,7 @@ footer {
   background-position: center;
   height: 50vh;
   width: 100%;
+  margin-top: auto;
 }
 
 .footer-contents {
