@@ -73,6 +73,133 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Amatic SC", cursive;
+  overflow: hidden;
+}
+
+/*  背景アニメーション */
+
+.box .circle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  border: solid 1px rgb(197, 235, 235);
+  opacity: 0;
+  z-index: -1;
+}
+
+.box .circle.a {
+  top: 20%;
+  left: 20%;
+  animation: wave-a 4s infinite;
+}
+
+.box .circle.b {
+  top: 20%;
+  left: 20%;
+  animation: wave-b 4s infinite;
+}
+
+.box .circle.c {
+  top: 20%;
+  left: 20%;
+  animation: wave-c 4s infinite;
+}
+
+@keyframes wave-a {
+  0% {
+    opacity: 0.3;
+    box-shadow: 0 0 100px inset #6a878f;
+  }
+  50% {
+    transform: translate(-300px, -300px);
+    width: 600px;
+    height: 600px;
+    opacity: 0;
+  }
+}
+
+@keyframes wave-b {
+  0% {
+    opacity: 0.3;
+    box-shadow: 0 0 100px inset #6a878f;
+  }
+  50% {
+    transform: translate(-225px, -225px);
+    width: 450px;
+    height: 450px;
+    opacity: 0;
+  }
+}
+
+@keyframes wave-c {
+  0% {
+    opacity: 0.3;
+    box-shadow: 0 0 100px inset #6a878f;
+  }
+  50% {
+    transform: translate(-150px, -150px);
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+.box .circle.d {
+  top: 80%;
+  left: 80%;
+  animation: wave-d 4s infinite;
+}
+
+.box .circle.e {
+  top: 80%;
+  left: 80%;
+  animation: wave-e 4s infinite;
+}
+
+.box .circle.f {
+  top: 80%;
+  left: 80%;
+  animation: wave-f 4s infinite;
+}
+
+@keyframes wave-d {
+  0% {
+    opacity: 0.3;
+    box-shadow: 0 0 100px inset #6a878f;
+  }
+  50% {
+    transform: translate(-300px, -300px);
+    width: 600px;
+    height: 600px;
+    opacity: 0;
+  }
+}
+
+@keyframes wave-e {
+  0% {
+    opacity: 0.3;
+    box-shadow: 0 0 100px inset #6a878f;
+  }
+  50% {
+    transform: translate(-225px, -225px);
+    width: 450px;
+    height: 450px;
+    opacity: 0;
+  }
+}
+
+@keyframes wave-f {
+  0% {
+    opacity: 0.3;
+    box-shadow: 0 0 100px inset #6a878f;
+  }
+  50% {
+    transform: translate(-150px, -150px);
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
 }
 
 /* ホームのタイトル */
@@ -154,54 +281,18 @@ h1 {
   transform: translate(0);
 }
 
-/* ホームの画像 */
+/* タイトル */
 
-.home {
-  height: 70vh;
-  width: 95vw;
-  margin: 2%;
-  margin-top: 7%;
-  margin-bottom: 10%;
+.menu-title {
+  height: 15vh;
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.home-text {
-  border: solid aqua;
-  background: none;
-  font-size: 30px;
-  color: aqua;
-  width: 40vw;
-  height: 100%;
-  margin: 0 1%;
-  display: block;
-  border-radius: 240px 15px 100px 15px / 15px 200px 15px 185px;
-}
-
-.home-text:hover {
-  border: solid white;
-  color: white;
-}
-
-.home-text-block {
-  position: relative;
-  top: 35%;
-  text-align: center;
-}
-
-.home-image {
-  border: solid white;
-  width: 54vw;
-  height: 100%;
-  min-height: 100%;
-  min-width: 100%;
-  border-radius: 240px 15px 100px 15px / 15px 200px 15px 185px;
-  transition: 0.2s;
-}
-
-.home-image:hover {
-  border: solid aqua;
-  transform: scale(1.01);
-  transition: 0.3s;
+.menu-title h1 {
+  background: linear-gradient(transparent 80%, yellow 100%);
 }
 
 /* フッター */
@@ -282,3 +373,4 @@ footer {
 .footer-bar li a:hover:after {
   transform: translate(0);
 }
+
