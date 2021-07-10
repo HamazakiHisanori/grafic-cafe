@@ -1,0 +1,27 @@
+    <%= stylesheet_link_tag 'shared/header' %>
+
+    <div class="home-title">
+
+      <div class="home-title-name">
+        <%= link_to "GRAPHIC CAFE", root_path, class:"root-link"%>
+      </div>
+
+      <div class="home-title-date">
+        <div>
+          000-0000-0000
+          <br>
+          00city to 00-00
+        </div>
+      </div>
+
+    </div>
+
+    <div class="menu-bar">
+      <ul >
+        <li><%= link_to "home", root_path %></li>
+        <li><%= link_to "news", news_homes_path %></li>
+        <li><a>menu</a></li>
+        <li><%= link_to "contact", contacts_path %></li>
+        <li><%= link_to "access", access_homes_path %></li>
+      </ul>
+    </div>

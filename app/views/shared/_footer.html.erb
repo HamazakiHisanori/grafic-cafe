@@ -1,0 +1,22 @@
+    <%= stylesheet_link_tag 'shared/footer' %>
+
+    <footer>
+
+    <div class="footer-contents">
+      <div>
+        <%= image_tag 'map.jpg', class:"image" %>
+      </div>
+      <div>details</div>
+    </div>
+
+    <div class="footer-bar">
+      <ul>
+        <li><%= link_to "home", root_path %></li>
+        <li><%= link_to "news", news_homes_path %></li>
+        <li><a>menu</a></li>
+        <li><%= link_to "contact", contacts_path %></li>
+        <li><%= link_to "access", access_homes_path %></li>
+      </ul>
+    </div>
+
+    </footer>

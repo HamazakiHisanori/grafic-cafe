@@ -6,9 +6,6 @@ class HomesController < ApplicationController
   def access
   end
 
-  def contact
-  end
-
   def news
   end
 

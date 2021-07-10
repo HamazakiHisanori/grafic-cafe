@@ -1,0 +1,78 @@
+/* フッター */
+
+footer {
+  background-image: url(/images/book2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  width: 100%;
+  margin: auto;
+}
+
+.footer-contents {
+  position: relative;
+  height: 45vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-contents div {
+  overflow: hidden;
+  object-fit: cover;
+  height: 90%;
+  width: 50%;
+  text-align: center;
+  color: aqua;
+}
+
+.footer-bar {
+  width: 100%;
+  position: relative;
+  height: 10%;
+}
+
+.footer-bar ul {
+  width: 100%;
+  position: relative;
+  top: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-bar li {
+  font-size: 20px;
+  color: aqua;
+  list-style: none;
+}
+
+.footer-bar li a {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  color: aqua;
+  text-decoration: none;
+}
+
+.footer-bar li a:hover {
+  transition: ease 0.3s;
+  transform: scale(1.4);
+  color: white;
+}
+
+.footer-bar li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -1px;
+  width: 100%;
+  height: 1.3px;
+  background-color:rgb(235, 238, 41);
+  transform: translate(-100%, 0);
+  transition: transform 0.6s;
+}
+
+.footer-bar li a:hover:after {
+  transform: translate(0);
+}
