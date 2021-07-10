@@ -1,9 +1,7 @@
 /* フッター */
 
 footer {
-  background-image: url(/images/book2.jpg);
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(-45deg, rgba(243, 46, 217, 0.5), rgba(230, 197, 12, 0.5)) fixed;
   height: 60vh;
   width: 100%;
   margin: auto;
