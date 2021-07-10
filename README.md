@@ -1,11 +1,11 @@
 # テーブル設計
 
 ## menu テーブル
-| Column      | Type    | Options |
-| ----------- | ------- | --------|
-| name        | string  |         |
-| description | text    |         |
-| price       | integer |         |
+| Column      | Type    | Options     |
+| ----------- | ------- | ----------- |
+| name        | string  | null: false |
+| description | text    | null: false |
+| price       | integer | null: false |
 
 ## contact テーブル
 | Column       | Type    | Options     |
