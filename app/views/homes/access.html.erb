@@ -13,7 +13,7 @@
     <div class="home-title">
 
       <div class="home-title-name">
-        <h1>GRAPHIC CAFE</h1>
+        <%= link_to "GRAPHIC CAFE", root_path, class:"root-link"%>
       </div>
 
       <div class="home-title-date">
@@ -28,6 +28,7 @@
 
     <div class="menu-bar">
       <ul >
+        <li><%= link_to "home", root_path %></li>
         <li><%= link_to "news", news_homes_path %></li>
         <li><a>menu</a></li>
         <li><%= link_to "contact", contact_homes_path %></li>
@@ -42,12 +43,13 @@
     <footer>
 
     <div class="footer-contents">
-      <div>map</div>
+      <div><%= image_tag 'map.jpg', class:"image" %></div>
       <div>details</div>
     </div>
 
     <div class="footer-bar">
       <ul>
+        <li><%= link_to "home", root_path %></li>
         <li><%= link_to "news", news_homes_path %></li>
         <li><a>menu</a></li>
         <li><%= link_to "contact", contact_homes_path %></li>

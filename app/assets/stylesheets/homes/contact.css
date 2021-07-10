@@ -73,7 +73,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Amatic SC", cursive;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -225,9 +224,14 @@ body {
   font-size: 30px;
 }
 
-h1 {
-  color: aqua;
+.root-link {
+   color: aqua;
   font-size: 70px;
+  text-decoration: none;
+}
+
+.root-link:hover {
+  opacity: 0.8;
 }
 
 /* メニューバー */
@@ -295,6 +299,132 @@ h1 {
 
 .menu-title h1 {
   background: linear-gradient(transparent 80%, yellow 100%);
+  color: aqua;
+  font-size: 70px;
+}
+
+/* コンタクトフォーム */
+
+.contact-box {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-box, .phone-number-box {
+  overflow: hidden;
+  border-bottom: solid 1px yellow;
+  height: 10vh;
+  width: 40%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-box input, .phone-number-box input {
+  width: 90%;
+  height: 50%;
+  font-size: 30px;
+  color: aqua;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.category-box {
+  overflow: hidden;
+  border-bottom: solid 1px yellow;
+  height: 7vh;
+  width: 20%;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-box select {
+  width: 90%;
+  height: 50%;
+  font-size: 20px;
+  color: aqua;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.text-box {
+  overflow: hidden;
+  border-bottom: solid 1px yellow;
+  height: 50vh;
+  width: 60%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box textarea {
+  border: solid 1px yellow;
+  border-radius: 2%;
+  width: 90%;
+  height: 80%;
+  font-size: 25px;
+  color: aqua;
+  background: none;
+  outline: none;
+}
+
+.btn {
+  width: 20%;
+  height: 10vh;
+  margin-top: 8%;
+  background: none;
+  border: solid 1px aqua;
+  color: aqua;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  border: white solid 1px;
+  color: white;
+}
+
+.text-box textarea::placeholder {
+  color: rgb(179, 182, 182);
+}
+
+.secret {
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.secret input {
+  width: 15%;
+  height: 10vh;
+  margin-right: 3%;
+  background-color: white;
+  border: solid 1px black;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.secret input:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 /* フッター */
@@ -303,14 +433,14 @@ footer {
   background-image: url(/images/book2.jpg);
   background-size: cover;
   background-position: center;
-  height: 50vh;
+  height: 60vh;
   width: 100%;
-  margin-top: auto;
+  margin: auto;
 }
 
 .footer-contents {
   position: relative;
-  height: 35vh;
+  height: 45vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -318,11 +448,10 @@ footer {
 }
 
 .footer-contents div {
-  border: solid 1px aqua;
-  position: relative;
-  height: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  height: 90%;
   width: 50%;
-  border-radius: 50%;
   text-align: center;
   color: aqua;
 }
@@ -330,7 +459,7 @@ footer {
 .footer-bar {
   width: 100%;
   position: relative;
-  height: 10vh;
+  height: 10%;
 }
 
 .footer-bar ul {
@@ -376,4 +505,3 @@ footer {
 .footer-bar li a:hover:after {
   transform: translate(0);
 }
-

@@ -28,6 +28,7 @@
 
     <div class="menu-bar">
       <ul >
+        <li><%= link_to "home", root_path %></li>
         <li><%= link_to "news", news_homes_path %></li>
         <li><a>menu</a></li>
         <li><%= link_to "contact", contact_homes_path %></li>
@@ -46,7 +47,7 @@
       </div>
 
       <div>
-        <img src="/images/introspection.jpg" class="home-image" />
+        <%= image_tag 'cafe.jpg', class:"home-image" %>
       </div>
 
     </div>
@@ -54,7 +55,7 @@
     <div class="home">
 
       <div>
-        <img src="/images/introspection.jpg" class="home-image" />
+        <%= image_tag 'introspection.jpg', class:"home-image" %>
       </div>
 
       <div class="home-text">
@@ -78,7 +79,7 @@
       </div>
 
       <div>
-        <img src="/images/introspection.jpg" class="home-image" />
+        <%= image_tag 'bar.jpg', class:"home-image" %>
       </div>
 
     </div>
@@ -86,12 +87,15 @@
     <footer>
 
     <div class="footer-contents">
-      <div>map</div>
+      <div>
+        <%= image_tag 'map.jpg', class:"image" %>
+      </div>
       <div>details</div>
     </div>
 
     <div class="footer-bar">
       <ul>
+        <li><%= link_to "home", root_path %></li>
         <li><%= link_to "news", news_homes_path %></li>
         <li><a>menu</a></li>
         <li><%= link_to "contact", contact_homes_path %></li>

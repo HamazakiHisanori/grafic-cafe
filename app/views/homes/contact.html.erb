@@ -41,7 +41,7 @@
     <div class="home-title">
 
       <div class="home-title-name">
-        <h1>GRAPHIC CAFE</h1>
+        <%= link_to "GRAPHIC CAFE", root_path, class:"root-link"%>
       </div>
 
       <div class="home-title-date">
@@ -56,6 +56,7 @@
 
     <div class="menu-bar">
       <ul >
+        <li><%= link_to "home", root_path %></li>
         <li><%= link_to "news", news_homes_path %></li>
         <li><a>menu</a></li>
         <li><%= link_to "contact", contact_homes_path %></li>
@@ -67,21 +68,52 @@
       <h1>contact</h1>
     </div>
 
+    <div class="contact-box">
+
+      <div class="email-box">
+        <input type="text" placeholder="email" value="" />
+      </div>
+
+      <div class="phone-number-box">
+        <input type="text" placeholder="phone-number" value="" />
+      </div>
+
+      <div class="category-box">
+        <select name="category">
+          <option>test</option>
+          <option>sample</option>
+          <option>hoge</option>
+        </select>
+      </div>
+
+      <div class="text-box">
+        <textarea placeholder="要件を入力してください" value=""></textarea>
+      </div>
+
+      <input id="button" class="btn" type="button" name="submit" value="submit" />
+
+    </div>
+
+    <div class="secret">
+      <input id="button" type="button" name="submit" value="従業員専用" />
+    </div>
+
     <footer>
 
-    <div class="footer-contents">
-      <div>map</div>
-      <div>details</div>
-    </div>
+      <div class="footer-contents">
+        <div><%= image_tag 'map.jpg', class:"image" %></div>
+        <div>details</div>
+      </div>
 
-    <div class="footer-bar">
-      <ul>
-        <li><%= link_to "news", news_homes_path %></li>
-        <li><a>menu</a></li>
-        <li><%= link_to "contact", contact_homes_path %></li>
-        <li><%= link_to "access", access_homes_path %></li>
-      </ul>
-    </div>
+      <div class="footer-bar">
+        <ul>
+          <li><%= link_to "home", root_path %></li>
+          <li><%= link_to "news", news_homes_path %></li>
+          <li><a>menu</a></li>
+          <li><%= link_to "contact", contact_homes_path %></li>
+          <li><%= link_to "access", access_homes_path %></li>
+        </ul>
+      </div>
 
     </footer>
 

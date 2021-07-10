@@ -98,9 +98,14 @@ body {
   font-size: 30px;
 }
 
-h1 {
+.root-link {
   color: aqua;
-  font-size: 70px;
+ font-size: 70px;
+ text-decoration: none;
+}
+
+.root-link:hover {
+  opacity: 0.8;
 }
 
 /* メニューバー */
@@ -168,6 +173,8 @@ h1 {
 
 .menu-title h1 {
   background: linear-gradient(transparent 80%, yellow 100%);
+  color: aqua;
+  font-size: 70px;
 }
 
 /* フッター */
@@ -176,14 +183,14 @@ footer {
   background-image: url(/images/book2.jpg);
   background-size: cover;
   background-position: center;
-  height: 50vh;
+  height: 60vh;
   width: 100%;
-  margin-top: auto;
+  margin: auto;
 }
 
 .footer-contents {
   position: relative;
-  height: 35vh;
+  height: 45vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -191,11 +198,10 @@ footer {
 }
 
 .footer-contents div {
-  border: solid 1px aqua;
-  position: relative;
-  height: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  height: 90%;
   width: 50%;
-  border-radius: 50%;
   text-align: center;
   color: aqua;
 }
@@ -203,7 +209,7 @@ footer {
 .footer-bar {
   width: 100%;
   position: relative;
-  height: 10vh;
+  height: 10%;
 }
 
 .footer-bar ul {
@@ -249,4 +255,3 @@ footer {
 .footer-bar li a:hover:after {
   transform: translate(0);
 }
-
