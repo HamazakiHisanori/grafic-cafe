@@ -18,4 +18,6 @@ Rails.application.config.assets.precompile += %w(
   contacts/index.css
   shared/header.css
   shared/footer.css
+  devise/registration.css
+  devise/session.css
 )

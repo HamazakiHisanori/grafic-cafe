@@ -3,7 +3,7 @@ class Contact < ApplicationRecord
     validates :content
     with_options numericality: { other_than: 1, message: 'を選択してください' } do
       validates :category_id
-      validates :repley_id
+      validates :reply_id
     end
   end
   validates :mail #@マークが必要
@@ -11,5 +11,5 @@ class Contact < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
-  belongs_to :repley
+  belongs_to :reply
 end

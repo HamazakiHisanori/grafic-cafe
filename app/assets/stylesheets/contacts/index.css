@@ -252,18 +252,18 @@ body {
   outline: none;
 }
 
-.category-box {
+.select-box {
   overflow: hidden;
   border-bottom: solid 1px yellow;
   height: 7vh;
   width: 20%;
-  margin: 20px;
+  margin: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.category-box select {
+.select-box select {
   width: 90%;
   height: 50%;
   font-size: 20px;
@@ -295,6 +295,10 @@ body {
   outline: none;
 }
 
+.text-box textarea::placeholder {
+  color: rgb(179, 182, 182);
+}
+
 .btn {
   width: 20%;
   height: 10vh;
@@ -314,21 +318,17 @@ body {
   color: white;
 }
 
-.text-box textarea::placeholder {
-  color: rgb(179, 182, 182);
-}
-
 .secret {
-  height: 15vh;
+  height: 10vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px;
 }
 
-.secret input {
-  width: 15%;
-  height: 10vh;
+.secret .secret-btn {
+  width: 10%;
+  height: 7vh;
   margin-right: 3%;
   background-color: white;
   border: solid 1px black;
@@ -336,9 +336,18 @@ body {
   cursor: pointer;
   font-weight: bold;
   transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.secret input:hover {
+.secret .secret-btn .text {
+  text-decoration: none;
+  color: black;
+}
+
+
+.secret .secret-btn:hover {
   transform: scale(1.1);
   transition: 0.3s;
 }

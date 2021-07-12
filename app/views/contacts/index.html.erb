@@ -52,7 +52,7 @@
         <input type="text" placeholder="phone-number" value="" />
       </div>
 
-      <div class="category-box">
+      <div class="select-box">
         <select name="category">
           <option>test</option>
           <option>sample</option>
@@ -64,12 +64,28 @@
         <textarea placeholder="要件を入力してください" value=""></textarea>
       </div>
 
+      <div class="select-box">
+        <select name="reply">
+          <option>test</option>
+          <option>sample</option>
+          <option>hoge</option>
+        </select>
+      </div>
+
       <input id="button" class="btn" type="button" name="submit" value="submit" />
+
 
     </div>
 
     <div class="secret">
-      <input id="button" type="button" name="submit" value="従業員専用" />
+      <% if user_signed_in? %>
+      <div class="secret-btn">
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"text" %>
+      </div>
+      <% end %>
+      <div class="secret-btn">
+        <%= link_to "従業員専用", new_user_registration_path, class:"text" %>
+      </div>
     </div>
 
     <%= render partial: "shared/footer" %>

@@ -1,4 +1,4 @@
-class Rpley < ActiveHash::Base
+class Reply < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: 'sample' },
