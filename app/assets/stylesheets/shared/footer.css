@@ -1,7 +1,7 @@
 /* フッター */
 
 footer {
-  background: linear-gradient(-45deg, rgba(243, 46, 217, 0.5), rgba(230, 197, 12, 0.5)) fixed;
+  background: linear-gradient(-45deg, rgba(243, 46, 217, 0.7), rgba(230, 197, 12, 0.7)) fixed;
   height: 60vh;
   width: 100%;
   margin: auto;
@@ -43,6 +43,7 @@ footer {
   font-size: 20px;
   color: aqua;
   list-style: none;
+  text-shadow: 0 0 2px white;
 }
 
 .footer-bar li a {

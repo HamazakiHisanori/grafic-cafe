@@ -10,7 +10,8 @@
 ## contact テーブル
 | Column       | Type    | Options     |
 | ------------ | ------- | ----------- |
-| email        | string  | null: false |
-| phone_number | string  | null: false |
+| email        | string  |             |
+| phone_number | string  |             |
 | category_id  | integer | null: false |
 | contents     | text    | null: false |
+| reply_id     | integer | null: false |

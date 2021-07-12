@@ -77,6 +77,9 @@ body {
   flex-direction: column;
 }
 
+/* 歯車アニメーション */
+
+
 /* ホームの画像 */
 
 .home {
@@ -89,20 +92,18 @@ body {
 }
 
 .home-text {
-  border: solid aqua;
-  background: none;
+  position: relative;
+  top: 10%;
+  background: white;
   font-size: 30px;
-  color: aqua;
   width: 40vw;
   height: 70%;
-  margin: 1%;
+  margin: 3%;
   display: block;
   border-radius: 240px 15px 100px 15px / 15px 200px 15px 185px;
-}
+  box-shadow: 3px 3px;
 
-.home-text:hover {
-  border: solid white;
-  color: white;
+  border: 5px solid black;
 }
 
 .home-text-block {
@@ -116,11 +117,11 @@ body {
   width: 54vw;
   height: 100%;
   object-fit: cover;
+  box-shadow: 20px 20px 50px 0;
   transition: 0.2s;
 }
 
 .home-image:hover {
-  border: solid aqua;
-  transform: scale(1.01);
+  transform: scale(1.03);
   transition: 0.3s;
 }
