@@ -1,17 +1,29 @@
     <%= stylesheet_link_tag 'shared/header' %>
+    <link href="https://fonts.googleapis.com/css2?family=Unkempt:wght@700&display=swap" rel="stylesheet">
+
+    <%if user_signed_in? %>
+
+      <div class="current-user">
+
+        <div class="user-name">
+          <div>従業員</div>
+          <div><%= "#{current_user.name}"%></div>
+        </div>
+
+        <div class="secret-btn">
+          <div class="log-out-btn">
+            <%= link_to "ログアウト", destroy_user_session_path, method:"delete", class:"text" %>
+          </div>
+        </div>
+
+      </div>
+
+    <% end %>
 
     <div class="home-title">
 
       <div class="home-title-name">
         <%= link_to "GRAPHIC CAFE", root_path, class:"root-link"%>
-      </div>
-
-      <div class="home-title-date">
-        <div>
-          000-0000-0000
-          <br>
-          00city to 00-00
-        </div>
       </div>
 
     </div>

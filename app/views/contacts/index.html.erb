@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'contacts/index' %>
   </head>
 
@@ -76,17 +76,19 @@
 
 
     </div>
+    <% unless user_signed_in? %>
+      <div class="secret">
 
-    <div class="secret">
-      <% if user_signed_in? %>
-      <div class="secret-btn">
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"text" %>
+        <div class="secret-btn">
+          <%= link_to "従業員ログイン", new_user_session_path, class:"text" %>
+        </div>
+
+        <div class="secret-btn">
+          <%= link_to "従業員サインイン", new_user_registration_path, class:"text" %>
+        </div>
+
       </div>
-      <% end %>
-      <div class="secret-btn">
-        <%= link_to "従業員専用", new_user_registration_path, class:"text" %>
-      </div>
-    </div>
+    <% end %>
 
     <%= render partial: "shared/footer" %>
 

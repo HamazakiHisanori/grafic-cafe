@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
     <% content_for :css do %>
       <%= stylesheet_link_tag 'homes/access' %>
     <% end %>
@@ -14,6 +14,23 @@
 
     <div class="menu-title">
       <h1>access</h1>
+    </div>
+
+    <div>
+      <div>
+        <%= image_tag 'cafe.jpg', class:"home-image" %>
+      <div>
+    </div>
+
+    <div>
+      <div>
+        <ul>
+          <li>住所:<li>
+          <li>電話番号:<li>
+          <li>最寄駅:<li>
+          <li>ルート:<li>
+        </ul>
+      <div>
     </div>
 
     <%= render partial: "shared/footer" %>

@@ -2,31 +2,54 @@
 <html>
 
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
-    <%= stylesheet_link_tag 'homes/index' %>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'devise/session' %>
   </head>
 
   <body>
 
     <%= render partial: "shared/header" %>
 
-    <h2>Log in</h2>
-    <%= render "shared/error_messages", resource: resource %>
+    <div class="menu-title">
+      <h1>従業員専用</h1>
+    </div>
+
+    <div class="sign-title">
+      <h2>Log in</h2>
+    </div>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+
+      <div class="sign-form">
+
+        <div class="form-error">
+          <%= render "devise/shared/error_messages", resource: resource %>
+        </div>
+
+        <div class="contents">
+          <div>
+            <h3>email</h3>
+          </div>
+          <div class="input">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"メール" %>
+          </div>
+        </div>
+
+        <div class="contents">
+          <div>
+            <h3>password</h3>
+          </div>
+          <div class="input">
+          <%= f.password_field :password, autocomplete: "current-password", placeholder:"パスワード" %>
+          </div>
+        </div>
+
       </div>
 
-      <div class="field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "current-password" %>
+      <div class="btn">
+        <%= f.submit "Log in", class:"form-btn"%>
       </div>
 
-      <div class="actions">
-        <%= f.submit "Log in" %>
-      </div>
     <% end %>
 
     <%= render partial: "shared/footer" %>

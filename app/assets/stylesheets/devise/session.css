@@ -1,0 +1,173 @@
+/* リセットCSS */
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: none;
+font-style: normal;
+text-align: left;
+zoom: 1;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+table {
+border-collapse: collapse;
+font-family: inherit;
+}
+h1,h2,h3,h4,h5 {
+font-size: 100%;
+font-weight: normal;
+line-height: 1;
+}
+input,textarea,select {
+font-family: inherit;
+font-size: 16px;
+}
+input[type="button"],input[type="text"],input[type="submit"] {
+ -webkit-appearance: none;
+ border-radius: 0;
+}
+textarea {
+resize: none;
+-webkit-appearance: none;
+border-radius: 0;
+}
+th,td {
+border-collapse: collapse;
+}
+table th,table td {
+white-space: nowrap;
+}
+ul,ol {
+list-style-type: none;
+}
+img {
+vertical-align: text-bottom;
+vertical-align: -webkit-baseline-middle;
+max-width: 100%;
+height: auto;
+width /***/:auto;
+}
+
+/* ここから */
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(-45deg, rgba(235, 114, 219, 0.8), rgba(153, 134, 241, 0.8)) fixed, url(/images/renga.jpg) fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: "Yomogi", cursive;
+  display: flex;
+  flex-direction: column;
+}
+
+/* タイトル */
+
+.menu-title {
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-title h1 {
+  background: linear-gradient(transparent 80%, yellow 100%);
+  color: aqua;
+  font-size: 70px;
+}
+
+/* サインアップの内容 */
+
+.sign-title {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-title h2 {
+  font-size: 40px;
+}
+
+.sign-form {
+  margin-top: 5%;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+.sign-form .contents {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-form .contents div {
+  height: 40%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-form .contents h3 {
+  font-size: 35px;
+}
+
+.input {
+  border-bottom: solid 1px yellow;
+}
+
+.sign-form .contents div input {
+  width: 90%;
+  height: 70%;
+  margin: 10px;
+  font-size: 22px;
+  outline: none;
+  background: none;
+  border: solid 1px yellow;
+  border-radius: 3%;
+}
+
+.btn {
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-btn {
+  border: solid 1px aqua;
+  height: 60%;
+  width: 15%;
+  color: aqua;
+  background: none;
+  transition: 0.2s;
+}
+
+.form-btn:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+  background-color: white;
+}
