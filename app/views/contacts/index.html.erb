@@ -14,37 +14,36 @@
       <h1>contact</h1>
     </div>
 
+    <%= form_with model: @contact, url: contacts_path, local: true do |f| %>
+
     <div class="contact-box">
 
+      <%= render "/shared/error_messages", model: @contact %>
+
+
       <div class="email-box">
-        <input type="text" placeholder="email" value="" />
+          <%= f.text_field :mail, placeholder:"メールアドレス" %>
       </div>
 
       <div class="phone-number-box">
-        <input type="text" placeholder="phone-number" value="" />
+          <%= f.text_field :phone_number, placeholder:"電話番号" %>
       </div>
 
       <div class="select-box">
-        <select name="category">
-          <option>test</option>
-          <option>sample</option>
-          <option>hoge</option>
-        </select>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}) %>
       </div>
 
       <div class="text-box">
-        <textarea placeholder="要件を入力してください" value=""></textarea>
+        <%= f.text_area :content, placeholder:"内容を入力してください" %>
       </div>
 
       <div class="select-box">
-        <select name="reply">
-          <option>test</option>
-          <option>sample</option>
-          <option>hoge</option>
-        </select>
+        <%= f.collection_select(:reply_id, Reply.all, :id, :name, {}) %>
       </div>
 
-      <input id="button" class="btn" type="button" name="submit" value="submit" />
+      <%= f.submit "送信する", class:"btn" %>
+
+      <% end %>
 
 
     </div>

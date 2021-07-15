@@ -1,9 +1,8 @@
 class Reply < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
-    { id: 2, name: 'sample' },
-    { id: 3, name: 'test' },
-    { id: 4, name: 'hoge' },
+    { id: 2, name: '返信を希望' },
+    { id: 3, name: '返信を希望しない' },
   ]
 
   include ActiveHash::Associations

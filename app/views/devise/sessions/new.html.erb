@@ -22,9 +22,7 @@
 
       <div class="sign-form">
 
-        <div class="form-error">
-          <%= render "devise/shared/error_messages", resource: resource %>
-        </div>
+        <%= render "/shared/error_messages", model: @user %>
 
         <div class="contents">
           <div>

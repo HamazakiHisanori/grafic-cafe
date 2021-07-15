@@ -8,3 +8,11 @@ ja:
         name: 名前
         description: 説明文
         price: 値段
+      contact:
+        mail: メールアドレス
+        phone_number: 電話番号
+        category_id: カテゴリー
+        content: 内容
+        reply_id: 返信の有無
+
+

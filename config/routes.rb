@@ -4,9 +4,8 @@ Rails.application.routes.draw do
   resources :homes, only: [:index] do
     collection do
       get 'access'
-      get 'news'
     end
   end
   resources :menus
-  resources :contacts, only: [:index, :new, :create ]
+  resources :contacts, only: [:index, :create ]
 end
