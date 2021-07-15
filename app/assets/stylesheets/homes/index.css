@@ -77,33 +77,56 @@ body {
   flex-direction: column;
 }
 
-/* 歯車アニメーション */
-
-
 /* ホームの画像 */
 
 .home {
-  height: 70vh;
-  width: 95vw;
-  margin: 2%;
+  height: 80vh;
+  width: 100%;
   margin-top: 5%;
-  margin-bottom: 5%;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.home-background {
+  height: 90%;
+  width: 90%;
+  background: url(/images/background.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.text-box {
+  height: 60%;
+  width: 30%;
+  position: relative;
+  top: 10%;
+  left: 5%;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-box-text {
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+}
+
 
 .home-text {
   position: relative;
   top: 10%;
-  background: white;
+
   font-size: 30px;
   width: 40vw;
   height: 70%;
   margin: 3%;
   display: block;
-  border-radius: 240px 15px 100px 15px / 15px 200px 15px 185px;
-  box-shadow: 3px 3px;
 
-  border: 5px solid black;
 }
 
 .home-text-block {
@@ -125,3 +148,57 @@ body {
   transform: scale(1.03);
   transition: 0.3s;
 }
+
+/* メニューとニュースの追加ボタン */
+
+.form-btn-background {
+  height: 150px;
+  width: 300px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-btn {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border: solid 1px black;
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 10px gray;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn .text {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn:hover {
+  border: solid 1px white;
+  background-color: black;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.btn:hover .text {
+  color: white;
+}
+

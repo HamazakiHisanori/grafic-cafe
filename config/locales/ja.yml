@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: 名前
+      menu:
+        image: 画像
+        name: 名前
+        description: 説明文
+        price: 値段

@@ -11,7 +11,7 @@
         </div>
 
         <div class="secret-btn">
-          <div class="log-out-btn">
+          <div class="log-out-btn" >
             <%= link_to "ログアウト", destroy_user_session_path, method:"delete", class:"text" %>
           </div>
         </div>
@@ -32,7 +32,7 @@
       <ul >
         <li><%= link_to "home", root_path %></li>
         <li><%= link_to "news", news_homes_path %></li>
-        <li><a>menu</a></li>
+        <li><%= link_to "menu", menus_path %></li>
         <li><%= link_to "contact", contacts_path %></li>
         <li><%= link_to "access", access_homes_path %></li>
       </ul>

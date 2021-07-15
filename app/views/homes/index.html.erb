@@ -8,24 +8,16 @@
 
   <body>
 
-    <div class="gear1"></div>
-    <div class="gear2"></div>
-    <div class="gear3"> </div>
-
     <%= render partial: "shared/header" %>
 
     <div class="home">
 
-      <div class="home-text" id="text">
-        <div class="home-text-block">
-          Text
-          <br>
-          derisios
-        </div>
-      </div>
+      <div class="home-background">
 
-      <div>
-        <%= image_tag 'cafe.jpg', class:"home-image" %>
+        <div class="text-box">
+          <div class="text-box-text">Text</div>
+        </div>
+
       </div>
 
     </div>
@@ -63,6 +55,26 @@
     </div>
 
     <%= render partial: "shared/footer" %>
+
+    <% if user_signed_in? %>
+
+      <div class="form-btn-background">
+
+        <div class="form-btn">
+          <div class="btn">
+          <%= link_to "news追加", new_menu_path, class:"text" %>
+          </div>
+        </div>
+
+        <div class="form-btn">
+          <div class="btn">
+          <%= link_to "menu追加", new_menu_path, class:"text" %>
+          </div>
+        </div>
+
+      </div>
+
+    <% end %>
 
   </body>
 

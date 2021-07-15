@@ -1,0 +1,32 @@
+<div>menu</div>
+<div class='item-contents'>
+    <ul class='item-lists'>
+
+     <% @menus.each do |menu| %>
+      <li class='list'>
+        <%= link_to menu_path(menu.id) do %>
+        <div class='item-img-content'>
+        <div class="items">
+          <%= image_tag menu.image, class: 'images', width:"400px", height:"400px" %>
+        </div>
+        </div>
+        <% end %>
+
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= menu.name %>
+          </h3>
+          <div class='item-price'>
+            <span><%= menu.price %>円</span>
+          </div>
+          </div>
+      </li>
+      <% end %>
+
+      <% if @menus.empty? %>
+      <li class='list'>
+      <div>現在取り扱っている商品がございません</div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
