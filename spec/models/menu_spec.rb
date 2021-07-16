@@ -6,6 +6,7 @@ RSpec.describe Menu, type: :model do
   end
 
   describe 'メニューの追加' do
+
     it '全ての情報が正しく入力されていれば追加できる' do
       expect(@menu).to be_valid
     end

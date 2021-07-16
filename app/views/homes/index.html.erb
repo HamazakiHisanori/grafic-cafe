@@ -54,6 +54,29 @@
 
     </div>
 
+    <div class='item-contents'>
+    <div>お知らせ</div>
+    <ul class='item-lists'>
+
+     <% @news.each do |news| %>
+      <li class='list'>
+        <%= news.created_at.year %>
+        <%= news.created_at.month %>
+        <%= news.created_at.day %>
+        <%= link_to news_path(news.id) do %>
+        <%= news.title %>
+        <% end %>
+      </li>
+      <% end %>
+
+      <% if @news.empty? %>
+      <li class='list'>
+      <div>現在お知らせはございません</div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
     <%= render partial: "shared/footer" %>
 
     <% if user_signed_in? %>
@@ -62,7 +85,7 @@
 
         <div class="form-btn">
           <div class="btn">
-          <%= link_to "news追加", new_menu_path, class:"text" %>
+          <%= link_to "news追加", new_news_path, class:"text" %>
           </div>
         </div>
 

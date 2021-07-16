@@ -1,0 +1,10 @@
+<div>show</div>
+<%= image_tag @news.image, width:"300px", height:"300px" %>
+<%= @news.title %>
+<%= @news.contents %>
+
+<% if user_signed_in? %>
+<%= link_to '編集', edit_news_path(@news.id) %>
+<%= link_to '削除', news_path(@news.id), method: :delete %>
+<%= link_to '戻る', root_path %>
+<% end %>

@@ -18,9 +18,8 @@
 ## news テーブル
 | Column   | Type       | Options                        |
 | -------- | ---------- | ------------------------------ |
-| post     | date       | null: false                    |
-| contents | text       | null: false                    |
 | title    | string     | null: false                    |
+| contents | text       | null: false                    |
 | user     | references | null: false, foreign_key: true |
 
 ## contact テーブル

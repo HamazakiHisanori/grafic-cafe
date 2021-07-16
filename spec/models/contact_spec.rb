@@ -6,6 +6,7 @@ RSpec.describe Contact, type: :model do
   end
 
   describe 'フォームの送信' do
+
     it '全ての情報が正しく入力されていれば送信できる' do
       expect(@contact).to be_valid
     end

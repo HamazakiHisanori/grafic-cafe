@@ -14,5 +14,10 @@ ja:
         category_id: カテゴリー
         content: 内容
         reply_id: 返信の有無
+      news:
+        image: 画像
+        title: タイトル
+        contents: 内容
+
 
 

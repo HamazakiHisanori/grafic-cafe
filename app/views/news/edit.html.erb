@@ -1,0 +1,29 @@
+<div>edit</div>
+
+<%= form_with model: @news, url: news_path, local: true do |f| %>
+
+<%= render "/shared/error_messages", model: @news %>
+
+
+<div>
+  <%= f.label :image, "画像" %><br />
+  <%= f.file_field :image %>
+</div>
+
+<div>
+  <%= f.label :title, "名前" %><br />
+  <%= f.text_field :title %>
+</div>
+
+<div>
+  <%= f.label :contents, "説明" %><br />
+  <%= f.text_area :contents %>
+</div>
+
+
+<div class="sell-btn-contents">
+      <%= f.submit "変更する", class:"sell-btn" %>
+      <%=link_to 'もどる', news_path(@news.id), class:"back-btn" %>
+    </div>
+
+<% end %>
