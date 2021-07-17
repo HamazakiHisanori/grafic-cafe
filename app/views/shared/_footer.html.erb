@@ -27,4 +27,23 @@
       </ul>
     </div>
 
+        <%if user_signed_in? %>
+
+      <div class="current-user">
+
+        <div class="user-name">
+          <div>従業員</div>
+          <div><%= "#{current_user.name}"%></div>
+        </div>
+
+        <div class="secret-btn">
+          <div class="log-out-btn" >
+            <%= link_to "ログアウト", destroy_user_session_path, method:"delete", class:"text" %>
+          </div>
+        </div>
+
+      </div>
+
+    <% end %>
+
     </footer>

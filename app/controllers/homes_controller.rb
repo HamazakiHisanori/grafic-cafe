@@ -7,5 +7,4 @@ class HomesController < ApplicationController
   def access
   end
 
-
 end

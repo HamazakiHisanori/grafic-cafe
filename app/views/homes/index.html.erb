@@ -8,96 +8,97 @@
 
   <body>
 
-    <%= render partial: "shared/header" %>
+    <div class="menu-bar">
+      <ul>
+        <li><%= link_to "TOP", root_path %></li>
+        <li><%= link_to "NEWS", menus_path %></li>
+        <li><%= link_to "MENU", menus_path %></li>
+        <li><%= link_to "CONTACT", contacts_path %></li>
+        <li><%= link_to "ACCESS", access_homes_path %></li>
+      </ul>
+    </div>
 
-    <div class="home">
+    <div class="top-background">
 
-      <div class="home-background">
-
-        <div class="text-box">
-          <div class="text-box-text">Text</div>
-        </div>
-
-      </div>
+      <div class="background-change"></div>
+      <div class="background-change"></div>
+      <div class="background-change"></div>
 
     </div>
 
-    <div class="home">
-
-      <div>
-        <%= image_tag 'introspection.jpg', class:"home-image" %>
+    <div class="top-title-background">
+      <div class="title-background">
+          <h1>参ぷる</h1>
       </div>
-
-      <div class="home-text">
-        <div class="home-text-block">
-          Text
-          <br>
-          derisios
-        </div>
-      </div>
-
     </div>
 
-    <div class="home">
+    <div class="arrow-background">
+      <div class="arrow-block-background">
 
-      <div class="home-text">
-        <div class="home-text-block">
-          Text
-          <br>
-          derisios
+        <div class="arrow-block">
+          <ul>
+            <li><div class="arrow-a"></div></li>
+            <li><div class="arrow-b"></div></li>
+            <li><div class="arrow-c"></div></li>
+          </ul>
         </div>
-      </div>
 
-      <div>
-        <%= image_tag 'bar.jpg', class:"home-image" %>
-      </div>
+        <div class="arrow-block">
+          <ul>
+            <li><div class="arrow-a"></div></li>
+            <li><div class="arrow-b"></div></li>
+            <li><div class="arrow-c"></div></li>
+          </ul>
+        </div>
 
+        <div class="arrow-block">
+          <ul>
+            <li><div class="arrow-a"></div></li>
+            <li><div class="arrow-b"></div></li>
+            <li><div class="arrow-c"></div></li>
+          </ul>
+        </div>
+
+      </div>
     </div>
 
-    <div class='item-contents'>
-    <div>お知らせ</div>
-    <ul class='item-lists'>
+    <div class="news-background">
 
-     <% @news.each do |news| %>
-      <li class='list'>
-        <%= news.created_at.year %>
-        <%= news.created_at.month %>
-        <%= news.created_at.day %>
-        <%= link_to news_path(news.id) do %>
-        <%= news.title %>
-        <% end %>
-      </li>
-      <% end %>
+      <div class="title-bar">
+        <h2>NEWS</h2>
+      </div>
 
-      <% if @news.empty? %>
-      <li class='list'>
-      <div>現在お知らせはございません</div>
-      </li>
-      <% end %>
-    </ul>
-  </div>
+      <div class="news-contents-background">
 
-    <%= render partial: "shared/footer" %>
+        <div class="news-contents">
 
-    <% if user_signed_in? %>
+          <div class="content">
 
-      <div class="form-btn-background">
+           <% @news.each do |news| %>
 
-        <div class="form-btn">
-          <div class="btn">
-          <%= link_to "news追加", new_news_path, class:"text" %>
+              <div class="content-image">
+                <div class="image"><%= image_tag news.image,  class:"image-tag"%></div>
+              </div>
+
+              <div class="content-text">
+                <div class="data"><p><%= "#{news.created_at.year}.#{news.created_at.month}.#{news.created_at.day}" %></p></div>
+                <div class="title"><p><%= news.title %></p></div>
+                <div class="text"><p><%= news.contents %></p></div>
+              </div>
+
+            <% end %>
+
           </div>
-        </div>
 
-        <div class="form-btn">
-          <div class="btn">
-          <%= link_to "menu追加", new_menu_path, class:"text" %>
-          </div>
+          <div class="content"></div>
+
+          <div class="content"></div>
+
         </div>
 
       </div>
 
-    <% end %>
+    </div>
 
   </body>
 

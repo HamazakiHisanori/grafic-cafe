@@ -1,6 +1,12 @@
-window.addEventListener('load', function() {
-  const text = document.getElementById("text");
-    text.addEventListener('click', function() {
-      text.style.border="solid red";
+$(function () {
+  $(window).scroll(function () {
+    const wHeight = $(window).height();
+    const scrollAmount = $(window).scrollTop();
+    $('.scroll-anime').each(function () {
+      const targetPosition = $(this).offset().top;
+      if(scrollAmount > targetPosition - wHeight +0) {
+        $(this).addClass("fade-in");
+      }
+    });
   });
 });
