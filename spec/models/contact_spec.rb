@@ -11,6 +11,12 @@ RSpec.describe Contact, type: :model do
       expect(@contact).to be_valid
     end
 
+    it 'nameが空だと送信できない' do
+      @contact.name = ""
+      @contact.valid?
+      expect(@contact.errors.full_messages).to include('お名前を入力してください')
+    end
+
     it 'mailが入力された場合、@を含まないと送信できない' do
       @contact.mail = "sample"
       @contact.valid?

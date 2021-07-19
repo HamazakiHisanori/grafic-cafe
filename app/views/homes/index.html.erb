@@ -62,43 +62,11 @@
       </div>
     </div>
 
-    <div class="news-background">
+    <%= render "components/news" %>
 
-      <div class="title-bar">
-        <h2>NEWS</h2>
-      </div>
+    <%= render "components/menu" %>
 
-      <div class="news-contents-background">
-
-        <div class="news-contents">
-
-          <div class="content">
-
-           <% @news.each do |news| %>
-
-              <div class="content-image">
-                <div class="image"><%= image_tag news.image,  class:"image-tag"%></div>
-              </div>
-
-              <div class="content-text">
-                <div class="data"><p><%= "#{news.created_at.year}.#{news.created_at.month}.#{news.created_at.day}" %></p></div>
-                <div class="title"><p><%= news.title %></p></div>
-                <div class="text"><p><%= news.contents %></p></div>
-              </div>
-
-            <% end %>
-
-          </div>
-
-          <div class="content"></div>
-
-          <div class="content"></div>
-
-        </div>
-
-      </div>
-
-    </div>
+    <%= render "components/contact" %>
 
   </body>
 

@@ -1,0 +1,39 @@
+<div class="news">
+
+  <div class="news-title-bar">
+    <h2>NEWS</h2>
+  </div>
+
+  <div class="news-contents">
+
+    <div class="news-content-background">
+
+      <% @news.each do |news| %>
+
+        <div class="news-content">
+
+          <div class="news-content-image">
+            <div class="news-image"><%= image_tag news.image,  class:"news-image-tag"%></div>
+          </div>
+
+          <div class="news-content-text">
+            <div class="news-data"><p><%= "#{news.created_at.year}.#{news.created_at.month}.#{news.created_at.day}" %></p></div>
+            <div class="news-title"><p><%= news.title %></p></div>
+            <div class="news-text"><p><%= news.contents %></p></div>
+          </div>
+
+        </div>
+
+      <% end %>
+
+    </div>
+
+  </div>
+
+  <div class="news-catalog-bar">
+    <div class="news-catalog-btn">
+      <a>一覧へ<a>
+    </div>
+  </div>
+
+</div>

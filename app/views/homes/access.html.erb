@@ -49,3 +49,25 @@
   </body>
 
 </html>
+
+
+
+
+
+        <div class="phone-number-box">
+            <%= f.text_field :phone_number, placeholder:"電話番号" %>
+        </div>
+
+        <div class="select-box">
+          <%= f.collection_select(:category_id, Category.all, :id, :name, {}) %>
+        </div>
+
+        <div class="text-box">
+          <%= f.text_area :content, placeholder:"内容を入力してください" %>
+        </div>
+
+        <div class="select-box">
+          <%= f.collection_select(:reply_id, Reply.all, :id, :name, {}) %>
+        </div>
+
+        <%= f.submit "送信する", class:"btn" %>

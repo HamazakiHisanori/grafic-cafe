@@ -1,5 +1,6 @@
 class Contact < ApplicationRecord
   with_options presence: true do
+    validates :name
     validates :content
     with_options numericality: { other_than: 1, message: 'を選択してください' } do
       validates :category_id

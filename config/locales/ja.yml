@@ -9,6 +9,7 @@ ja:
         description: 説明文
         price: 値段
       contact:
+        name: お名前
         mail: メールアドレス
         phone_number: 電話番号
         category_id: カテゴリー

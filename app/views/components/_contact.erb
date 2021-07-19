@@ -1,0 +1,33 @@
+<div class="contact">
+
+  <div class="contact-title-bar">
+    <h2>CONTACT</h2>
+  </div>
+
+  <%= form_with model: @contact, url: contacts_path, class:"contact-form", local: true do |f|  %>
+
+    <%= render "/shared/error_messages", model: @contact %>
+
+      <div class="contact-box">
+
+        <div class ="contact-box-background">
+
+          <div class="contact-mail-box">
+
+            <div class="contact-mail-name">
+              <p>メールアドレス</p>
+            </div>
+
+            <div class="contact-mail-form">
+              <%= f.text_field :mail, placeholder:"メールアドレス", class:"contact-mail-form-input" %>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+  <% end %>
+
+</div>

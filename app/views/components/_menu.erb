@@ -1,0 +1,39 @@
+<div class="menu">
+
+  <div class="menu-title-bar">
+    <h2>MENU</h2>
+  </div>
+
+  <div class="menu-contents">
+
+    <div class="menu-content-background">
+
+      <% @menus.each do |menu| %>
+
+        <div class="menu-content">
+
+          <div class="menu-image">
+            <%= image_tag menu.image, class:"menu-image-tag"%>
+          </div>
+          <div class="menu-name">
+            <p><%= menu.name %></p>
+          </div>
+          <div class="menu-price">
+            <p><%= "¥#{menu.price}" %></p>
+          </div>
+
+        </div>
+
+      <% end %>
+
+    </div>
+
+  </div>
+
+  <div class="menu-catalog-bar">
+    <div class="menu-catalog-btn">
+      <a>一覧へ<a>
+    </div>
+  </div>
+
+</div>

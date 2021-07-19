@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
-  before_action :authenticate_user!, except: [:show]
-  before_action :set_news, only: [:show, :update, :edit, :destroy]
+  before_action :authenticate_user!
+  before_action :set_news, only: [:update, :edit, :destroy]
 
   def new
     @news = News.new
@@ -14,9 +14,6 @@ class NewsController < ApplicationController
     else
         render :new
     end
-  end
-
-  def show
   end
 
   def edit

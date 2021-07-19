@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     end
   end
   resources :menus
-  resources :news, except: [:index]
+  resources :news, except: [:index, :show]
   resources :contacts, only: [:index, :create ]
 end
