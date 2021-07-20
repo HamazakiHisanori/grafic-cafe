@@ -7,6 +7,8 @@ class HomesController < ApplicationController
   end
 
   def create
+    @news = News.order('created_at DESC')
+    @menus = Menu.order('created_at DESC')
     @contact = Contact.new(contact_params)
     if @contact.save
       redirect_to root_path
