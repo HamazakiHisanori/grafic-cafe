@@ -17,6 +17,9 @@ class HomesController < ApplicationController
     end
   end
 
+  def worker
+  end
+
   private
 
   def contact_params

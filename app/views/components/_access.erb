@@ -1,7 +1,9 @@
 <div class="access">
 
-  <div class="access-title-bar">
-    <h2>ACCESS</h2>
+  <div class="title-bar">
+    <div class="title-border">
+      <h2>ACCESS</h2>
+    </div>
   </div>
 
   <div class="access-contents">
@@ -9,8 +11,11 @@
     <div class="access-content-background">
 
       <div class="access-image">
-        <%= image_tag 'access.jpg'%>
-        <%= link_to "GoogleMap", "https://goo.gl/maps/ReN9U5vN21FpXxMU9", class:"access-link"%>
+        <div class="link-tag">
+          <%= link_to "https://goo.gl/maps/ReN9U5vN21FpXxMU9", class:"link-btn" do %>
+            <%= image_tag "map.png", class:"link-icon" %>
+          <% end %>
+        </div>
       </div>
 
       <div class="access-textarea">
@@ -42,8 +47,7 @@
           </div>
           <div class="access-text">
             <p>am 〇〇:〇〇 〜 pm 〇〇:〇〇</p>
-            <p>ラストオーダーは閉店時間より
-            <br>〇分前となっております</p>
+            <p>ラストオーダーは閉店時間より<br>〇分前となっております</p>
           </div>
         </div>
 
@@ -61,6 +65,17 @@
 
     </div>
 
+  </div>
+
+  <div class="access-warning">
+    <div class="access-warning-title">
+      <h4>注意事項<h4>
+    </div>
+    <div class=access-warning-text>
+      <p>コロナ感染対策としてお店での飲食は最大1時間とさせていただいております</p>
+      <p>店内で飲食を希望される場合、2人以下とさせていただいております</p>
+      <p>時間短縮要請などで急遽営業時間が変更になる場合やお休みとさせていただく場合がございます</p>
+    </div>
   </div>
 
 </div>
