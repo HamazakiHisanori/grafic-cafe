@@ -39,7 +39,7 @@ class MenusController < ApplicationController
   private
 
   def menu_params
-      params.require(:menu).permit(:image, :name, :description, :price).merge(user_id: current_user.id)
+      params.require(:menu).permit(:image, :name, :description, :price, :type_id).merge(user_id: current_user.id)
   end
 
 
