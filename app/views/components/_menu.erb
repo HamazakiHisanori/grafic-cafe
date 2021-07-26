@@ -6,21 +6,93 @@
 
   <div class="menu-contents">
 
-    <% @menus.each do |menu| %>
+    <div class="type">
 
-      <div class="menu-content">
+      <div class="type-name">
+        <p>ドリンク</p>
+      </div>
 
-        <div class="menu-image">
-          <%= image_tag menu.image, class:"menu-image-tag"%>
-        </div>
+      <div class="type-content">
 
-        <div class="menu-text">
-          <p><%= menu.name %></p>
-          <p><%= "¥#{menu.price}" %><p>
-        </div>
+        <% @menus_drink.each do |drink| %>
+
+          <div class="menu-content">
+
+            <div class="menu-image">
+              <%= image_tag drink.image, class:"menu-image-tag"%>
+            </div>
+
+            <div class="menu-text">
+              <p><%= drink.name %></p>
+              <p><%= "¥#{drink.price}" %><p>
+            </div>
+
+          </div>
+
+        <% end %>
 
       </div>
 
+    </div>
+
+    <div class="type">
+
+      <div class="type-name">
+        <p>フード</p>
+      </div>
+
+      <div class="type-content">
+
+        <% @menus_food.each do |food| %>
+
+          <div class="menu-content">
+
+            <div class="menu-image">
+              <%= image_tag food.image, class:"menu-image-tag"%>
+            </div>
+
+            <div class="menu-text">
+              <p><%= food.name %></p>
+              <p><%= "¥#{food.price}" %><p>
+            </div>
+
+          </div>
+
+        <% end %>
+
+      </div>
+
+    </div>
+
+    <% if @menus_option.present? %>
+      <div class="type">
+
+        <div class="type-name">
+          <p>その他</p>
+        </div>
+
+        <div class="type-content">
+
+          <% @menus_option.each do |option| %>
+
+            <div class="menu-content">
+
+              <div class="menu-image">
+                <%= image_tag option.image, class:"menu-image-tag"%>
+              </div>
+
+              <div class="menu-text">
+                <p><%= option.name %></p>
+                <p><%= "¥#{option.price}" %><p>
+              </div>
+
+            </div>
+
+          <% end %>
+
+        </div>
+
+      </div>
     <% end %>
 
   </div>

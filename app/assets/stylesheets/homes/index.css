@@ -332,7 +332,6 @@ h1 {
 
 .news {
   margin-bottom: 20vh;
-  max-height: 185vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -359,9 +358,7 @@ h2 {
 }
 
 .news-contents {
-  max-height: 120vh;
   width: 90%;
-  overflow: hidden;
   flex-wrap: wrap;
   display: flex;
   flex-direction: column;
@@ -460,7 +457,6 @@ h2 {
 
 .menu {
   margin-bottom: 20vh;
-  max-height: 185vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -485,10 +481,34 @@ h2 {
 }
 
 .menu-contents {
-  max-height: 120vh;
   width: 100%;
-  flex-wrap: wrap;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.type {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.type-name {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.type-name p {
+  border-bottom: dotted 2px;
+  font-size: 40px;
+}
+
+.type-content {
+  height: 70vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

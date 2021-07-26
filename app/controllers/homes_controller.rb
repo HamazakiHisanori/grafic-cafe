@@ -1,8 +1,10 @@
 class HomesController < ApplicationController
 
   def index
-    @news = News.order('created_at DESC')
-    @menus = Menu.order('created_at DESC')
+    @news = News.order('created_at DESC').limit(4)
+    @menus_drink = Menu.where(type_id: name='2').limit(3)
+    @menus_food =  Menu.where(type_id: name='3').limit(3)
+    @menus_option =  Menu.where(type_id: name='4').limit(3)
     @contact = Contact.new
   end
 
