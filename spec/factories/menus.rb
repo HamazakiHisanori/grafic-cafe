@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :menu do
+    type_id { 2 }
     name { 'sample' }
     description { 'sample' }
     price { 100 }

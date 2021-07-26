@@ -17,6 +17,12 @@ RSpec.describe Menu, type: :model do
       expect(@menu.errors.full_messages).to include('画像を入力してください')
     end
 
+    it 'type_idが1以外でないと追加できない' do
+      @menu.type_id = 1
+      @menu.valid?
+      expect(@menu.errors.full_messages).to include('メニューの種類を選択してください')
+    end
+
     it 'nameが空だと追加できない' do
       @menu.name = ''
       @menu.valid?
