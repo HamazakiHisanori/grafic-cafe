@@ -71,15 +71,12 @@ body {
   font-family: serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.sign-up {
-  height: 100vh;
+.new-news {
+  height: 75vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -87,23 +84,22 @@ body {
 .background {
   height: 90%;
   width: 90%;
-  background-image: url(/images/sign-up.jpeg);
+  background-image: url(/images/news.jpeg);
   background-size: cover;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .contents {
-  height: 80%;
-  width: 60%;
+  height: 90%;
+  width: 90%;
   box-shadow: 0 0 4px gray;
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: lighten;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
@@ -116,18 +112,27 @@ body {
 
 .title h2 {
   font-size: 40px;
+  border-bottom: dotted 3px;
 }
 
 .form {
-  height: 60vh;
+  height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .content {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.image-select {
   height: 20%;
   width: 100%;
   display: flex;
@@ -136,28 +141,65 @@ body {
   align-items: center;
 }
 
-.input {
-  width: 40%;
-  border: solid 1px rgb(201, 201, 201);
+.preview {
+  height: 80%;
+  width: 100%;
 }
 
-.form-btn {
-  height: 50%;
-  width: 20%;
+.news-title {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-input {
+  border: solid 1px;
+}
+
+.news-contents {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contents-input {
+  border: solid 1px;
+  border-radius: 5px;
+  height: 70%;
+  width: 80%;
+}
+
+.btns {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
   border: solid 1px rgb(176, 222, 230);
-  background: none;
   color: rgb(176, 222, 230);
+  background: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 30%;
   transition: 0.4s;
 }
 
-.form-btn:hover {
+.btn:hover {
   border: solid 1px white;
+  color: white;
   background-color: rgb(176, 222, 230);
   box-shadow: 0 0 4px gray;
-  color: white;
+  transition: 0.4s;
 }
-
-
-
-
-

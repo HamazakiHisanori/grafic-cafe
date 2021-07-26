@@ -13,10 +13,12 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 Rails.application.config.assets.precompile += %w(
   homes/index.css
-  homes/access.css
-  contacts/index.css
-  shared/header.css
-  shared/footer.css
+  homes/worker.css
+  menus/new
+  news/index
+  news/new
   devise/registration.css
   devise/session.css
+  components/homebar.css
+  components/footer_second.css
 )

@@ -1,6 +1,10 @@
 class NewsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
   before_action :set_news, only: [:update, :edit, :destroy]
+
+  def index
+    @news = News.order('created_at DESC')
+  end
 
   def new
     @news = News.new
@@ -10,7 +14,7 @@ class NewsController < ApplicationController
     @news = News.new(news_params)
     @news.save
     if @news.save
-      redirect_to news_path(@news.id)
+      redirect_to root_path
     else
         render :new
     end

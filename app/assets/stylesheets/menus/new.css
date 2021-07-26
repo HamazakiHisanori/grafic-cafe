@@ -66,43 +66,43 @@ width /***/:auto;
 /* body */
 
 body {
+  border: solid 1px;
   min-height: 100vh;
   width: 100%;
   font-family: serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.sign-up {
-  height: 100vh;
+.new-menu {
+  border: solid 1px;
+  height: 75vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .background {
+  border: solid 1px;
   height: 90%;
   width: 90%;
-  background-image: url(/images/sign-up.jpeg);
+  background-image: url(/images/menu.jpeg);
   background-size: cover;
+  background-position: bottom;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .contents {
-  height: 80%;
-  width: 60%;
+  border: solid 1px;
+  height: 90%;
+  width: 90%;
   box-shadow: 0 0 4px gray;
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: lighten;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -117,47 +117,4 @@ body {
 .title h2 {
   font-size: 40px;
 }
-
-.form {
-  height: 60vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.content {
-  height: 20%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.input {
-  width: 40%;
-  border: solid 1px rgb(201, 201, 201);
-}
-
-.form-btn {
-  height: 50%;
-  width: 20%;
-  border: solid 1px rgb(176, 222, 230);
-  background: none;
-  color: rgb(176, 222, 230);
-  transition: 0.4s;
-}
-
-.form-btn:hover {
-  border: solid 1px white;
-  background-color: rgb(176, 222, 230);
-  box-shadow: 0 0 4px gray;
-  color: white;
-}
-
-
-
-
 

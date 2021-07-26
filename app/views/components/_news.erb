@@ -1,16 +1,14 @@
 <div class="news">
 
-  <div class="title-bar">
-    <div class="title-border">
-      <h2>NEWS</h2>
-    </div>
+  <div class="news-title-bar">
+    <h2>NEWS</h2>
   </div>
 
   <div class="news-contents">
 
-    <div class="news-content-background">
+    <% @news.each do |news| %>
 
-      <% @news.each do |news| %>
+      <div class="news-background">
 
         <div class="news-content">
 
@@ -26,16 +24,16 @@
 
         </div>
 
-      <% end %>
+      </div>
 
-    </div>
+    <% end %>
 
   </div>
 
   <div class="catalog-bar">
-    <div class="catalog-btn">
-      <a>一覧へ<a>
-    </div>
+    <%=  link_to news_index_path, class:"catalog-btn" do %>
+      <p>一覧へ</p>
+    <% end %>
   </div>
 
 </div>

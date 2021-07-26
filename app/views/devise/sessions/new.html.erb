@@ -8,49 +8,46 @@
 
   <body>
 
-    <%= render partial: "shared/header" %>
+    <%= render "components/homebar" %>
 
-    <div class="menu-title">
-      <h1>従業員専用</h1>
-    </div>
+    <div class="log-in">
 
-    <div class="sign-title">
-      <h2>Log in</h2>
-    </div>
-
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
-      <div class="sign-form">
-
-        <%= render "/shared/error_messages", model: @user %>
+      <div class="background">
 
         <div class="contents">
-          <div>
-            <h3>email</h3>
-          </div>
-          <div class="input">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"メール" %>
-          </div>
-        </div>
 
-        <div class="contents">
-          <div>
-            <h3>password</h3>
+          <div class="title">
+            <h2>Log in</h2>
           </div>
-          <div class="input">
-          <%= f.password_field :password, autocomplete: "current-password", placeholder:"パスワード" %>
-          </div>
+
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class:"form"}) do |f| %>
+
+              <%= flash[:notice] %>
+              <%= flash[:alert] %>
+
+            <div class="content">
+              <p>メールアドレス</p>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input" %>
+            </div>
+
+            <div class="content">
+              <p>パスワード</p>
+              <%= f.password_field :password, autocomplete: "current-password", class:"input" %>
+            </div>
+
+            <div class="content">
+              <%= f.submit "Log in", class:"form-btn"%>
+            </div>
+
+          <% end %>
+
         </div>
 
       </div>
 
-      <div class="btn">
-        <%= f.submit "Log in", class:"form-btn"%>
-      </div>
+    </div>
 
-    <% end %>
-
-    <%= render partial: "shared/footer" %>
+    <%= render "components/footer_second" %>
 
   </body>
 

@@ -1,6 +1,6 @@
 class MenusController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_menu, only: [:show, :update, :edit, :destroy]
+  before_action :authenticate_user!, except: [:index]
+  before_action :set_menu, only: [:update, :edit, :destroy]
 
 
   def index
@@ -14,13 +14,10 @@ class MenusController < ApplicationController
   def create
     @menu = Menu.new(menu_params)
     if @menu.save
-      redirect_to menus_path
+      redirect_to root_path
     else
       render :new
     end
-  end
-
-  def show
   end
 
   def edit

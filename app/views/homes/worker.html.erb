@@ -1,1 +1,59 @@
-www
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'homes/worker' %>
+  </head>
+
+  <body>
+
+    <%= render "components/homebar" %>
+
+    <div class="worker">
+
+      <div class="title">
+        <h2>従業員専用ページ</h2>
+      </div>
+
+      <div class="worker-contents">
+
+        <div class="worker-btn-background">
+
+          <% if user_signed_in? %>
+
+            <%= link_to new_menu_path, class:"worker-btn" do %>
+              <p>New Menu</p>
+            <% end %>
+
+            <%= link_to new_news_path, class:"worker-btn" do %>
+              <p>New News</p>
+            <% end %>
+
+            <%= link_to destroy_user_session_path, method: :delete, class:"worker-btn" do %>
+              <p>Log out</p>
+            <% end %>
+
+          <% else %>
+
+            <%= link_to new_user_registration_path, class:"worker-btn" do %>
+              <p>Sign up</p>
+            <% end %>
+
+            <%= link_to new_user_session_path, class:"worker-btn" do %>
+              <p>Log in</p>
+            <% end %>
+
+          <% end %>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <%= render "components/footer_second" %>
+
+  </body>
+
+</html>

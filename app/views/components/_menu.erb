@@ -1,41 +1,34 @@
 <div class="menu">
 
-  <div class="title-bar">
-    <div class="title-border">
-      <h2>MENU</h2>
-    </div>
+  <div class="menu-title-bar">
+    <h2>MENU</h2>
   </div>
 
   <div class="menu-contents">
 
-    <div class="menu-content-background">
+    <% @menus.each do |menu| %>
 
-      <% @menus.each do |menu| %>
+      <div class="menu-content">
 
-        <div class="menu-content">
-
-          <div class="menu-image">
-            <%= image_tag menu.image, class:"menu-image-tag"%>
-          </div>
-          <div class="menu-name">
-            <p><%= menu.name %></p>
-          </div>
-          <div class="menu-price">
-            <p><%= "¥#{menu.price}" %></p>
-          </div>
-
+        <div class="menu-image">
+          <%= image_tag menu.image, class:"menu-image-tag"%>
         </div>
 
-      <% end %>
+        <div class="menu-text">
+          <p><%= menu.name %></p>
+          <p><%= "¥#{menu.price}" %><p>
+        </div>
 
-    </div>
+      </div>
+
+    <% end %>
 
   </div>
 
   <div class="catalog-bar">
-    <div class="catalog-btn">
-      <a>一覧へ<a>
-    </div>
+    <%=  link_to menus_path, class:"catalog-btn" do %>
+      <p>一覧へ</p>
+    <% end %>
   </div>
 
 </div>

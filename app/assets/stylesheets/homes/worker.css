@@ -71,93 +71,82 @@ body {
   font-family: serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.sign-up {
-  height: 100vh;
+/* 従業員専用ページ */
+
+.worker {
+  min-height: 75vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.background {
-  height: 90%;
-  width: 90%;
-  background-image: url(/images/sign-up.jpeg);
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contents {
-  height: 80%;
-  width: 60%;
-  box-shadow: 0 0 4px gray;
-  background-color: rgba(255, 255, 255, 0.5);
-  background-blend-mode: lighten;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
 .title {
+  height: 30vh;
   width: 100%;
+  background-image: url(/images/worker.jpeg);
+  background-size: cover;
+  background-position: top;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .title h2 {
-  font-size: 40px;
-}
-
-.form {
-  height: 60vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.content {
-  height: 20%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.input {
-  width: 40%;
-  border: solid 1px rgb(201, 201, 201);
-}
-
-.form-btn {
-  height: 50%;
-  width: 20%;
-  border: solid 1px rgb(176, 222, 230);
-  background: none;
-  color: rgb(176, 222, 230);
-  transition: 0.4s;
-}
-
-.form-btn:hover {
-  border: solid 1px white;
-  background-color: rgb(176, 222, 230);
-  box-shadow: 0 0 4px gray;
+  font-size: 70px;
+  letter-spacing: 5px;
   color: white;
 }
 
+/* worker-contents */
 
+.worker-contents {
+  height: 45vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.worker-btn-background {
+  height: 60%;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.worker-btn {
+  border: solid 1px rgba(176, 222, 230);
+  height: 50%;
+  width: 20%;
+  text-decoration: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.worker-btn:hover {
+  border: solid 1px white;
+  background-color: rgba(176, 222, 230);
+  box-shadow: 0 0 4px gray;
+  transition: 0.4s;
+}
+
+.worker-btn p {
+  font-family: serif;
+  font-size: 30px;
+  color: rgba(176, 222, 230);
+  transition: 0.4s;
+}
+
+.worker-btn:hover p {
+  color: white;
+  transition: 0.4s;
+}
 

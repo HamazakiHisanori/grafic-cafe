@@ -1,0 +1,28 @@
+/* home-bar */
+
+.home-bar {
+  height: 10vh;
+  width: 100%;
+  background-color: rgb(176, 222, 230, 0.7);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.home-link {
+  position: relative;
+  left: 2%;
+  height: 80%;
+  width: 5%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: seashell;
+}
+
+h1 {
+  font-family: "Yomogi", cursive;
+  font-weight: bold;
+  color: rosybrown;
+}

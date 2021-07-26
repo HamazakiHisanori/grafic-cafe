@@ -63,58 +63,63 @@ height: auto;
 width /***/:auto;
 }
 
-/* ここから */
+/* body */
 
 body {
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(-45deg, rgba(235, 114, 219, 0.8), rgba(153, 134, 241, 0.8)) fixed, url(/images/renga.jpg) fixed;
-  background-size: cover;
-  margin: 0;
-  padding: 0;
-  font-family: "Yomogi", cursive;
+  font-family: serif;
   display: flex;
   flex-direction: column;
-}
-
-/* タイトル */
-
-.menu-title {
-  height: 15vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu-title h1 {
-  background: linear-gradient(transparent 80%, yellow 100%);
-  color: aqua;
-  font-size: 70px;
-}
-
-/* サインアップの内容 */
-
-.sign-title {
-  height: 10vh;
-  width: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.sign-title h2 {
+.log-in {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  height: 90%;
+  width: 90%;
+  background-image: url(/images/log-in.jpeg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contents {
+  height: 80%;
+  width: 60%;
+  box-shadow: 0 0 4px gray;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title h2 {
   font-size: 40px;
 }
 
-.sign-form {
-  margin-top: 5%;
-  margin-bottom: 2%;
-  width: 100%;
-}
-
-.sign-form .contents {
-  height: 20vh;
+.form {
+  height: 60vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -122,52 +127,32 @@ body {
   align-items: center;
 }
 
-.sign-form .contents div {
-  height: 40%;
-  width: 40%;
+.content {
+  height: 20%;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.sign-form .contents h3 {
-  font-size: 35px;
 }
 
 .input {
-  border-bottom: solid 1px yellow;
-}
-
-.sign-form .contents div input {
-  width: 90%;
-  height: 70%;
-  margin: 10px;
-  font-size: 22px;
-  outline: none;
-  background: none;
-  border: solid 1px yellow;
-  border-radius: 3%;
-}
-
-.btn {
-  height: 15vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 40%;
+  border: solid 1px rgb(201, 201, 201);
 }
 
 .form-btn {
-  border: solid 1px aqua;
-  height: 60%;
-  width: 15%;
-  color: aqua;
+  height: 50%;
+  width: 20%;
+  border: solid 1px rgb(176, 222, 230);
   background: none;
-  transition: 0.2s;
+  color: rgb(176, 222, 230);
+  transition: 0.4s;
 }
 
 .form-btn:hover {
-  transform: scale(1.1);
-  transition: 0.2s;
-  background-color: white;
+  border: solid 1px white;
+  background-color: rgb(176, 222, 230);
+  box-shadow: 0 0 4px gray;
+  color: white;
 }

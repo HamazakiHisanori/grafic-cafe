@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'homes#index'
 
-  resources :menus
-  resources :news, except: [:index, :show]
+  resources :menus, except: [:show]
+  resources :news, except: [:show]
   resources :contacts, only: [:create]
   resources :homes, only: [:index, :create] do
     collection do
