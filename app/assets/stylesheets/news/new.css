@@ -185,8 +185,8 @@ body {
 }
 
 .btn {
-  border: solid 1px rgb(176, 222, 230);
-  color: rgb(176, 222, 230);
+  border: solid 1px black;
+  color: black;
   background: none;
   text-decoration: none;
   display: flex;

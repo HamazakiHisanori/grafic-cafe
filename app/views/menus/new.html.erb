@@ -47,21 +47,21 @@
 
                 <div class="name-price">
 
-                  <div class="name">
+                  <div class="each">
                     <p>名前</p>
-                    <%= f.text_field :name %>
+                    <%= f.text_field :name, class:"each-input" %>
                   </div>
 
-                  <div class="price">
+                  <div class="each">
                     <p>値段</p>
-                    <%= f.text_field :price %>
+                    <p>¥<%= f.text_field :price, class:"each-input"  %></p>
                   </div>
 
                 </div>
 
                 <div class="description">
                   <p>説明</p>
-                  <%= f.text_area :description %>
+                  <%= f.text_area :description, class:"description-input"%>
                 </div>
 
                 <div class="form-btn">

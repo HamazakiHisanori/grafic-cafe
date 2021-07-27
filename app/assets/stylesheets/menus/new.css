@@ -66,7 +66,6 @@ width /***/:auto;
 /* body */
 
 body {
-  border: solid 1px;
   min-height: 100vh;
   width: 100%;
   font-family: serif;
@@ -75,7 +74,6 @@ body {
 }
 
 .new-menu {
-  border: solid 1px;
   height: 75vh;
   width: 100%;
   display: flex;
@@ -84,7 +82,6 @@ body {
 }
 
 .background {
-  border: solid 1px;
   height: 90%;
   width: 90%;
   background-image: url(/images/menu.jpeg);
@@ -96,7 +93,6 @@ body {
 }
 
 .contents {
-  border: solid 1px;
   height: 90%;
   width: 90%;
   box-shadow: 0 0 4px gray;
@@ -109,7 +105,6 @@ body {
 }
 
 .title {
-  border:  solid 1px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -120,3 +115,126 @@ body {
   font-size: 40px;
 }
 
+.form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.type-title {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.select {
+  height: 40%;
+  width: 20%;
+}
+
+.content {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-select {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview {
+  height: 80%;
+  width: 100%;
+}
+
+.text {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.name-price {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.each {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.each-input {
+  border: solid 1px;
+}
+
+.description {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-input {
+  height: 70%;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.form-btn {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  border: solid 1px black;
+  color: black;
+  background: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 30%;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  border: solid 1px white;
+  color: white;
+  background-color: rgb(176, 222, 230);
+  box-shadow: 0 0 4px gray;
+  transition: 0.4s;
+}
