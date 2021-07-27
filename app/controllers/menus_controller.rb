@@ -4,7 +4,9 @@ class MenusController < ApplicationController
 
 
   def index
-    @menus = Menu.order('created_at DESC')
+    @menus_drink = Menu.where(type_id: name='2')
+    @menus_food =  Menu.where(type_id: name='3')
+    @menus_option =  Menu.where(type_id: name='4')
   end
 
   def new
@@ -25,7 +27,7 @@ class MenusController < ApplicationController
 
   def update
       if @menu.update(menu_params)
-        redirect_to menu_path(@menu.id)
+        redirect_to menus_path
       else
         render :edit
       end

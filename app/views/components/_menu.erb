@@ -14,7 +14,7 @@
 
       <div class="type-content">
 
-        <% @menus_drink.each do |drink| %>
+        <% @menus_drink.first(3).each do |drink| %>
 
           <div class="menu-content">
 
@@ -33,6 +33,12 @@
 
       </div>
 
+      <% if @menus_drink.length >= 3 %>
+        <div class="multi">
+          <p><%= "その他(#{@menus_drink.length - 3})"%></p>
+        </div>
+      <% end %>
+
     </div>
 
     <div class="type">
@@ -43,7 +49,7 @@
 
       <div class="type-content">
 
-        <% @menus_food.each do |food| %>
+        <% @menus_food.first(3).each do |food| %>
 
           <div class="menu-content">
 
@@ -62,6 +68,12 @@
 
       </div>
 
+      <% if @menus_food.length >= 3 %>
+        <div class="multi">
+          <p><%= "その他(#{@menus_food.length - 3})"%></p>
+        </div>
+      <% end %>
+
     </div>
 
     <% if @menus_option.present? %>
@@ -73,7 +85,7 @@
 
         <div class="type-content">
 
-          <% @menus_option.each do |option| %>
+          <% @menus_option.first(3).each do |option| %>
 
             <div class="menu-content">
 
@@ -91,6 +103,12 @@
           <% end %>
 
         </div>
+
+        <% if @menus_option.length >= 3 %>
+          <div class="multi">
+            <p><%= "その他(#{@menus_option.length - 3})"%></p>
+          </div>
+        <% end %>
 
       </div>
     <% end %>

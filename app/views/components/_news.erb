@@ -6,20 +6,18 @@
 
   <div class="news-contents">
 
-    <% @news.each do |news| %>
+    <% @news.first(5).each do |news| %>
 
       <div class="news-background">
 
         <div class="news-content">
 
-          <div class="news-content-image">
-            <div class="news-image"><%= image_tag news.image,  class:"news-image-tag"%></div>
+          <div class="news-content-date">
+            <p><%= "#{news.created_at.year}.#{news.created_at.month}.#{news.created_at.day}" %></p>
           </div>
 
-          <div class="news-content-text">
-            <div class="news-data"><p><%= "#{news.created_at.year}.#{news.created_at.month}.#{news.created_at.day}" %></p></div>
-            <div class="news-title"><p><%= news.title %></p></div>
-            <div class="news-text"><p><%= news.contents %></p></div>
+          <div class="news-content-title">
+            <p><%= news.title %></p>
           </div>
 
         </div>
@@ -29,6 +27,12 @@
     <% end %>
 
   </div>
+
+    <% if @news.length >= 5 %>
+      <div class="multi">
+        <p><%= "その他(#{@news.length - 5})"%></p>
+      </div>
+    <% end %>
 
   <div class="catalog-bar">
     <%=  link_to news_index_path, class:"catalog-btn" do %>

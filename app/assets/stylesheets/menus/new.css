@@ -103,11 +103,13 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: lighten;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .title {
+  border:  solid 1px;
   width: 100%;
   display: flex;
   justify-content: center;

@@ -14,6 +14,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w(
   homes/index.css
   homes/worker.css
+  menus/index
   menus/new
   news/index
   news/new

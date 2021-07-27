@@ -20,6 +20,63 @@
             <h2>New Menu</h2>
           </div>
 
+          <%= form_with model: @menu, url: menus_path, class:"form", local: true do |f| %>
+
+            <%= render "/shared/error_messages", model: @menu %>
+
+            <div class="type-title">
+              <p>メニューの種類を選択</p>
+              <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"select"}) %>
+            </div>
+
+            <div class="content">
+
+              <div class="image">
+
+                <div class="image-select">
+                  <p>画像選択</p>
+                  <%= f.file_field :image %>
+                </div>
+
+                <div class="preview">
+                </div>
+
+              </div>
+
+              <div class="text">
+
+                <div class="name-price">
+
+                  <div class="name">
+                    <p>名前</p>
+                    <%= f.text_field :name %>
+                  </div>
+
+                  <div class="price">
+                    <p>値段</p>
+                    <%= f.text_field :price %>
+                  </div>
+
+                </div>
+
+                <div class="description">
+                  <p>説明</p>
+                  <%= f.text_area :description %>
+                </div>
+
+                <div class="form-btn">
+                  <%= f.submit "出品する", class:"btn" %>
+                  <%= link_to root_path, class:"btn" do %>
+                    <p>戻る</p>
+                  <% end %>
+                </div>
+
+              </div>
+
+            </div>
+
+          <% end %>
+
         </div>
 
       </div>
@@ -31,39 +88,3 @@
   </body>
 
 </html>
-
-<div>new</div>
-<%= form_with model: @menu, url: menus_path, local: true do |f| %>
-
- <%= render "/shared/error_messages", model: @menu %>
-
-<div>
-  <%= f.label :image, "画像" %><br />
-  <%= f.file_field :image %>
-</div>
-
-<div>
-  <%= f.label :name, "名前" %><br />
-  <%= f.text_field :name %>
-</div>
-
-<div>
-  <%= f.label :description, "説明" %><br />
-  <%= f.text_area :description %>
-</div>
-
-<div>
-  <%= f.label :price, "値段" %><br />
-  <%= f.text_field :price %>
-</div>
-
-<%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"select"}) %>
-
-
-<div class="sell-btn-contents">
-      <%= f.submit "出品する", class:"sell-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
-    </div>
-
-<% end %>
-

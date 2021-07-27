@@ -1,32 +1,211 @@
-<div>menu</div>
-<div class='item-contents'>
-    <ul class='item-lists'>
+<!DOCTYPE html>
+<html>
 
-     <% @menus.each do |menu| %>
-      <li class='list'>
-        <%= link_to menu_path(menu.id) do %>
-        <div class='item-img-content'>
-        <div class="items">
-          <%= image_tag menu.image, class: 'images', width:"400px", height:"400px" %>
-        </div>
-        </div>
-        <% end %>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'menus/index' %>
+  </head>
 
-        <div class='item-info'>
-          <h3 class='item-name'>
-            <%= menu.name %>
-          </h3>
-          <div class='item-price'>
-            <span><%= menu.price %>円</span>
+  <body>
+
+    <%= render "components/homebar" %>
+
+    <div class="menu-index">
+
+    <div class="title">
+      <h2>MENU</h2>
+    </div>
+
+    <div class="contents">
+
+      <div class="background">
+
+        <div class="menu-background">
+
+          <div class="type">
+
+            <div class="type-title">
+              <p>ドリンク</p>
+            </div>
+
+            <% @menus_drink.each do |drink| %>
+              <div class="content">
+
+                <div class="item">
+
+                  <div class="image-box">
+                    <%= image_tag drink.image, class:"image" %>
+                  </div>
+
+                  <div class="text">
+
+                    <div class="name-price">
+
+                      <div class="name">
+                        <p><%= drink.name %></p>
+                      </div>
+
+                      <div class="price">
+                        <p><%="¥#{drink.price}"%></p>
+                      </div>
+
+                    </div>
+
+                    <div class="description">
+                      <div class="flame">
+                        <p><%= drink.description %></p>
+                      </div>
+                    </div>
+
+                    <% if user_signed_in? %>
+                      <div class="worker-btn">
+
+                        <%= link_to edit_menu_path(drink.id), class:"btn" do %>
+                          <p>編集</p>
+                        <% end %>
+
+                        <%= link_to menu_path(drink.id),class:"btn", method: :delete do %>
+                          <p>削除</p>
+                        <% end %>
+
+                      </div>
+                    <% end %>
+
+                  </div>
+
+                </div>
+
+              </div>
+            <% end %>
+
           </div>
-          </div>
-      </li>
-      <% end %>
 
-      <% if @menus.empty? %>
-      <li class='list'>
-      <div>現在取り扱っている商品がございません</div>
-      </li>
-      <% end %>
-    </ul>
-  </div>
+          <div class="type">
+
+            <div class="type-title">
+              <p>フード</p>
+            </div>
+
+            <% @menus_food.each do |food| %>
+              <div class="content">
+
+                <div class="item">
+
+                  <div class="image-box">
+                    <%= image_tag food.image, class:"image" %>
+                  </div>
+
+                  <div class="text">
+
+                    <div class="name-price">
+
+                      <div class="name">
+                        <p><%= food.name %></p>
+                      </div>
+
+                      <div class="price">
+                        <p><%="¥#{food.price}"%></p>
+                      </div>
+
+                    </div>
+
+                    <div class="description">
+                      <div class="flame">
+                        <p><%= food.description %></p>
+                      </div>
+                    </div>
+
+                    <% if user_signed_in? %>
+                      <div class="worker-btn">
+
+                        <%= link_to edit_menu_path(food.id), class:"btn" do %>
+                          <p>編集</p>
+                        <% end %>
+
+                        <%= link_to menu_path(food.id),class:"btn", method: :delete do %>
+                          <p>削除</p>
+                        <% end %>
+
+                      </div>
+                    <% end %>
+
+                  </div>
+
+                </div>
+
+              </div>
+            <% end %>
+
+          </div>
+
+          <div class="type">
+
+            <div class="type-title">
+              <p>その他</p>
+            </div>
+
+            <% @menus_option.each do |option| %>
+              <div class="content">
+
+                <div class="item">
+
+                  <div class="image-box">
+                    <%= image_tag option.image, class:"image" %>
+                  </div>
+
+                  <div class="text">
+
+                    <div class="name-price">
+
+                      <div class="name">
+                        <p><%= option.name %></p>
+                      </div>
+
+                      <div class="price">
+                        <p><%="¥#{option.price}"%></p>
+                      </div>
+
+                    </div>
+
+                    <div class="description">
+                      <div class="flame">
+                        <p><%= option.description %></p>
+                      </div>
+                    </div>
+
+                    <% if user_signed_in? %>
+                      <div class="worker-btn">
+
+                        <%= link_to edit_menu_path(option.id), class:"btn" do %>
+                          <p>編集</p>
+                        <% end %>
+
+                        <%= link_to menu_path(option.id),class:"btn", method: :delete do %>
+                          <p>削除</p>
+                        <% end %>
+
+                      </div>
+                    <% end %>
+
+                  </div>
+
+                </div>
+
+              </div>
+            <% end %>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    </div>
+
+    <%= render "components/footer_second" %>
+
+  </body>
+
+</html>
