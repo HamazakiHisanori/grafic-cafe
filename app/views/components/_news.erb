@@ -6,22 +6,32 @@
 
   <div class="news-contents">
 
-    <% @news.each do |news| %>
+    <% if @news.present? %>
 
-      <div class="news-background">
+      <% @news.each do |news| %>
 
-        <div class="news-content">
+        <div class="news-background">
 
-          <div class="news-content-date">
-            <p><%= "#{news.created_at.year}.#{news.created_at.month}.#{news.created_at.day}" %></p>
-          </div>
+          <div class="news-content">
 
-          <div class="news-content-title">
-            <p>【<%= news.title %>】</p>
+            <div class="news-content-date">
+              <p><%= "#{news.created_at.year}.#{news.created_at.month}.#{news.created_at.day}" %></p>
+            </div>
+
+            <div class="news-content-title">
+              <p>【<%= news.title %>】</p>
+            </div>
+
           </div>
 
         </div>
 
+      <% end %>
+
+    <% else %>
+
+      <div class="else-sentence">
+        <p>現在お知らせはございません</p>
       </div>
 
     <% end %>

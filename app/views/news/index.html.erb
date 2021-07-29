@@ -20,54 +20,64 @@
 
         <div class="background">
 
-          <% @news.each do |news| %>
-            <div class="content-background">
+          <% if @news.present? %>
 
-              <div class="content">
+            <% @news.each do |news| %>
+              <div class="content-background">
 
-                <div class="text">
+                <div class="content">
 
-                  <div class="data">
-                    <p><%= "#{news.created_at.year}.#{news.created_at.month}.#{news.created_at.day}" %></p>
-                  </div>
+                  <div class="text">
 
-                  <div class="news-title">
-                    <p>【<%= news.title %>】</p>
-                  </div>
-
-                  <div class="description">
-                    <div class="description-text">
-                      <p><%= news.contents %></p>
+                    <div class="data">
+                      <p><%= "#{news.created_at.year}.#{news.created_at.month}.#{news.created_at.day}" %></p>
                     </div>
-                  </div>
 
-                </div>
-
-                <div class="image-box">
-
-                  <div class="news-image">
-                    <%= image_tag news.image, class:"image" %>
-                  </div>
-
-                  <% if user_signed_in? %>
-                    <div class="worker-btn">
-
-                      <%= link_to edit_news_path(news.id), class:"btn" do %>
-                        <p>編集</p>
-                      <% end %>
-
-                      <%= link_to news_path(news.id),class:"btn", method: :delete do %>
-                        <p>削除</p>
-                      <% end %>
-
+                    <div class="news-title">
+                      <p>【<%= news.title %>】</p>
                     </div>
-                  <% end %>
+
+                    <div class="description">
+                      <div class="description-text">
+                        <p><%= news.contents %></p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="image-box">
+
+                    <div class="news-image">
+                      <%= image_tag news.image, class:"image" %>
+                    </div>
+
+                    <% if user_signed_in? %>
+                      <div class="worker-btn">
+
+                        <%= link_to edit_news_path(news.id), class:"btn" do %>
+                          <p>編集</p>
+                        <% end %>
+
+                        <%= link_to news_path(news.id),class:"btn", method: :delete do %>
+                          <p>削除</p>
+                        <% end %>
+
+                      </div>
+                    <% end %>
+
+                  </div>
 
                 </div>
 
               </div>
+            <% end %>
 
-            </div>
+          <% else %>
+
+           <div class="else-sentence">
+             <p>現在お知らせはございません</p>
+           </div>
+
           <% end %>
 
         </div>

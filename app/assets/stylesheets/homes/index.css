@@ -188,12 +188,17 @@ body {
 }
 
 .title-background {
-  height: 100%;
-  width: 10%;
+  height: 150px;
+  width: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: seashell;
+}
+
+.home-icon {
+  height: 30px;
+  width: 30px;
 }
 
 h1 {
@@ -377,7 +382,7 @@ h2 {
   overflow: scroll;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
 }
 

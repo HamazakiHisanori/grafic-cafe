@@ -98,6 +98,7 @@ body {
   font-size: 70px;
   letter-spacing: 5px;
   color: white;
+  box-shadow: 2px 2px 8px  black;
 }
 
 .contents {
@@ -239,6 +240,16 @@ body {
 .btn:hover p {
   transition: 0.4s;
   color: white;
+}
+
+.else-sentence {
+  margin-bottom: 10vh;
+  height: 30vh;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
