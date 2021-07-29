@@ -371,8 +371,10 @@ h2 {
 }
 
 .news-contents {
+  min-height: 50vh;
+  max-height: 50vh;
   width: 90%;
-  flex-wrap: wrap;
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -380,7 +382,7 @@ h2 {
 }
 
 .news-background {
-  height: 10vh;
+  min-height: 10vh;
   width: 100%;
   background-color: rgb(250, 236, 219, 0.3);
   display: flex;
@@ -466,11 +468,22 @@ h2 {
 }
 
 .type-name p {
-  border-bottom: dotted 2px;
+  border-top: double 4px rgb(189, 175, 155);
+  border-bottom: double 4px rgb(189, 175, 155);
   font-size: 40px;
+  color: rgb(189, 175, 155);
 }
 
 .type-content {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-contents {
   height: 70vh;
   width: 100%;
   display: flex;

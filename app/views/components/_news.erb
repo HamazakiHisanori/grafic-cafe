@@ -6,7 +6,7 @@
 
   <div class="news-contents">
 
-    <% @news.first(5).each do |news| %>
+    <% @news.each do |news| %>
 
       <div class="news-background">
 
@@ -17,7 +17,7 @@
           </div>
 
           <div class="news-content-title">
-            <p><%= news.title %></p>
+            <p>【<%= news.title %>】</p>
           </div>
 
         </div>
@@ -27,12 +27,6 @@
     <% end %>
 
   </div>
-
-    <% if @news.length >= 5 %>
-      <div class="multi">
-        <p><%= "その他(#{@news.length - 5})"%></p>
-      </div>
-    <% end %>
 
   <div class="catalog-bar">
     <%=  link_to news_index_path, class:"catalog-btn" do %>

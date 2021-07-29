@@ -1,17 +1,13 @@
 class HomesController < ApplicationController
+  before_action :set_params, only: [:index, :create]
+
 
   def index
-    @news = News.order('created_at DESC')
-    @menus_drink = Menu.where(type_id: name='2')
-    @menus_food =  Menu.where(type_id: name='3')
-    @menus_option =  Menu.where(type_id: name='4')
     @contact = Contact.new
 
   end
 
   def create
-    @news = News.order('created_at DESC')
-    @menus = Menu.order('created_at DESC')
     @contact = Contact.new(contact_params)
     if @contact.save
       redirect_to root_path
@@ -27,6 +23,13 @@ class HomesController < ApplicationController
 
   def contact_params
     params.require(:contact).permit(:name, :email, :phone_number, :category_id, :content, :reply_id)
+  end
+
+  def set_params
+    @news = News.order('created_at DESC')
+    @menus_drink = Menu.where(type_id: name='2')
+    @menus_food =  Menu.where(type_id: name='3')
+    @menus_option =  Menu.where(type_id: name='4')
   end
 
 end

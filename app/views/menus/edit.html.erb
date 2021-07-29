@@ -1,33 +1,90 @@
-<div>edit</div>
+<!DOCTYPE html>
+<html>
 
-<%= form_with model: @menu, url: menu_path, local: true do |f| %>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'menus/new_edit' %>
+  </head>
 
-<%= render "/shared/error_messages", model: @menu %>
+  <body>
 
+    <%= render "components/homebar" %>
 
-<div>
-  <%= f.label :image, "画像" %><br />
-  <%= f.file_field :image %>
-</div>
+    <div class="new-edit-menu">
 
-<div>
-  <%= f.label :name, "名前" %><br />
-  <%= f.text_field :name %>
-</div>
+      <div class="background">
 
-<div>
-  <%= f.label :description, "説明" %><br />
-  <%= f.text_area :description %>
-</div>
+        <div class="contents">
 
-<div>
-  <%= f.label :price, "値段" %><br />
-  <%= f.text_area :price %>
-</div>
+          <div class="title">
+            <h2>Edit Menu</h2>
+          </div>
 
-<div class="sell-btn-contents">
-      <%= f.submit "変更する", class:"sell-btn" %>
-      <%=link_to 'もどる', menu_path(@menu.id), class:"back-btn" %>
+          <%= render "/shared/error_messages", model: @menu %>
+
+          <%= form_with model: @menu, url: menu_path(@menu.id), class:"form", local: true do |f| %>
+
+            <div class="type-title">
+              <p>メニューの種類を選択</p>
+              <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"select"}) %>
+            </div>
+
+            <div class="content">
+
+              <div class="image">
+
+                <div class="image-select">
+                  <p>画像選択</p>
+                  <%= f.file_field :image %>
+                </div>
+
+                <div class="preview">
+                </div>
+
+              </div>
+
+              <div class="text">
+
+                <div class="name-price">
+
+                  <div class="each">
+                    <p>名前</p>
+                    <%= f.text_field :name, class:"each-input" %>
+                  </div>
+
+                  <div class="each">
+                    <p>値段</p>
+                    <p>¥<%= f.text_field :price, class:"each-input"  %></p>
+                  </div>
+
+                </div>
+
+                <div class="description">
+                  <p>説明</p>
+                  <%= f.text_area :description, class:"description-input"%>
+                </div>
+
+                <div class="form-btn">
+                  <%= f.submit "編集する", class:"btn" %>
+                  <%= link_to menus_path, class:"btn" do %>
+                    <p>戻る</p>
+                  <% end %>
+                </div>
+
+              </div>
+
+            </div>
+
+          <% end %>
+
+        </div>
+
+      </div>
+
     </div>
 
-<% end %>
+    <%= render "components/footer_second" %>
+
+  </body>
+
+</html>

@@ -3,14 +3,14 @@
 
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
-    <%= stylesheet_link_tag 'menus/new' %>
+    <%= stylesheet_link_tag 'menus/new_edit' %>
   </head>
 
   <body>
 
     <%= render "components/homebar" %>
 
-    <div class="new-menu">
+    <div class="new- edit-menu">
 
       <div class="background">
 
@@ -20,9 +20,9 @@
             <h2>New Menu</h2>
           </div>
 
-          <%= form_with model: @menu, url: menus_path, class:"form", local: true do |f| %>
+          <%= render "/shared/error_messages", model: @menu %>
 
-            <%= render "/shared/error_messages", model: @menu %>
+          <%= form_with model: @menu, url: menus_path, class:"form", local: true do |f| %>
 
             <div class="type-title">
               <p>メニューの種類を選択</p>
@@ -66,7 +66,7 @@
 
                 <div class="form-btn">
                   <%= f.submit "出品する", class:"btn" %>
-                  <%= link_to root_path, class:"btn" do %>
+                  <%= link_to "/homes/worker", class:"btn" do %>
                     <p>戻る</p>
                   <% end %>
                 </div>

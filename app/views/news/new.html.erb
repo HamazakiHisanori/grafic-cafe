@@ -3,14 +3,14 @@
 
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
-    <%= stylesheet_link_tag 'news/new' %>
+    <%= stylesheet_link_tag 'news/new_edit' %>
   </head>
 
   <body>
 
     <%= render "components/homebar" %>
 
-    <div class="new-news">
+    <div class="new-edit-news">
 
       <div class="background">
 
@@ -20,9 +20,9 @@
             <h2>New News</h2>
           </div>
 
-          <%= form_with model: @news, url: news_index_path, class:"form", local: true do |f| %>
+          <%= render "/shared/error_messages", model: @news %>
 
-            <%= render "/shared/error_messages", model: @news %>
+          <%= form_with model: @news, url: news_index_path, class:"form", local: true do |f| %>
 
             <div class="content">
 

@@ -28,54 +28,64 @@
               <p>ドリンク</p>
             </div>
 
-            <% @menus_drink.each do |drink| %>
-              <div class="content">
+            <% if @menus_drink.present? %>
 
-                <div class="item">
+              <% @menus_drink.each do |drink| %>
+                <div class="content">
 
-                  <div class="image-box">
-                    <%= image_tag drink.image, class:"image" %>
-                  </div>
+                  <div class="item">
 
-                  <div class="text">
-
-                    <div class="name-price">
-
-                      <div class="name">
-                        <p><%= drink.name %></p>
-                      </div>
-
-                      <div class="price">
-                        <p><%="¥#{drink.price}"%></p>
-                      </div>
-
+                    <div class="image-box">
+                      <%= image_tag drink.image, class:"image" %>
                     </div>
 
-                    <div class="description">
-                      <div class="flame">
-                        <p><%= drink.description %></p>
+                    <div class="text">
+
+                      <div class="name-price">
+
+                        <div class="name">
+                          <p><%= drink.name %></p>
+                        </div>
+
+                        <div class="price">
+                          <p><%="¥#{drink.price}"%></p>
+                        </div>
+
                       </div>
+
+                      <div class="description">
+                        <div class="flame">
+                          <p><%= drink.description %></p>
+                        </div>
+                      </div>
+
+                      <% if user_signed_in? %>
+                        <div class="worker-btn">
+
+                          <%= link_to edit_menu_path(drink.id), class:"btn" do %>
+                            <p>編集</p>
+                          <% end %>
+
+                          <%= link_to menu_path(drink.id),class:"btn", method: :delete do %>
+                            <p>削除</p>
+                          <% end %>
+
+                        </div>
+                      <% end %>
+
                     </div>
-
-                    <% if user_signed_in? %>
-                      <div class="worker-btn">
-
-                        <%= link_to edit_menu_path(drink.id), class:"btn" do %>
-                          <p>編集</p>
-                        <% end %>
-
-                        <%= link_to menu_path(drink.id),class:"btn", method: :delete do %>
-                          <p>削除</p>
-                        <% end %>
-
-                      </div>
-                    <% end %>
 
                   </div>
 
                 </div>
+              <% end %>
 
+            <% else %>
+
+              <div class="else-sentence">
+                <p>現在取扱商品がございません</p>
               </div>
+
             <% end %>
 
           </div>
@@ -86,54 +96,64 @@
               <p>フード</p>
             </div>
 
-            <% @menus_food.each do |food| %>
-              <div class="content">
+            <%if @menus_food.present?%>
 
-                <div class="item">
+              <% @menus_food.each do |food| %>
+                <div class="content">
 
-                  <div class="image-box">
-                    <%= image_tag food.image, class:"image" %>
-                  </div>
+                  <div class="item">
 
-                  <div class="text">
-
-                    <div class="name-price">
-
-                      <div class="name">
-                        <p><%= food.name %></p>
-                      </div>
-
-                      <div class="price">
-                        <p><%="¥#{food.price}"%></p>
-                      </div>
-
+                    <div class="image-box">
+                      <%= image_tag food.image, class:"image" %>
                     </div>
 
-                    <div class="description">
-                      <div class="flame">
-                        <p><%= food.description %></p>
+                    <div class="text">
+
+                      <div class="name-price">
+
+                        <div class="name">
+                          <p><%= food.name %></p>
+                        </div>
+
+                        <div class="price">
+                          <p><%="¥#{food.price}"%></p>
+                        </div>
+
                       </div>
+
+                      <div class="description">
+                        <div class="flame">
+                          <p><%= food.description %></p>
+                        </div>
+                      </div>
+
+                      <% if user_signed_in? %>
+                        <div class="worker-btn">
+
+                          <%= link_to edit_menu_path(food.id), class:"btn" do %>
+                            <p>編集</p>
+                          <% end %>
+
+                          <%= link_to menu_path(food.id),class:"btn", method: :delete do %>
+                            <p>削除</p>
+                          <% end %>
+
+                        </div>
+                      <% end %>
+
                     </div>
-
-                    <% if user_signed_in? %>
-                      <div class="worker-btn">
-
-                        <%= link_to edit_menu_path(food.id), class:"btn" do %>
-                          <p>編集</p>
-                        <% end %>
-
-                        <%= link_to menu_path(food.id),class:"btn", method: :delete do %>
-                          <p>削除</p>
-                        <% end %>
-
-                      </div>
-                    <% end %>
 
                   </div>
 
                 </div>
+              <% end %>
 
+            <% else %>
+
+              <div class="else-sentence">
+                <p>現在取扱商品がございません</p>
               </div>
+
             <% end %>
 
           </div>
@@ -144,54 +164,64 @@
               <p>その他</p>
             </div>
 
-            <% @menus_option.each do |option| %>
-              <div class="content">
+            <%if @menus_option.present? %>
 
-                <div class="item">
+              <% @menus_option.each do |option| %>
+                <div class="content">
 
-                  <div class="image-box">
-                    <%= image_tag option.image, class:"image" %>
-                  </div>
+                  <div class="item">
 
-                  <div class="text">
-
-                    <div class="name-price">
-
-                      <div class="name">
-                        <p><%= option.name %></p>
-                      </div>
-
-                      <div class="price">
-                        <p><%="¥#{option.price}"%></p>
-                      </div>
-
+                    <div class="image-box">
+                      <%= image_tag option.image, class:"image" %>
                     </div>
 
-                    <div class="description">
-                      <div class="flame">
-                        <p><%= option.description %></p>
+                    <div class="text">
+
+                      <div class="name-price">
+
+                        <div class="name">
+                          <p><%= option.name %></p>
+                        </div>
+
+                        <div class="price">
+                          <p><%="¥#{option.price}"%></p>
+                        </div>
+
                       </div>
+
+                      <div class="description">
+                        <div class="flame">
+                          <p><%= option.description %></p>
+                        </div>
+                      </div>
+
+                      <% if user_signed_in? %>
+                        <div class="worker-btn">
+
+                          <%= link_to edit_menu_path(option.id), class:"btn" do %>
+                            <p>編集</p>
+                          <% end %>
+
+                          <%= link_to menu_path(option.id),class:"btn", method: :delete do %>
+                            <p>削除</p>
+                          <% end %>
+
+                        </div>
+                      <% end %>
+
                     </div>
-
-                    <% if user_signed_in? %>
-                      <div class="worker-btn">
-
-                        <%= link_to edit_menu_path(option.id), class:"btn" do %>
-                          <p>編集</p>
-                        <% end %>
-
-                        <%= link_to menu_path(option.id),class:"btn", method: :delete do %>
-                          <p>削除</p>
-                        <% end %>
-
-                      </div>
-                    <% end %>
 
                   </div>
 
                 </div>
+              <% end %>
 
+            <% else %>
+
+              <div class="else-sentence">
+                <p>現在取扱商品がございません</p>
               </div>
+
             <% end %>
 
           </div>

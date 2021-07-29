@@ -12,32 +12,46 @@
         <p>ドリンク</p>
       </div>
 
-      <div class="type-content">
+      <div class="type-content" >
 
-        <% @menus_drink.first(3).each do |drink| %>
+        <% if @menus_drink.present? %>
 
-          <div class="menu-content">
+          <div class="item-contents">
 
-            <div class="menu-image">
-              <%= image_tag drink.image, class:"menu-image-tag"%>
-            </div>
+            <% @menus_drink.first(3).each do |drink| %>
 
-            <div class="menu-text">
-              <p><%= drink.name %></p>
-              <p><%= "¥#{drink.price}" %><p>
-            </div>
+              <div class="menu-content">
+
+                <div class="menu-image">
+                  <%= image_tag drink.image, class:"menu-image-tag"%>
+                </div>
+
+                <div class="menu-text">
+                  <p><%= drink.name %></p>
+                  <p><%= "¥#{drink.price}" %><p>
+                </div>
+
+              </div>
+
+            <% end %>
 
           </div>
 
-        <% end %>
+          <div class="multi">
+            <% if @menus_drink.length >= 3 %>
+              <p><%= "その他(#{@menus_drink.length - 3})"%></p>
+            <% else %>
+              <p>その他(0)</p>
+            <% end %>
+          </div>
+
+        <% else %>
+
+          <p>現在取扱商品がございません</p>
+
+        <% end%>
 
       </div>
-
-      <% if @menus_drink.length >= 3 %>
-        <div class="multi">
-          <p><%= "その他(#{@menus_drink.length - 3})"%></p>
-        </div>
-      <% end %>
 
     </div>
 
@@ -47,78 +61,104 @@
         <p>フード</p>
       </div>
 
-      <div class="type-content">
+      <div class="type-content" >
 
-        <% @menus_food.first(3).each do |food| %>
+        <% if @menus_food.present? %>
 
-          <div class="menu-content">
+          <div class="item-contents">
 
-            <div class="menu-image">
-              <%= image_tag food.image, class:"menu-image-tag"%>
-            </div>
+            <% @menus_food.first(3).each do |food| %>
 
-            <div class="menu-text">
-              <p><%= food.name %></p>
-              <p><%= "¥#{food.price}" %><p>
-            </div>
+              <div class="menu-content">
+
+                <div class="menu-image">
+                  <%= image_tag food.image, class:"menu-image-tag"%>
+                </div>
+
+                <div class="menu-text">
+                  <p><%= food.name %></p>
+                  <p><%= "¥#{food.price}" %><p>
+                </div>
+
+              </div>
+
+            <% end %>
 
           </div>
 
-        <% end %>
+          <div class="multi">
+            <% if @menus_food.length >= 3 %>
+              <p><%= "その他(#{@menus_food.length - 3})"%></p>
+            <% else %>
+              <p>その他(0)</p>
+            <% end %>
+          </div>
+
+        <% else %>
+
+          <p>現在取扱商品がございません</p>
+
+        <% end%>
 
       </div>
-
-      <% if @menus_food.length >= 3 %>
-        <div class="multi">
-          <p><%= "その他(#{@menus_food.length - 3})"%></p>
-        </div>
-      <% end %>
 
     </div>
 
-    <% if @menus_option.present? %>
-      <div class="type">
+    <div class="type">
 
-        <div class="type-name">
-          <p>その他</p>
-        </div>
+      <div class="type-name">
+        <p>グッズなど</p>
+      </div>
 
-        <div class="type-content">
+      <div class="type-content" >
 
-          <% @menus_option.first(3).each do |option| %>
+        <% if @menus_option.present? %>
 
-            <div class="menu-content">
+          <div class="item-contents">
 
-              <div class="menu-image">
-                <%= image_tag option.image, class:"menu-image-tag"%>
+            <% @menus_option.first(3).each do |option| %>
+
+              <div class="menu-content">
+
+                <div class="menu-image">
+                  <%= image_tag option.image, class:"menu-image-tag"%>
+                </div>
+
+                <div class="menu-text">
+                  <p><%= option.name %></p>
+                  <p><%= "¥#{option.price}" %><p>
+                </div>
+
               </div>
 
-              <div class="menu-text">
-                <p><%= option.name %></p>
-                <p><%= "¥#{option.price}" %><p>
-              </div>
+            <% end %>
 
-            </div>
-
-          <% end %>
-
-        </div>
-
-        <% if @menus_option.length >= 3 %>
-          <div class="multi">
-            <p><%= "その他(#{@menus_option.length - 3})"%></p>
           </div>
-        <% end %>
+
+          <div class="multi">
+            <% if @menus_option.length >= 3 %>
+              <p><%= "その他(#{@menus_option.length - 3})"%></p>
+            <% else %>
+              <p>その他(0)</p>
+            <% end %>
+          </div>
+
+        <% else %>
+
+          <p>現在取扱商品がございません</p>
+
+        <% end%>
 
       </div>
-    <% end %>
 
-  </div>
+    </div>
 
-  <div class="catalog-bar">
-    <%=  link_to menus_path, class:"catalog-btn" do %>
-      <p>一覧へ</p>
-    <% end %>
+    <div class="catalog-bar">
+      <%=  link_to menus_path, class:"catalog-btn" do %>
+        <p>一覧へ</p>
+      <% end %>
+    </div>
+
   </div>
 
 </div>

@@ -15,9 +15,9 @@ Rails.application.config.assets.precompile += %w(
   homes/index.css
   homes/worker.css
   menus/index
-  menus/new
+  menus/new_edit
   news/index
-  news/new
+  news/new_edit
   devise/registration.css
   devise/session.css
   components/homebar.css

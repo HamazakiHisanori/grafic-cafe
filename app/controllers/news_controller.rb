@@ -25,7 +25,7 @@ class NewsController < ApplicationController
 
   def update
     if @news.update(news_params)
-      redirect_to news_path(@news.id)
+      redirect_to news_index_path
     else
       render :edit
     end
@@ -33,7 +33,7 @@ class NewsController < ApplicationController
 
   def destroy
     @news.destroy
-    redirect_to root_path
+    redirect_to news_index_path
   end
 
   private

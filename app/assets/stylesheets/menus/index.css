@@ -134,6 +134,8 @@ body {
   flex-wrap: wrap;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .type-title {
@@ -219,8 +221,9 @@ body {
 }
 
 .flame p {
-  font-family: "Yomogi", cursive;
+  font-family: serif;
   font-size: 18px;
+  white-space: pre-wrap;
 }
 
 .worker-btn {
@@ -258,4 +261,12 @@ body {
 .btn:hover p {
   transition: 0.4s;
   color: white;
+}
+
+.else-sentence {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

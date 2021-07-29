@@ -4,9 +4,9 @@ class MenusController < ApplicationController
 
 
   def index
-    @menus_drink = Menu.where(type_id: name='2')
-    @menus_food =  Menu.where(type_id: name='3')
-    @menus_option =  Menu.where(type_id: name='4')
+    @menus_drink = Menu.where(type_id: name='2').order('created_at DESC')
+    @menus_food =  Menu.where(type_id: name='3').order('created_at DESC')
+    @menus_option =  Menu.where(type_id: name='4').order('created_at DESC')
   end
 
   def new
@@ -16,7 +16,7 @@ class MenusController < ApplicationController
   def create
     @menu = Menu.new(menu_params)
     if @menu.save
-      redirect_to root_path
+      redirect_to menus_path
     else
       render :new
     end

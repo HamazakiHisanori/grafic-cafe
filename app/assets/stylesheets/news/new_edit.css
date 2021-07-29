@@ -73,8 +73,8 @@ body {
   flex-direction: column;
 }
 
-.new-menu {
-  height: 75vh;
+.new-edit-news {
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -82,29 +82,29 @@ body {
 }
 
 .background {
-  height: 90%;
+  min-height: 90vh;
   width: 90%;
-  background-image: url(/images/menu.jpeg);
+  background-image: url(/images/news.jpeg);
   background-size: cover;
-  background-position: bottom;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .contents {
-  height: 90%;
+  min-height: 70vh;
   width: 90%;
   box-shadow: 0 0 4px gray;
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: lighten;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
 .title {
+  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -113,44 +113,24 @@ body {
 
 .title h2 {
   font-size: 40px;
+  border-bottom: dotted 3px;
 }
 
 .form {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-}
-
-.type-title {
-  height: 15%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
-.select {
-  height: 40%;
-  width: 20%;
-}
-
-.content {
-  height: 85%;
+  height: 60vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.image {
+.content {
   height: 100%;
   width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
 .image-select {
@@ -167,51 +147,38 @@ body {
   width: 100%;
 }
 
-.text {
-  height: 100%;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-
-.name-price {
-  height: 20%;
+.news-title {
+  height: 15%;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.each {
-  height: 100%;
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.each-input {
+.title-input {
+  width: 80%;
   border: solid 1px;
 }
 
-.description {
-  height: 60%;
+.news-contents {
+  height: 70%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-.description-input {
+.contents-input {
+  border: solid 1px;
+  border-radius: 5px;
   height: 70%;
   width: 80%;
-  border-radius: 10px;
 }
 
-.form-btn {
-  height: 20%;
+.btns {
+  height: 15%;
   width: 100%;
   display: flex;
   justify-content: space-around;

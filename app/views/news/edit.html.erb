@@ -1,29 +1,75 @@
-<div>edit</div>
+<!DOCTYPE html>
+<html>
 
-<%= form_with model: @news, url: news_path, local: true do |f| %>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'news/new_edit' %>
+  </head>
 
-<%= render "/shared/error_messages", model: @news %>
+  <body>
 
+    <%= render "components/homebar" %>
 
-<div>
-  <%= f.label :image, "画像" %><br />
-  <%= f.file_field :image %>
-</div>
+    <div class="new-edit-news">
 
-<div>
-  <%= f.label :title, "名前" %><br />
-  <%= f.text_field :title %>
-</div>
+      <div class="background">
 
-<div>
-  <%= f.label :contents, "説明" %><br />
-  <%= f.text_area :contents %>
-</div>
+        <div class="contents">
 
+          <div class="title">
+            <h2>Edit News</h2>
+          </div>
 
-<div class="sell-btn-contents">
-      <%= f.submit "変更する", class:"sell-btn" %>
-      <%=link_to 'もどる', news_path(@news.id), class:"back-btn" %>
+          <%= render "/shared/error_messages", model: @news %>
+
+          <%= form_with model: @news, url: news_path, class:"form", local: true do |f| %>
+
+            <div class="content">
+
+              <div class="image-select">
+                <p>画像選択</p>
+                <%= f.file_field :image %>
+              </div>
+
+              <div class="preview">
+              </div>
+
+            </div>
+
+            <div class="content">
+
+              <div class="news-title">
+                <p>タイトル</p>
+                <%= f.text_field :title, class:"title-input" %>
+              </div>
+
+              <div class="news-contents">
+                <p>内容</p>
+                <%= f.text_area :contents, class:"contents-input" %>
+              </div>
+
+              <div class="btns">
+
+                <%= f.submit "変更する", class:"btn" %>
+
+                <%= link_to news_index_path, class:"btn"  do %>
+                  <p>戻る</p>
+                <% end %>
+
+              </div>
+
+            </div>
+
+          <% end %>
+
+        </div>
+
+      </div>
+
     </div>
 
-<% end %>
+    <%= render "components/footer_second" %>
+
+  </body>
+
+</html>
