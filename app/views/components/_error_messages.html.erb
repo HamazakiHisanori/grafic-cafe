@@ -1,8 +1,10 @@
+<%= stylesheet_link_tag 'components/error_messages' %>
+
 <% if model.errors.any? %>
-<div class="error-alert">
+<div class="error">
   <ul>
     <% model.errors.full_messages.each do |message| %>
-    <li class='error-message'><%= message %></li>
+    <li><%= message %></li>
     <% end %>
   </ul>
 </div>

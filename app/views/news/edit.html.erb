@@ -20,7 +20,7 @@
             <h2>Edit News</h2>
           </div>
 
-          <%= render "/shared/error_messages", model: @news %>
+          <%= render "components/error_messages", model: @news %>
 
           <%= form_with model: @news, url: news_path, class:"form", local: true do |f| %>
 

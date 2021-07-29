@@ -14,12 +14,18 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w(
   homes/index.css
   homes/worker.css
-  menus/index
-  menus/new_edit
-  news/index
-  news/new_edit
+  menus/index.css
+  menus/new_edit.css
+  news/index.css
+  news/new_edit.css
   devise/registration.css
   devise/session.css
+  components/access.css
+  components/contact.css
   components/homebar.css
+  components/menu.css
+  components/news.css
+  components/footer.css
   components/footer_second.css
+  components/error_messages.css
 )

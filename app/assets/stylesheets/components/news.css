@@ -1,0 +1,77 @@
+/* news */
+
+.news {
+  margin-bottom: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-title-bar {
+  height: 40vh;
+  width: 100%;
+  background-image: url(/images/news.JPG);
+  background-position: top;
+  background-size: cover;
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 70px;
+  letter-spacing: 5px;
+  color: white;
+  box-shadow: 2px 2px 8px  black;
+}
+
+.news-contents {
+  min-height: 50vh;
+  max-height: 50vh;
+  width: 90%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-background {
+  min-height: 10vh;
+  width: 100%;
+  background-color: rgb(250, 236, 219, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-content {
+  border-bottom: dotted 2px;
+  height: 80%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-content-date {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-content-date p {
+  font-weight: bold;
+}
+
+.news-content-title {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

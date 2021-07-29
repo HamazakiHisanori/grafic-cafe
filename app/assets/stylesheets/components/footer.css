@@ -48,10 +48,31 @@
   width: 40px;
 }
 
-.footer-key h5 {
-  font-size: 25px;
+/* 従業員ボタン */
+
+.worker {
+  border: solid 1px white;
+  border-radius: 10px;
+  height: 80%;
+  width: 70%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.worker:hover {
+  transition: 0.4s;
+  background-color: white;
+  box-shadow: 0 0 4px gray;
+}
+
+.worker p {
   color: white;
 }
 
-
-
+.worker:hover p {
+  transition: 0.4s;
+  color: rgb(176, 222, 230);
+}

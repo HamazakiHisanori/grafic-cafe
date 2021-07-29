@@ -20,7 +20,7 @@
             <h2>New Menu</h2>
           </div>
 
-          <%= render "/shared/error_messages", model: @menu %>
+          <%= render "components/error_messages", model: @menu %>
 
           <%= form_with model: @menu, url: menus_path, class:"form", local: true do |f| %>
 

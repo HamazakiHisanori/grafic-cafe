@@ -16,6 +16,12 @@
       <% end %>
     </div>
 
+    <% if user_signed_in? %>
+      <div class="footer-key">
+        <h5><%= current_user.name %></h5>
+      </div>
+    <% end %>
+
     <div class="footer-key">
       <div class="telephone">
         <%= image_tag "telephone.png", class:"icon" %>

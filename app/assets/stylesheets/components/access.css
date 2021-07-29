@@ -1,0 +1,167 @@
+/* access */
+
+.access {
+  margin-bottom: 10vh;
+  max-height: 170vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.access-title-bar {
+  height: 40vh;
+  width: 100%;
+  background-image: url(/images/access.jpeg);
+  background-position: top;
+  background-size: cover;
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 70px;
+  letter-spacing: 5px;
+  color: white;
+}
+
+.access-contents {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.access-content-background {
+  height: 90%;
+  width: 90%;
+  background-color: rgb(250, 236, 219, 0.3);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.access-image {
+  height: 90%;
+  width: 45%;
+  overflow: hidden;
+  background-image: url(/images/access.jpg);
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  transition: 0.4s;
+}
+
+.access-image:hover {
+  opacity: 0.7;
+  transition: 0.4s;
+}
+
+.hover {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.access-image:hover .hover {
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.hover p {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 5%;
+}
+
+.access-textarea {
+  background-color: white;
+  height: 90%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.access-child {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.access-title {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.access-title h4 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.access-text {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.access-text p {
+  text-align: center;
+  border-bottom: dotted 2px gray;
+  margin-bottom: 3px;
+}
+
+.access-warning {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.access-warning-title {
+  height: 15%;
+  width: 30%;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.access-warning-title h4 {
+  border-bottom: solid 2px red;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.access-warning-text {
+  height: 80%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.access-warning-text p {
+  border-bottom: dotted 2px gray;
+  margin-bottom: 8px;
+}

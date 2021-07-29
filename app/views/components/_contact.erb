@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag 'components/contact' %>
+
 <div class="contact">
 
   <div class="contact-title-bar">
@@ -18,7 +20,7 @@
 
       <div class="contact-box">
 
-        <%= render "/shared/error_messages", model: @contact %>
+        <%= render "components/error_messages", model: @contact %>
 
         <div class ="contact-box-background">
 

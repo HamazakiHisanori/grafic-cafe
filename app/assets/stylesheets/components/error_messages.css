@@ -1,0 +1,9 @@
+/* error_messages */
+
+.error {
+  padding-bottom: 10px;
+}
+
+.error li {
+  border-bottom: dotted 1px red;
+}
