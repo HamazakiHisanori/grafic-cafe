@@ -145,6 +145,15 @@ body {
 .preview {
   height: 80%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-size {
+  height: 80%;
+  width: 80%;
+  overflow: hidden;
 }
 
 .news-title {
@@ -177,7 +186,11 @@ body {
   width: 80%;
 }
 
-.btns {
+::placeholder {
+  opacity: 0.5;
+}
+
+.form-btn {
   height: 15%;
   width: 100%;
   display: flex;

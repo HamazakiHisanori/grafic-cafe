@@ -35,10 +35,12 @@
 
                 <div class="image-select">
                   <p>画像選択</p>
-                  <%= f.file_field :image %>
+                  <%= f.file_field :image, id:"input-image" %>
                 </div>
 
                 <div class="preview">
+                  <div class="preview-size" id="preview">
+                  </div>
                 </div>
 
               </div>
@@ -49,19 +51,19 @@
 
                   <div class="each">
                     <p>名前</p>
-                    <%= f.text_field :name, class:"each-input" %>
+                    <%= f.text_field :name, class:"each-input", placeholder:"16字以内" %>
                   </div>
 
                   <div class="each">
                     <p>値段</p>
-                    <p>¥<%= f.text_field :price, class:"each-input"  %></p>
+                    <p>¥<%= f.text_field :price, class:"each-input", placeholder:"9999まで"  %></p>
                   </div>
 
                 </div>
 
                 <div class="description">
                   <p>説明</p>
-                  <%= f.text_area :description, class:"description-input"%>
+                  <%= f.text_area :description, class:"description-input", placeholder:"100字以内" %>
                 </div>
 
                 <div class="form-btn">

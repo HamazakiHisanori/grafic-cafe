@@ -28,10 +28,12 @@
 
               <div class="image-select">
                 <p>画像選択</p>
-                <%= f.file_field :image %>
+                <%= f.file_field :image, id:"input-image" %>
               </div>
 
               <div class="preview">
+                <div class="preview-size" id="preview">
+                </div>
               </div>
 
             </div>

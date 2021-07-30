@@ -28,10 +28,12 @@
 
               <div class="image-select">
                 <p>画像選択</p>
-                <%= f.file_field :image %>
+                <%= f.file_field :image, id:"input-image" %>
               </div>
 
               <div class="preview">
+                <div class="preview-size" id="preview">
+                </div>
               </div>
 
             </div>
@@ -40,15 +42,15 @@
 
               <div class="news-title">
                 <p>タイトル</p>
-                <%= f.text_field :title, class:"title-input" %>
+                <%= f.text_field :title, class:"title-input", placeholder:"40字以内" %>
               </div>
 
               <div class="news-contents">
                 <p>内容</p>
-                <%= f.text_area :contents, class:"contents-input" %>
+                <%= f.text_area :contents, class:"contents-input", placeholder:"300字以内" %>
               </div>
 
-              <div class="btns">
+              <div class="form-btn">
 
                 <%= f.submit "投稿する", class:"btn" %>
 

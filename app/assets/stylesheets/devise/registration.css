@@ -141,6 +141,10 @@ body {
   border: solid 1px rgb(201, 201, 201);
 }
 
+::placeholder {
+  opacity: 0.5;
+}
+
 .form-btn {
   height: 50%;
   width: 20%;

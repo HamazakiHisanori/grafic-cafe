@@ -204,7 +204,7 @@ body {
 
 .name-price p {
   font-family: "Yomogi", cursive;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -219,12 +219,14 @@ body {
 .flame {
   height: 80%;
   width: 80%;
+  overflow: hidden;
 }
 
 .flame p {
   font-family: serif;
   font-size: 18px;
   white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .worker-btn {

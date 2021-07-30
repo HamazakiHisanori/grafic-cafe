@@ -171,6 +171,20 @@ body {
 .preview {
   height: 80%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-size {
+  height: 80%;
+  width: 80%;
+  overflow: hidden;
+}
+
+.render-image {
+  height: 100%;
+  width: 100%;
 }
 
 .text {
@@ -214,6 +228,10 @@ body {
   height: 70%;
   width: 80%;
   border-radius: 10px;
+}
+
+::placeholder {
+  opacity: 0.5;
 }
 
 .form-btn {
