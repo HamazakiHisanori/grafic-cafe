@@ -29,10 +29,10 @@ RSpec.describe Menu, type: :model do
       expect(@menu.errors.full_messages).to include('名前を入力してください')
     end
 
-    it 'descriptionが空だと追加できない' do
-      @menu.description = ''
+    it 'nameが16字以上だと追加できない' do
+      @menu.name = 'a' * 16
       @menu.valid?
-      expect(@menu.errors.full_messages).to include('説明文を入力してください')
+      expect(@menu.errors.full_messages).to include('名前は15文字以内で入力してください')
     end
 
     it 'priceが空だと追加できない' do
@@ -57,6 +57,24 @@ RSpec.describe Menu, type: :model do
       @menu.price = 'sample1000'
       @menu.valid?
       expect(@menu.errors.full_messages).to include('値段は数値で入力してください')
+    end
+
+    it 'priceが10000以上では追加できない' do
+      @menu.price = '10000'
+      @menu.valid?
+      expect(@menu.errors.full_messages).to include('値段は9999以下の値にしてください')
+    end
+
+    it 'descriptionが空だと追加できない' do
+      @menu.description = ''
+      @menu.valid?
+      expect(@menu.errors.full_messages).to include('説明文を入力してください')
+    end
+
+    it 'descriptionが101字以上だと追加できない' do
+      @menu.description = 'a' * 101
+      @menu.valid?
+      expect(@menu.errors.full_messages).to include('説明文は100文字以内で入力してください')
     end
 
     it 'userが紐付いていないと追加できない' do
