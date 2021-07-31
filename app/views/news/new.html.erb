@@ -20,7 +20,7 @@
             <h2>New News</h2>
           </div>
 
-          <%= render "components/error_messages", model: @news %>
+          <%= render 'components/error_messages', model:@news %>
 
           <%= form_with model: @news, url: news_index_path, class:"form", local: true do |f| %>
 
@@ -42,12 +42,14 @@
 
               <div class="news-title">
                 <p>タイトル</p>
-                <%= f.text_field :title, class:"title-input", placeholder:"40字以内" %>
+                <%= f.text_field :title, class:"title-input", placeholder:"40字以内", id:"news-title" %>
+                <span class="error" id="news-title-error">タイトルを入力してください</span>
               </div>
 
               <div class="news-contents">
                 <p>内容</p>
-                <%= f.text_area :contents, class:"contents-input", placeholder:"最大300字以内(改行やスペースを使う場合300字以内でも文字がはみ出してしまい、表示されない場合がございますので一覧ページでご確認の上、編集をお願い致します)" %>
+                <%= f.text_area :contents, class:"contents-input", placeholder:"最大300字以内(改行やスペースを使う場合300字以内でも文字がはみ出してしまい、表示されない場合がございますので一覧ページでご確認の上、編集をお願い致します)", id:"news-contents" %>
+                <span class="error" id="news-contents-error">内容を入力してください</span>
               </div>
 
               <div class="form-btn">

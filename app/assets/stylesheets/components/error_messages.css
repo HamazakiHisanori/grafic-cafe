@@ -1,9 +1,12 @@
-/* error_messages */
+/* alert */
 
-.error {
-  padding-bottom: 10px;
+.alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.error li {
-  border-bottom: dotted 1px red;
+.alert p {
+  color: red;
 }

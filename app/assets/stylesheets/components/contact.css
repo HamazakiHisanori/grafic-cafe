@@ -2,7 +2,7 @@
 
 .contact {
   margin-bottom: 20vh;
-  min-height: 240vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,6 @@ h2 {
 }
 
 .contact-form {
-  min-height: 160vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -59,7 +58,6 @@ h2 {
 
 .contact-box {
   background-color: rgb(250, 236, 219, 0.3);
-  min-height: 150vh;
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -68,15 +66,15 @@ h2 {
 }
 
 .contact-box-background {
-  min-height: 90%;
   width: 70%;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   background-color: white;
   border: solid 2px rgb(189, 188, 188, 0.7);
+  box-shadow: 0 0 8px rgb(182, 181, 181);
   border-radius: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  box-shadow: 0 0 8px rgb(182, 181, 181);
   align-items: center;
 }
 
@@ -433,4 +431,8 @@ h2 {
 
 .contact-btn:hover .contact-btn-text {
   color: white;
+}
+
+.error {
+  color: red;
 }

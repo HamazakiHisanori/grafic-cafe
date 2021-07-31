@@ -20,29 +20,32 @@
             <h2>Sign up</h2>
           </div>
 
+          <%= render 'components/error_messages', model:@user %>
+
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class:"form"}) do |f| %>
-
-
-            <%= render "components/error_messages", model: @user %>
 
             <div class="content">
               <p>名前</p>
-              <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"input", placeholder:"10字以内" %>
+              <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"input", placeholder:"10字以内", id:"user-name" %>
+              <span class="error" id="user-name-error">お名前を入力してください</span>
             </div>
 
             <div class="content">
               <p>メールアドレス</p>
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input" %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input", id:"user-mail" %>
+              <span class="error" id="user-mail-error">メールアドレスを入力してください</span>
             </div>
 
             <div class="content">
               <p>パスワード</p>
-              <%= f.password_field :password, autocomplete: "new-password", class:"input" %>
+              <%= f.password_field :password, autocomplete: "new-password", class:"input", id:"password" %>
+              <span class="error" id="password-error">パスワードを入力してください</span>
             </div>
 
             <div class="content">
               <p>パスワード(確認)</p>
-              <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"input" %>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"input", id:"password-confirmation" %>
+              <span class="error" id="password-confirmation-error">パスワードの確認をしてください</span>
             </div>
 
             <div class="content">

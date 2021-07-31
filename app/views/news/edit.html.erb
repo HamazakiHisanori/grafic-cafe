@@ -20,7 +20,7 @@
             <h2>Edit News</h2>
           </div>
 
-          <%= render "components/error_messages", model: @news %>
+          <%= render 'components/error_messages', model:@news %>
 
           <%= form_with model: @news, url: news_path, class:"form", local: true do |f| %>
 
@@ -42,12 +42,14 @@
 
               <div class="news-title">
                 <p>タイトル</p>
-                <%= f.text_field :title, class:"title-input" %>
+                <%= f.text_field :title, class:"title-input", id:"news-title" %>
+                <span class="error" id="news-title-error"></span>
               </div>
 
               <div class="news-contents">
                 <p>内容</p>
-                <%= f.text_area :contents, class:"contents-input" %>
+                <%= f.text_area :contents, class:"contents-input", id:"news-contents" %>
+                <span class="error" id="news-contents-error"></span>
               </div>
 
               <div class="form-btn">

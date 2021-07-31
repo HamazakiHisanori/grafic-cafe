@@ -74,7 +74,6 @@ body {
 }
 
 .new-edit-menu {
-  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -83,27 +82,26 @@ body {
 }
 
 .background {
-  min-height: 90vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   width: 90%;
   background-image: url(/images/menu.jpeg);
   background-size: cover;
   background-position: bottom;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .contents {
-  min-height: 70vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   width: 90%;
   box-shadow: 0 0 4px gray;
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: lighten;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: center;
 }
 
 .title {
@@ -116,11 +114,9 @@ body {
 
 .title h2 {
   font-size: 40px;
-  border-bottom: dotted 3px;
 }
 
 .form {
-  height: 60vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -131,21 +127,21 @@ body {
 .type-title {
   border-top: double 4px rgb(189, 175, 155);
   border-bottom: double 4px rgb(189, 175, 155);
-  height: 15%;
+  height: 15vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
 }
 
 .select {
-  height: 40%;
+  height: 30%;
   width: 20%;
 }
 
 .content {
-  height: 85%;
+  height: 60vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -160,7 +156,7 @@ body {
 }
 
 .image-select {
-  height: 20%;
+  height: 25%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -169,7 +165,7 @@ body {
 }
 
 .preview {
-  height: 80%;
+  height: 75%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -177,7 +173,7 @@ body {
 }
 
 .preview-size {
-  height: 80%;
+  height: 90%;
   width: 80%;
   overflow: hidden;
 }
@@ -261,4 +257,8 @@ body {
   background-color: rgb(176, 222, 230);
   box-shadow: 0 0 4px gray;
   transition: 0.4s;
+}
+
+.error {
+  color: red;
 }

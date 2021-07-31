@@ -1,0 +1,8 @@
+<%= stylesheet_link_tag 'components/error_messages' %>
+
+<% if model.errors.any? %>
+  <div class="alert">
+    <p>送信に失敗しました</p>
+    <p>もう一度内容をご確認ください</p>
+  </div>
+<% end %>

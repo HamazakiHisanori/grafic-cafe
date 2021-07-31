@@ -10,7 +10,7 @@
 
     <%= render "components/homebar" %>
 
-    <div class="new- edit-menu">
+    <div class="new-edit-menu">
 
       <div class="background">
 
@@ -20,13 +20,14 @@
             <h2>New Menu</h2>
           </div>
 
-          <%= render "components/error_messages", model: @menu %>
+          <%= render 'components/error_messages', model:@menu %>
 
           <%= form_with model: @menu, url: menus_path, class:"form", local: true do |f| %>
 
             <div class="type-title">
               <p>メニューの種類を選択</p>
-              <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"select"}) %>
+              <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"select", id:"menu-type"}) %>
+              <span class="error" id="menu-type-error">種類を選択してください</span>
             </div>
 
             <div class="content">
@@ -51,19 +52,22 @@
 
                   <div class="each">
                     <p>名前</p>
-                    <%= f.text_field :name, class:"each-input", placeholder:"16字以内" %>
+                    <%= f.text_field :name, class:"each-input", placeholder:"16字以内", id:"menu-name" %>
+                    <span class="error" id="menu-name-error">名前を入力してください</span>
                   </div>
 
                   <div class="each">
                     <p>値段</p>
-                    <p>¥<%= f.text_field :price, class:"each-input", placeholder:"9999まで"  %></p>
+                    <p>¥<%= f.text_field :price, class:"each-input", placeholder:"9999まで", id:"menu-price"  %></p>
+                    <span class="error" id="menu-price-error">値段を入力してください</span>
                   </div>
 
                 </div>
 
                 <div class="description">
-                  <p>説明</p>
-                  <%= f.text_area :description, class:"description-input", placeholder:"100字以内(改行やスペースを使う場合100字以内でも文字がはみ出してしまい、表示されない場合がございますので一覧ページでご確認の上、編集をお願い致します)" %>
+                  <p>説明文</p>
+                  <%= f.text_area :description, class:"description-input", placeholder:"100字以内(改行やスペースを使う場合100字以内でも文字がはみ出してしまい、表示されない場合がございますので一覧ページでご確認の上、編集をお願い致します)", id:"menu-description" %>
+                  <span class="error" id="menu-description-error">説明文を入力してください</span>
                 </div>
 
                 <div class="form-btn">

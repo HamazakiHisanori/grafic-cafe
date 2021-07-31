@@ -27,12 +27,14 @@
 
             <div class="content">
               <p>メールアドレス</p>
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input" %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input", id:"user-mail" %>
+              <span class="error" id="user-mail-error">メールアドレスを入力してください</span>
             </div>
 
             <div class="content">
               <p>パスワード</p>
-              <%= f.password_field :password, autocomplete: "current-password", class:"input" %>
+              <%= f.password_field :password, autocomplete: "current-password", class:"input", id:"password" %>
+              <span class="error" id="password-error">パスワードを入力してください</span>
             </div>
 
             <div class="content">
