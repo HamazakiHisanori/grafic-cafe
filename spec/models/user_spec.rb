@@ -14,13 +14,13 @@ RSpec.describe User, type: :model do
     it 'nameが空だと登録できない' do
       @user.name = ''
       @user.valid?
-      expect(@user.errors.full_messages).to include('名前を入力してください')
+      expect(@user.errors.full_messages).to include('名前')
     end
 
     it 'nameが11字以上だとだと登録できない' do
-      @user.name = '12345678901'
+      @user.name = 'a' * 11
       @user.valid?
-      expect(@user.errors.full_messages).to include('名前は10文字以内で入力してください')
+      expect(@user.errors.full_messages).to include('名前')
     end
 
     it 'emailが空だと登録できない' do
@@ -39,25 +39,25 @@ RSpec.describe User, type: :model do
     it 'passwordが空だと登録できない' do
       @user.password = ''
       @user.valid?
-      expect(@user.errors.full_messages).to include('パスワードを入力してください')
+      expect(@user.errors.full_messages).to include('パスワード')
     end
 
     it 'passwordが指定と完全に一致しないと登録できない例(1' do
       @user.password = 'secretcode1'
       @user.valid?
-      expect(@user.errors.full_messages).to include('パスワードパスワードが違います')
+      expect(@user.errors.full_messages).to include('パスワード')
     end
 
     it 'passwordが指定と完全に一致しないと登録できない例(2' do
       @user.password = 'secretcod'
       @user.valid?
-      expect(@user.errors.full_messages).to include('パスワードパスワードが違います')
+      expect(@user.errors.full_messages).to include('パスワード')
     end
 
     it 'passwordが指定と完全に一致しないと登録できない例(3' do
       @user.password = 'SECRETCODE'
       @user.valid?
-      expect(@user.errors.full_messages).to include('パスワードパスワードが違います')
+      expect(@user.errors.full_messages).to include('パスワード')
     end
 
     it 'password_confirmationが空だと登録できない' do

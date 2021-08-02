@@ -13,7 +13,7 @@ ja:
         name: お名前
         mail: メールアドレス
         phone_number: 電話番号
-        category_id: カテゴリー
+        category_id: ご質問の種類
         content: 内容
         reply_id: 返信の有無
       news:
