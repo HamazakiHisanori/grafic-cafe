@@ -1,4 +1,7 @@
-<%= stylesheet_link_tag 'components/news' %>
+<head>
+  <%= stylesheet_link_tag 'components/news' %>
+  <%= stylesheet_link_tag 'colorbox/colorbox' %>
+</head>
 
 <div class="news" id="news">
 
@@ -21,7 +24,7 @@
             </div>
 
             <div class="news-content-title">
-              <p>【<%= news.title %>】</p>
+              <p>【 <%= link_to news.title, news_path(news.id), class:"iframe" %> 】</p>
             </div>
 
           </div>
@@ -38,12 +41,6 @@
 
     <% end %>
 
-  </div>
-
-  <div class="catalog-bar">
-    <%=  link_to news_index_path, class:"catalog-btn" do %>
-      <p>一覧へ</p>
-    <% end %>
   </div>
 
 </div>

@@ -1,4 +1,7 @@
-<%= stylesheet_link_tag 'components/menu' %>
+<head>
+  <%= stylesheet_link_tag 'components/menu' %>
+  <%= stylesheet_link_tag 'colorbox/colorbox' %>
+</head>
 
 <div class="menu" id="menu">
 
@@ -29,7 +32,7 @@
                 </div>
 
                 <div class="menu-text">
-                  <p><%= drink.name %></p>
+                  <p class="name-border"><%= drink.name %></p>
                   <p><%= "¥#{drink.price}" %><p>
                 </div>
 
@@ -37,14 +40,6 @@
 
             <% end %>
 
-          </div>
-
-          <div class="multi">
-            <% if @menus_drink.length >= 3 %>
-              <p><%= "その他(#{@menus_drink.length - 3})"%></p>
-            <% else %>
-              <p>その他(0)</p>
-            <% end %>
           </div>
 
         <% else %>
@@ -78,7 +73,7 @@
                 </div>
 
                 <div class="menu-text">
-                  <p><%= food.name %></p>
+                  <p class="name-border"><%= food.name %></p>
                   <p><%= "¥#{food.price}" %><p>
                 </div>
 
@@ -86,14 +81,6 @@
 
             <% end %>
 
-          </div>
-
-          <div class="multi">
-            <% if @menus_food.length >= 3 %>
-              <p><%= "その他(#{@menus_food.length - 3})"%></p>
-            <% else %>
-              <p>その他(0)</p>
-            <% end %>
           </div>
 
         <% else %>
@@ -127,7 +114,7 @@
                 </div>
 
                 <div class="menu-text">
-                  <p><%= option.name %></p>
+                  <p class="name-border"><%= option.name %></p>
                   <p><%= "¥#{option.price}" %><p>
                 </div>
 
@@ -135,14 +122,6 @@
 
             <% end %>
 
-          </div>
-
-          <div class="multi">
-            <% if @menus_option.length >= 3 %>
-              <p><%= "その他(#{@menus_option.length - 3})"%></p>
-            <% else %>
-              <p>その他(0)</p>
-            <% end %>
           </div>
 
         <% else %>
@@ -153,12 +132,6 @@
 
       </div>
 
-    </div>
-
-    <div class="catalog-bar">
-      <%=  link_to menus_path, class:"catalog-btn" do %>
-        <p>一覧へ</p>
-      <% end %>
     </div>
 
   </div>

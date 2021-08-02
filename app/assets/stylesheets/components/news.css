@@ -28,18 +28,17 @@ h2 {
 }
 
 .news-contents {
-  min-height: 50vh;
-  max-height: 50vh;
+  min-height: 75vh;
+  max-height: 75vh;
   width: 90%;
   overflow: scroll;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .news-background {
-  min-height: 10vh;
+  height: 15vh;
+  min-height: 15vh;
   width: 100%;
   background-color: rgb(250, 236, 219, 0.3);
   display: flex;
@@ -49,7 +48,7 @@ h2 {
 
 .news-content {
   border-bottom: dotted 2px;
-  height: 80%;
+  height: 50%;
   width: 60%;
   display: flex;
   justify-content: center;
@@ -75,3 +74,27 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+
+.iframe {
+  text-decoration: none;
+  border-bottom: solid 1px;
+}
+
+.iframe:hover {
+  opacity: 0.5;
+  color: gray;
+}
+
+/* scrollbar */
+
+.news-contents::-webkit-scrollbar {
+  width: 8px;
+}
+
+/*スクロールバーの動く部分*/
+.news-contents::-webkit-scrollbar-thumb {
+background-color: rgba(0, 0, 50, .5);
+border-radius: 10px;
+box-shadow:0 0 0 1px rgba(255, 255, 255, .3);
+}
+

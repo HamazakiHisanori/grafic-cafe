@@ -66,63 +66,18 @@ width /***/:auto;
 /* body */
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   font-family: serif;
+  background-color: rgb(3, 211, 226);
   display: flex;
   flex-direction: column;
-}
-
-/* ニュース一覧 */
-
-.news-index {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.title {
-  height: 30vh;
-  width: 100%;
-  background-image: url(/images/news.JPG);
-  background-size: cover;
-  background-position: top;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title h2 {
-  font-size: 70px;
-  letter-spacing: 5px;
-  color: white;
-  box-shadow: 2px 2px 8px  black;
-}
-
-.contents {
-  width: 100%;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .background {
-  width: 90%;
-  padding-top: 10vh;
-  background-color: rgb(3, 211, 226);
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content-background {
-  margin-bottom: 10vh;
-  height: 80vh;
+  height: 90%;
   width: 80%;
   background-color: white;
   display: flex;
@@ -243,21 +198,3 @@ body {
   transition: 0.4s;
   color: white;
 }
-
-.else-sentence {
-  margin-bottom: 10vh;
-  height: 30vh;
-  width: 80%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-
-
-
-
-

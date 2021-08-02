@@ -5,6 +5,6 @@ class News < ApplicationRecord
   with_options presence: true do
     validates :image
     validates :title, length: { maximum: 40 }
-    validates :contents, length: { maximum: 300 }
+    validates :contents, length: { maximum: 260 }
   end
 end

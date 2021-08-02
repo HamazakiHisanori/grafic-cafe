@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'homes#index'
 
   resources :menus, except: [:show]
-  resources :news, except: [:show]
+  resources :news, except: [:index]
   resources :contacts, only: [:create]
   resources :homes, only: [:index, :create] do
     collection do

@@ -77,7 +77,6 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 0.4s;
 }
 
 .menu-image {
@@ -87,6 +86,15 @@ h2 {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  transition: 0.4s;
+}
+
+.menu-image:hover {
+  opacity: 0.5;
+  transition: 0.4s;
+  box-shadow: 0 0 8px gray;
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
 }
 
 .menu-image-tag {
@@ -94,12 +102,6 @@ h2 {
   width: 100%;
   background-size: cover;
   background-position: center;
-  transition: 0.8s;
-}
-
-.menu-image:hover .menu-image-tag {
-  transform: scale(1.05);
-  transition: 0.8s;
 }
 
 .menu-text {
@@ -107,10 +109,13 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .menu-text p {
-  margin: 5px;
+  margin-top: 10px;
+}
+
+.name-border {
+  border-bottom: solid 1px rgb(3, 211, 226);
 }

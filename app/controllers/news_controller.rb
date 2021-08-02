@@ -1,10 +1,6 @@
 class NewsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
-  before_action :set_news, only: [:update, :edit, :destroy]
-
-  def index
-    @news = News.order('created_at DESC')
-  end
+  before_action :authenticate_user!, except: [:show]
+  before_action :set_news, only: [:show, :edit, :update, :destroy]
 
   def new
     @news = News.new
@@ -20,12 +16,15 @@ class NewsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def edit
   end
 
   def update
     if @news.update(news_params)
-      redirect_to news_index_path
+      redirect_to root_path
     else
       render :edit
     end
@@ -33,7 +32,7 @@ class NewsController < ApplicationController
 
   def destroy
     @news.destroy
-    redirect_to news_index_path
+    redirect_to root_path
   end
 
   private

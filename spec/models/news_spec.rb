@@ -36,9 +36,9 @@ RSpec.describe News, type: :model do
     end
 
     it 'contentsが301字以上だと追加できない' do
-      @news.contents = 'a' * 301
+      @news.contents = 'a' * 261
       @news.valid?
-      expect(@news.errors.full_messages).to include('内容は300文字以内で入力してください')
+      expect(@news.errors.full_messages).to include('内容は260文字以内で入力してください')
     end
 
     it 'userが紐付いていないと追加できない' do

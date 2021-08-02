@@ -16,7 +16,7 @@ Rails.application.config.assets.precompile += %w(
   homes/worker.css
   menus/index.css
   menus/new_edit.css
-  news/index.css
+  news/show.css
   news/new_edit.css
   devise/registration.css
   devise/session.css
@@ -28,4 +28,5 @@ Rails.application.config.assets.precompile += %w(
   components/footer.css
   components/footer_second.css
   components/error_messages.css
+  colorbox/colorbox.css
 )
