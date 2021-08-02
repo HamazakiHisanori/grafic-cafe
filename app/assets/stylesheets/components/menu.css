@@ -82,26 +82,19 @@ h2 {
 .menu-image {
   height: 80%;
   width: 85%;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
 .menu-image:hover {
-  opacity: 0.5;
-  transition: 0.4s;
-  box-shadow: 0 0 8px gray;
-  -webkit-transform: rotate(-360deg);
-  transform: rotate(-360deg);
-}
-
-.menu-image-tag {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
+  opacity: 0.4;
+  transition: 0.2s;
+  box-shadow: 0 0 10px gray;
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
 }
 
 .menu-text {

@@ -257,7 +257,7 @@ function check_menu_name(str) {
     $('#menu-name-error').html('名前を入力してください');
 		result = false;
   } else if (menu_name.length > 15){
-    $('#menu-name-error').html('16字以内でお願い致します');
+    $('#menu-name-error').html('15字以内でお願い致します');
   }
   return result;
 }
@@ -307,8 +307,8 @@ function check_menu_description(str) {
   if( menu_description == ""){
     $('#menu-description-error').html('説明文を入力してください');
 		result = false;
-  } else if ( menu_description.length > 100){
-    $('#menu-description-error').html('100字以内で入力してください');
+  } else if ( menu_description.length > 180){
+    $('#menu-description-error').html('180字以内で入力してください');
   }
   return result;
 }
@@ -353,8 +353,8 @@ function check_news_contents(str) {
   if( news_contents == ""){
     $('#news-contents-error').html('内容を入力してください');
 		result = false;
-  } else if ( news_contents.length > 300){
-    $('#news-contents-error').html('300字以内で入力してください');
+  } else if ( news_contents.length > 260){
+    $('#news-contents-error').html('260字以内で入力してください');
   }
   return result;
 }

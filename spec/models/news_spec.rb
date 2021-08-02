@@ -35,7 +35,7 @@ RSpec.describe News, type: :model do
       expect(@news.errors.full_messages).to include('内容を入力してください')
     end
 
-    it 'contentsが301字以上だと追加できない' do
+    it 'contentsが261字以上だと追加できない' do
       @news.contents = 'a' * 261
       @news.valid?
       expect(@news.errors.full_messages).to include('内容は260文字以内で入力してください')

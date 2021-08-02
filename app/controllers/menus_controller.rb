@@ -1,13 +1,6 @@
 class MenusController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
-  before_action :set_menu, only: [:update, :edit, :destroy]
-
-
-  def index
-    @menus_drink = Menu.where(type_id: name='2').order('created_at DESC')
-    @menus_food =  Menu.where(type_id: name='3').order('created_at DESC')
-    @menus_option =  Menu.where(type_id: name='4').order('created_at DESC')
-  end
+  before_action :authenticate_user!, except: [:show]
+  before_action :set_menu, only: [:show, :update, :edit, :destroy]
 
   def new
     @menu = Menu.new
@@ -16,10 +9,13 @@ class MenusController < ApplicationController
   def create
     @menu = Menu.new(menu_params)
     if @menu.save
-      redirect_to menus_path
+      redirect_to root_path
     else
       render :new
     end
+  end
+
+  def show
   end
 
   def edit
@@ -27,7 +23,7 @@ class MenusController < ApplicationController
 
   def update
       if @menu.update(menu_params)
-        redirect_to menus_path
+        redirect_to root_path
       else
         render :edit
       end
@@ -35,7 +31,7 @@ class MenusController < ApplicationController
 
   def destroy
     @menu.destroy
-    redirect_to menus_path
+    redirect_to root_path
   end
 
   private

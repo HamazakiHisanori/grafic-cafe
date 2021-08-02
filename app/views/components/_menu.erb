@@ -28,7 +28,9 @@
               <div class="menu-content">
 
                 <div class="menu-image">
-                  <%= image_tag drink.image, class:"menu-image-tag"%>
+                  <%= link_to menu_path(drink.id), class:"iframe" do %>
+                    <%= image_tag drink.image %>
+                  <% end %>
                 </div>
 
                 <div class="menu-text">
@@ -69,7 +71,9 @@
               <div class="menu-content">
 
                 <div class="menu-image">
-                  <%= image_tag food.image, class:"menu-image-tag"%>
+                  <%= link_to menu_path(food.id), class:"iframe" do %>
+                    <%= image_tag food.image, class:"menu-image-tag"%>
+                  <% end %>
                 </div>
 
                 <div class="menu-text">
@@ -110,7 +114,9 @@
               <div class="menu-content">
 
                 <div class="menu-image">
-                  <%= image_tag option.image, class:"menu-image-tag"%>
+                  <%= link_to menu_path(option.id), class:"iframe" do %>
+                    <%= image_tag option.image, class:"menu-image-tag"%>
+                  <% end %>
                 </div>
 
                 <div class="menu-text">

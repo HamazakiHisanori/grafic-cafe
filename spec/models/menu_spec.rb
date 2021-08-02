@@ -71,10 +71,10 @@ RSpec.describe Menu, type: :model do
       expect(@menu.errors.full_messages).to include('説明文を入力してください')
     end
 
-    it 'descriptionが101字以上だと追加できない' do
-      @menu.description = 'a' * 101
+    it 'descriptionが181字以上だと追加できない' do
+      @menu.description = 'a' * 181
       @menu.valid?
-      expect(@menu.errors.full_messages).to include('説明文は100文字以内で入力してください')
+      expect(@menu.errors.full_messages).to include('説明文は180文字以内で入力してください')
     end
 
     it 'userが紐付いていないと追加できない' do

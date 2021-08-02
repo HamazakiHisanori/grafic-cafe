@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'homes#index'
 
-  resources :menus, except: [:show]
+  resources :menus, except: [:index]
   resources :news, except: [:index]
   resources :contacts, only: [:create]
   resources :homes, only: [:index, :create] do

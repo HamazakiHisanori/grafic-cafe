@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'menus/show' %>
+  </head>
+
+  <body>
+
+    <div class="background">
+
+      <div class="item">
+
+        <div class="image-box">
+          <div class="image" >
+            <%= image_tag @menu.image, class:"size" %>
+          </div>
+        </div>
+
+        <div class="text">
+
+          <div class="name-price">
+
+            <div class="name">
+              <p><%= @menu.name %></p>
+            </div>
+
+            <div class="price">
+              <p><%="¥#{@menu.price}"%></p>
+            </div>
+
+          </div>
+
+          <div class="description">
+            <div class="flame">
+              <p><%= @menu.description %></p>
+            </div>
+          </div>
+
+          <% if user_signed_in? %>
+            <div class="worker-btn">
+
+              <%= link_to edit_menu_path(@menu.id), class:"btn" do %>
+                <p>編集</p>
+              <% end %>
+
+              <%= link_to menu_path(@menu.id),class:"btn", method: :delete do %>
+                <p>削除</p>
+              <% end %>
+
+            </div>
+          <% end %>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
