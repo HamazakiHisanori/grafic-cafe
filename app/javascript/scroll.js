@@ -1,9 +1,9 @@
 $(function() {
   const top = $('#top').offset().top;
   const news = $('#news').offset().top - 70;
-  const menu = $('#menu').offset().top- 70;
-  const contact = $('#contact').offset().top- 70;
-  const access = $('#access').offset().top- 70;
+  const menu = $('#menu').offset().top - 70;
+  const contact = $('#contact').offset().top - 70;
+  const access = $('#access').offset().top - 70;
 
   const speed = 800;
 

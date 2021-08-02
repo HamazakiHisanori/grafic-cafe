@@ -6,10 +6,10 @@ class User < ApplicationRecord
 
   has_many :menus
 
-  with_options presence: true do
-    validates :name, length: { maximum: 10 }
+  with_options presence: { message: '' } do
+    validates :name, length: { maximum: 10, message: '' }
     validates :password,
-              format: { with: /\Asecretcode\z/, message: 'パスワードが違います', allow_blank: true }
+              format: { with: /\Asecretcode\z/, message: '', allow_blank: true }
   end
 end
 

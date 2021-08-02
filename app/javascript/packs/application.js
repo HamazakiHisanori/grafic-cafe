@@ -11,6 +11,7 @@ require('jquery')
 require("../preview.js")
 require("../scroll.js")
 require("../error_messages.js")
+require("../render.js")
 require("../jquery.colorbox-min.js")
 require("../jquery.colorbox-ja.js")
 

@@ -2,7 +2,15 @@
 
 <% if model.errors.any? %>
   <div class="alert">
-    <p>送信に失敗しました</p>
+
+    <div class="each-error">
+      <% model.errors.full_messages.each do |message| %>
+        <p><%= message %></p>
+      <% end %>
+    </div>
+
+    <p>に、問題があり送信に失敗しました</p>
     <p>もう一度内容をご確認ください</p>
+
   </div>
 <% end %>

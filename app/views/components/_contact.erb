@@ -20,7 +20,7 @@
 
       <div class="contact-box">
 
-        <%= render 'components/error_messages', model:@contact %>
+          <%= render 'components/error_messages', model:@contact %>
 
         <div class ="contact-box-background">
 
@@ -127,7 +127,7 @@
 
           <div class="contact-btn-box">
             <div class="contact-btn">
-              <%= f.submit "送信する", class:"contact-btn-text" %>
+              <%= f.submit "送信する", class:"contact-btn-text", id:"contact-submit" %>
             </div>
           </div>
 

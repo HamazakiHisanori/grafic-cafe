@@ -22,7 +22,7 @@ class HomesController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:name, :email, :phone_number, :category_id, :content, :reply_id)
+    params.require(:contact).permit(:name, :mail, :phone_number, :category_id, :content, :reply_id)
   end
 
   def set_params

@@ -10,3 +10,12 @@
 .alert p {
   color: red;
 }
+
+.each-error {
+  display: flex;
+}
+
+.each-error p {
+  margin-right: 20px;
+  border-bottom: dotted 1px red;
+}
