@@ -6,7 +6,6 @@ RSpec.describe User, type: :model do
   end
 
   describe '新規登録' do
-
     it '全ての情報が正しく入力されていれば登録できる' do
       expect(@user).to be_valid
     end
@@ -71,6 +70,5 @@ RSpec.describe User, type: :model do
       @user.valid?
       expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
     end
-
   end
 end

@@ -12,7 +12,7 @@ class NewsController < ApplicationController
     if @news.save
       redirect_to root_path
     else
-        render :new
+      render :new
     end
   end
 
@@ -44,5 +44,4 @@ class NewsController < ApplicationController
   def set_news
     @news = News.find(params[:id])
   end
-
 end

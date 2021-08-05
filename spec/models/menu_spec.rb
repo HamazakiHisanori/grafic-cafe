@@ -6,7 +6,6 @@ RSpec.describe Menu, type: :model do
   end
 
   describe 'メニューの追加' do
-
     it '全ての情報が正しく入力されていれば追加できる' do
       expect(@menu).to be_valid
     end
@@ -66,7 +65,7 @@ RSpec.describe Menu, type: :model do
     end
 
     it 'priceが10000以上では追加できない' do
-      @menu.price = 10000
+      @menu.price = 10_000
       @menu.valid?
       expect(@menu.errors.full_messages).to include('値段')
     end
@@ -88,6 +87,5 @@ RSpec.describe Menu, type: :model do
       @menu.valid?
       expect(@menu.errors.full_messages).to include('Userを入力してください')
     end
-
   end
 end

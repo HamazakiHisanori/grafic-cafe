@@ -8,6 +8,5 @@ FactoryBot.define do
     after(:build) do |news|
       news.image.attach(io: File.open('public/images/test.jpg'), filename: 'test.jpg')
     end
-
   end
 end

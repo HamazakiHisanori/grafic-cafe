@@ -4,7 +4,7 @@ class Category < ActiveHash::Base
     { id: 2, name: 'ご予約について' },
     { id: 3, name: '不具合など' },
     { id: 4, name: 'ご要望など' },
-    { id: 5, name: 'その他' },
+    { id: 5, name: 'その他' }
 
   ]
 

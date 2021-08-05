@@ -6,7 +6,6 @@ RSpec.describe News, type: :model do
   end
 
   describe 'ニュースの追加' do
-
     it '全ての情報が正しく入力されていれば追加できる' do
       expect(@news).to be_valid
     end
@@ -24,7 +23,7 @@ RSpec.describe News, type: :model do
     end
 
     it 'titleが41字以上だと追加できない' do
-      @news.title = "a" * 41
+      @news.title = 'a' * 41
       @news.valid?
       expect(@news.errors.full_messages).to include('タイトル')
     end
@@ -46,6 +45,5 @@ RSpec.describe News, type: :model do
       @news.valid?
       expect(@news.errors.full_messages).to include('Userを入力してください')
     end
-
   end
 end

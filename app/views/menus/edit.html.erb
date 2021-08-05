@@ -25,7 +25,7 @@
             <div class="type-title">
               <p>メニューの種類を選択</p>
               <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"select", id:"menu-type"}) %>
-              <span class="error" id="menu-type-error">種類を選択してください</span>
+              <span class="error" id="menu-type-error"></span>
             </div>
 
             <div class="content">
@@ -51,13 +51,13 @@
                   <div class="each">
                     <p>名前</p>
                     <%= f.text_field :name, class:"each-input", id:"menu-name" %>
-                    <span class="error" id="menu-name-error">名前を入力してください</span>
+                    <span class="error" id="menu-name-error"></span>
                   </div>
 
                   <div class="each">
                     <p>値段</p>
                     <p>¥<%= f.text_field :price, class:"each-input", id:"menu-price"  %></p>
-                    <span class="error" id="menu-price-error">値段を入力してください</span>
+                    <span class="error" id="menu-price-error"></span>
                   </div>
 
                 </div>
@@ -65,7 +65,7 @@
                 <div class="description">
                   <p>説明文</p>
                   <%= f.text_area :description, class:"description-input", id:"menu-description" %>
-                  <span class="error" id="menu-description-error">説明文を入力してください</span>
+                  <span class="error" id="menu-description-error"></span>
                 </div>
 
                 <div class="form-btn">

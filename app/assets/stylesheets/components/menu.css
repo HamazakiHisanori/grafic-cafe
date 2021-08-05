@@ -19,12 +19,6 @@
   align-items: center;
 }
 
-h2 {
-  font-size: 70px;
-  letter-spacing: 5px;
-  color: white;
-}
-
 .menu-contents {
   width: 100%;
   display: flex;

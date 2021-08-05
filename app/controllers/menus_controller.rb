@@ -22,11 +22,11 @@ class MenusController < ApplicationController
   end
 
   def update
-      if @menu.update(menu_params)
-        redirect_to root_path
-      else
-        render :edit
-      end
+    if @menu.update(menu_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -37,13 +37,10 @@ class MenusController < ApplicationController
   private
 
   def menu_params
-      params.require(:menu).permit(:image, :name, :description, :price, :type_id).merge(user_id: current_user.id)
+    params.require(:menu).permit(:image, :name, :description, :price, :type_id).merge(user_id: current_user.id)
   end
-
 
   def set_menu
     @menu = Menu.find(params[:id])
   end
-
-
 end

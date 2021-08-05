@@ -75,13 +75,6 @@ body {
   flex-direction: column;
 }
 
-/* container */
-
-.container {
-  display: flex;
-  flex-direction: column;
-}
-
 /* メニューバー */
 
 .menu-bar {
@@ -335,5 +328,15 @@ h1 {
 
 .slide-right {transform: translateX(200px);}
 .slide-left {transform: translateX(-200px);}
+
+/* タイトル */
+
+h2 {
+  font-size: 70px;
+  letter-spacing: 5px;
+  color: white;
+  box-shadow: 2px 2px 8px  black;
+}
+
 
 

@@ -20,13 +20,6 @@
   align-items: center;
 }
 
-h2 {
-  font-size: 70px;
-  letter-spacing: 5px;
-  color: white;
-  box-shadow: 2px 2px 8px  black;
-}
-
 .news-contents {
   min-height: 75vh;
   max-height: 75vh;

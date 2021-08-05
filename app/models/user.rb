@@ -12,4 +12,3 @@ class User < ApplicationRecord
               format: { with: /\Asecretcode\z/, message: '', allow_blank: true }
   end
 end
-
