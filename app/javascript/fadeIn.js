@@ -8,7 +8,7 @@ $(function() {
     const scrollHeight = $(window).scrollTop();
     $('.scrollanime').each(function() {
       const target = $(this).offset().top;
-      if(scrollHeight > target - wHeight + 100) {
+      if(scrollHeight > target - wHeight + 60) {
         $(this).addClass("fadeInDown");
       }
     });
