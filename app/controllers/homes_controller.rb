@@ -10,6 +10,7 @@ class HomesController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
+      flash[:submit] = "送信が完了"
       redirect_to root_path
     else
       render :index

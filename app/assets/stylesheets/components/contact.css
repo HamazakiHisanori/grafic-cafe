@@ -436,3 +436,17 @@ h2 {
 .error {
   color: red;
 }
+
+/* flash */
+
+.flash {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flash p {
+  font-size: 20px;
+}

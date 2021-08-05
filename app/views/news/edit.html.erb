@@ -8,9 +8,9 @@
 
   <body>
 
-    <%= render "components/homebar" %>
-
     <div class="new-edit-news">
+
+    <%= render 'components/error_messages', model:@news %>
 
       <div class="background">
 
@@ -19,8 +19,6 @@
           <div class="title">
             <h2>Edit News</h2>
           </div>
-
-          <%= render 'components/error_messages', model:@news %>
 
           <%= form_with model: @news, url: news_path, class:"form", local: true do |f| %>
 
@@ -56,10 +54,6 @@
 
                 <%= f.submit "変更する", class:"btn" %>
 
-                <%= link_to news_index_path, class:"btn"  do %>
-                  <p>戻る</p>
-                <% end %>
-
               </div>
 
             </div>
@@ -71,8 +65,6 @@
       </div>
 
     </div>
-
-    <%= render "components/footer_second" %>
 
   </body>
 

@@ -11,9 +11,12 @@ require('jquery')
 require("../preview.js")
 require("../scroll.js")
 require("../error_messages.js")
-require("../render.js")
 require("../jquery.colorbox-min.js")
 require("../jquery.colorbox-ja.js")
+require("../modal.js")
+require("../check.js")
+require("../fadeIn.js")
+require("../render.js")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

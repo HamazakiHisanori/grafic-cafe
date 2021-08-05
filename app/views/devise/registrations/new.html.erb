@@ -12,6 +12,8 @@
 
     <div class="sign-up">
 
+    <%= render 'components/error_messages_user', model:@user %>
+
       <div class="background">
 
         <div class="contents">
@@ -19,8 +21,6 @@
           <div class="title">
             <h2>Sign up</h2>
           </div>
-
-          <%= render 'components/error_messages_user', model:@user %>
 
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class:"form"}) do |f| %>
 

@@ -12,6 +12,8 @@
 
     <div class="new-edit-news">
 
+    <%= render 'components/error_messages', model:@news %>
+
       <div class="background">
 
         <div class="contents">
@@ -19,8 +21,6 @@
           <div class="title">
             <h2>New News</h2>
           </div>
-
-          <%= render 'components/error_messages', model:@news %>
 
           <%= form_with model: @news, url: news_index_path, class:"form", local: true do |f| %>
 

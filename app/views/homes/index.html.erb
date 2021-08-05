@@ -27,6 +27,11 @@
       </ul>
     </div>
 
+    <%= render 'components/error_messages', model:@contact %>
+    <% if flash[:submit] %>
+      <%= render 'components/notice_messages' %>
+    <% end %>
+
     <div class="top-background">
 
       <div class="background-change"></div>

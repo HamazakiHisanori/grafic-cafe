@@ -1,16 +1,27 @@
-<%= stylesheet_link_tag 'components/error_messages' %>
+<%= stylesheet_link_tag 'components/messages' %>
 
 <% if model.errors.any? %>
-  <div class="alert">
 
-    <div class="each-error">
-      <% model.errors.full_messages.each do |message| %>
-        <p><%= message %></p>
-      <% end %>
+  <div class="messages">
+
+    <div class="message">
+
+      <div class="each-error">
+
+        <% model.errors.full_messages.each do |message| %>
+          <h5><%= message %></h5>
+        <% end %>
+
+      </div>
+
+      <p class="alert">に問題があり送信に失敗しました</p>
+      <p class="alert">もう一度内容をご確認ください</p>
+
     </div>
 
-    <p>に、問題があり送信に失敗しました</p>
-    <p>もう一度内容をご確認ください</p>
+    <%= image_tag "cancel.png", class:"close-img" %>
 
   </div>
+
 <% end %>
+

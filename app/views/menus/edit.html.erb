@@ -8,9 +8,9 @@
 
   <body>
 
-    <%= render "components/homebar" %>
-
     <div class="new-edit-menu">
+
+    <%= render 'components/error_messages', model:@menu %>
 
       <div class="background">
 
@@ -19,8 +19,6 @@
           <div class="title">
             <h2>Edit Menu</h2>
           </div>
-
-          <%= render 'components/error_messages', model:@menu %>
 
           <%= form_with model: @menu, url: menu_path(@menu.id), class:"form", local: true do |f| %>
 
@@ -72,9 +70,6 @@
 
                 <div class="form-btn">
                   <%= f.submit "編集する", class:"btn" %>
-                  <%= link_to menus_path, class:"btn" do %>
-                    <p>戻る</p>
-                  <% end %>
                 </div>
 
               </div>
@@ -88,8 +83,6 @@
       </div>
 
     </div>
-
-    <%= render "components/footer_second" %>
 
   </body>
 

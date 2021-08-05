@@ -1,0 +1,11 @@
+<%= stylesheet_link_tag 'components/messages' %>
+
+<div class="messages">
+
+  <div class="message">
+    <p class="alert"><%= flash[:alert] %></p>
+  </div>
+
+  <%= image_tag "cancel.png", class:"close-img" %>
+
+</div>

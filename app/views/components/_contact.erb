@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'components/contact' %>
 
-<div class="contact" id="contact">
+<div class="contact scrollanime" id="contact">
 
   <div class="contact-title-bar">
     <h2>CONTACT</h2>
@@ -16,11 +16,9 @@
     </div>
   </div>
 
-  <%= form_with model: @contact, url: homes_path, class:"contact-form", local: true do |f|  %>
+  <%= form_with model: @contact, url: homes_path, class:"contact-form", id:"contact-form", local: true do |f|  %>
 
       <div class="contact-box">
-
-          <%= render 'components/error_messages', model:@contact %>
 
         <div class ="contact-box-background">
 
@@ -127,7 +125,7 @@
 
           <div class="contact-btn-box">
             <div class="contact-btn">
-              <%= f.submit "送信する", class:"contact-btn-text", id:"contact-submit" %>
+              <%= f.submit "送信する", class:"contact-btn-text" %>
             </div>
           </div>
 

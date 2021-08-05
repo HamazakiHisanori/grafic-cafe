@@ -28,5 +28,6 @@ Rails.application.config.assets.precompile += %w(
   components/footer.css
   components/footer_second.css
   components/error_messages.css
+  components/messages.css
   colorbox/colorbox.css
 )

@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag 'components/messages' %>
+
+<div class="messages">
+
+  <div class="message">
+    <p class="warning"><%= flash[:submit] %></p>
+    <p>送信の完了を確認いたしました</p>
+  </div>
+
+  <%= image_tag "cancel.png", class:"close-img" %>
+
+</div>

@@ -165,3 +165,7 @@ body {
 .error {
   color: red;
 }
+
+.flash-alert {
+  color: red;
+}

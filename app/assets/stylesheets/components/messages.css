@@ -1,0 +1,56 @@
+/* messages */
+
+.messages {
+  margin-top: 70px;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  border: dotted 2px red;
+  margin-left: 30px;
+  height: 80%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.warning {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.close-img {
+  position: relative;
+  top: -88px;
+  right: 16px;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+}
+
+.close-img:hover {
+  opacity: 0.5;
+}
+
+.alert {
+  color: red;
+}
+
+.each-error {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.each-error h5 {
+  margin-right: 20px;
+  color: red;
+  border-bottom: dotted 1px red;
+}
+
+

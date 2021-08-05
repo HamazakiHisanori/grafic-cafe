@@ -12,6 +12,8 @@
 
     <div class="new-edit-menu">
 
+    <%= render 'components/error_messages', model:@menu %>
+
       <div class="background">
 
         <div class="contents">
@@ -19,8 +21,6 @@
           <div class="title">
             <h2>New Menu</h2>
           </div>
-
-          <%= render 'components/error_messages', model:@menu %>
 
           <%= form_with model: @menu, url: menus_path, class:"form", local: true do |f| %>
 

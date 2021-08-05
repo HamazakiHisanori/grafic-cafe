@@ -3,7 +3,7 @@
   <%= stylesheet_link_tag 'colorbox/colorbox' %>
 </head>
 
-<div class="menu" id="menu">
+<div class="menu scrollanime" id="menu">
 
   <div class="menu-title-bar">
     <h2>MENU</h2>
@@ -21,7 +21,7 @@
 
         <% if @menus_drink.present? %>
 
-          <div class="item-contents">
+          <div class="item-contents scrollanime slide-right">
 
             <% @menus_drink.each do |drink| %>
 
@@ -64,7 +64,7 @@
 
         <% if @menus_food.present? %>
 
-          <div class="item-contents">
+          <div class="item-contents scrollanime slide-left">
 
             <% @menus_food.each do |food| %>
 
@@ -107,7 +107,7 @@
 
         <% if @menus_option.present? %>
 
-          <div class="item-contents">
+          <div class="item-contents scrollanime slide-right">
 
             <% @menus_option.each do |option| %>
 

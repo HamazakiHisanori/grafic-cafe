@@ -12,6 +12,10 @@
 
     <div class="log-in">
 
+    <% if flash[:alert] %>
+      <%= render 'components/session_error' %>
+    <% end %>
+
       <div class="background">
 
         <div class="contents">
@@ -21,9 +25,6 @@
           </div>
 
           <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class:"form"}) do |f| %>
-
-              <%= flash[:notice] %>
-              <%= flash[:alert] %>
 
             <div class="content">
               <p>メールアドレス</p>
