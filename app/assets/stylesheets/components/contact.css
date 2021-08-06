@@ -38,7 +38,7 @@
 }
 
 .contact-warning-text p {
-  border-bottom: dotted 2px rgb(187, 187, 187);
+  border-bottom: dotted 2px rgba(187, 187, 187);
   margin-bottom: 5px;
   font-family: serif;
 }
@@ -51,7 +51,7 @@
 }
 
 .contact-box {
-  background-color: rgb(250, 236, 219, 0.3);
+  background-color: rgba(250, 236, 219, 0.3);
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -64,8 +64,8 @@
   margin-top: 10vh;
   margin-bottom: 10vh;
   background-color: white;
-  border: solid 2px rgb(189, 188, 188, 0.7);
-  box-shadow: 0 0 8px rgb(182, 181, 181);
+  border: solid 2px rgba(189, 188, 188, 0.7);
+  box-shadow: 0 0 8px rgba(182, 181, 181);
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -171,7 +171,7 @@
 }
 
 .contact-mail-form-input input::placeholder {
-  color: rgb(187, 187, 187);
+  color: rgba(187, 187, 187);
 }
 
 /* phone-number */
@@ -331,7 +331,7 @@
 }
 
 .contact-content-textarea::placeholder {
-  color: rgb(187, 187, 187);
+  color: rgba(187, 187, 187);
 }
 
 /* reply */
@@ -419,7 +419,7 @@
 
 .contact-btn:hover {
   border: solid 1px white;
-  background-color: rgb(176, 222, 230);
+  background-color: rgba(176, 222, 230);
   box-shadow: 0 0 4px gray;
 }
 

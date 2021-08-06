@@ -3,7 +3,7 @@
 .home-bar {
   height: 10vh;
   width: 100%;
-  background-color: rgb(176, 222, 230, 0.7);
+  background-color: rgba(176, 222, 230, 0.7);
   display: flex;
   justify-content: start;
   align-items: center;

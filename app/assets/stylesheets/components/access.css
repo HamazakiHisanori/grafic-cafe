@@ -30,7 +30,7 @@
 .access-content-background {
   height: 90%;
   width: 90%;
-  background-color: rgb(250, 236, 219, 0.3);
+  background-color: rgba(250, 236, 219, 0.3);
   display: flex;
   justify-content: space-around;
   align-items: center;
