@@ -211,7 +211,7 @@ body {
 .btn:hover {
   border: solid 1px white;
   color: white;
-  background-color: rgba(176, 222, 230);
+  background-color: rgb(176, 222, 230);
   box-shadow: 0 0 4px gray;
   transition: 0.4s;
 }

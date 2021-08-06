@@ -108,7 +108,7 @@ body {
 }
 
 .menu-bar ul li:hover {
-  background-color: rgba(221, 139, 194);
+  background-color: rgb(221, 139, 194);
   transition: 0.5s;
 }
 
@@ -119,7 +119,7 @@ body {
 }
 
 .menu-bar ul li:hover p {
-  border-bottom: solid 2px rgba(176, 222, 230);
+  border-bottom: solid 2px rgb(176, 222, 230);
 }
 
 
@@ -335,7 +335,7 @@ h2 {
   font-size: 70px;
   letter-spacing: 5px;
   color: white;
-  box-shadow: 2px 2px 8px  black;
+  box-shadow: 2px 2px 8px black;
 }
 
 
