@@ -3,6 +3,7 @@
 
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=devise-width, initial-scale=1.0">
     <%= stylesheet_link_tag 'homes/worker' %>
   </head>
 
@@ -22,12 +23,12 @@
 
           <% if user_signed_in? %>
 
-            <%= link_to new_menu_path, class:"worker-btn" do %>
-              <p>New Menu</p>
-            <% end %>
-
             <%= link_to new_news_path, class:"worker-btn" do %>
               <p>New News</p>
+            <% end %>
+
+            <%= link_to new_menu_path, class:"worker-btn" do %>
+              <p>New Menu</p>
             <% end %>
 
             <%= link_to destroy_user_session_path, method: :delete, class:"worker-btn" do %>
