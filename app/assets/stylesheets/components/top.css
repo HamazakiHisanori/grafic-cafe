@@ -1,0 +1,80 @@
+/* top */
+
+.top {
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-background {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  animation:  change-anime 9s infinite;
+}
+
+.top-background:nth-child(1) {
+  background-image: url(/images/top.jpg);
+}
+
+.top-background:nth-child(2) {
+  background-image: url(/images/top2.jpeg);
+  animation-delay: 3s;
+}
+
+.top-background:nth-child(3) {
+  background-image: url(/images/top3.jpeg);
+  animation-delay: 6s;
+}
+
+@keyframes change-anime {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  10% {
+      opacity: 1;
+  }
+  40% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.top-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: seashell;
+}
+
+.top-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.top-title h1 {
+  font-family: "Yomogi", cursive;
+  font-size: 27px;
+  font-weight: bold;
+  color: rosybrown;
+}

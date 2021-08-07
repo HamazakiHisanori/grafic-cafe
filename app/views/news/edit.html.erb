@@ -3,56 +3,58 @@
 
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
-    <%= stylesheet_link_tag 'news/new_edit' %>
+    <%= stylesheet_link_tag 'news_menus/new_edit' %>
   </head>
 
   <body>
 
-    <div class="new-edit-news">
+    <div class="new-edit">
 
-    <%= render 'components/error_messages', model:@news %>
+    <%= render 'components/edit_error', model:@news %>
 
-      <div class="background">
+      <div class="new-edit-background news-background">
 
-        <div class="contents">
+        <div class="new-edit-contents">
 
-          <div class="title">
+          <div class="new-edit-title">
             <h2>Edit News</h2>
           </div>
 
-          <%= form_with model: @news, url: news_path, class:"form", local: true do |f| %>
+          <%= form_with model: @news, url: news_path, class:"new-edit-form", local: true do |f| %>
 
-            <div class="content">
+            <div class="new-edit-box">
 
-              <div class="image-select">
-                <p>画像選択</p>
-                <%= f.file_field :image, id:"input-image" %>
-              </div>
+              <div class="news-common-box">
 
-              <div class="preview">
-                <div class="preview-size" id="preview">
+                <div class="news-title">
+                  <p>タイトル</p>
+                  <%= f.text_field :title, class:"news-title-input", id:"news-title" %>
+                  <span class="error" id="news-title-error"></span>
                 </div>
+
+                <div class="news-contents">
+                  <p>内容</p>
+                  <%= f.text_area :contents, class:"news-contents-input", id:"news-contents" %>
+                  <span class="error" id="news-contents-error"></span>
+                </div>
+
               </div>
 
-            </div>
+              <div class="news-common-box">
 
-            <div class="content">
+                <div class="news-image-select">
+                  <p>画像選択</p>
+                  <%= f.file_field :image, id:"input-image" %>
+                </div>
 
-              <div class="news-title">
-                <p>タイトル</p>
-                <%= f.text_field :title, class:"title-input", id:"news-title" %>
-                <span class="error" id="news-title-error"></span>
-              </div>
+                <div class="news-preview">
+                  <div class="preview-size" id="preview">
+                  </div>
+                </div>
 
-              <div class="news-contents">
-                <p>内容</p>
-                <%= f.text_area :contents, class:"contents-input", id:"news-contents" %>
-                <span class="error" id="news-contents-error"></span>
-              </div>
-
-              <div class="form-btn">
-
-                <%= f.submit "変更する", class:"btn" %>
+                <div class="new-edit-form-btn">
+                  <%= f.submit "編集する", class:"btn" %>
+                </div>
 
               </div>
 

@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag 'components/contact' %>
 
-<div class="contact scrollanime" id="contact">
+<div class="contents scroll-anime" id="contact">
 
-  <div class="contact-title-bar">
+  <div class="title-bar contact-title">
     <h2>CONTACT</h2>
   </div>
 
@@ -10,128 +10,127 @@
     <div class="contact-warning-text">
       <p>ご要望やご予約について、その他気になった点などございましら下記のフォームよりお願い致します</p>
       <p>返信を希望される方はメールアドレス、もしくは電話番号の入力をお願い致します</p>
-      <p>*入力がない場合、返信、ご連絡出来かねますことご容赦下さい</p>
+      <p>＊入力がない場合、返信、ご連絡出来かねますことご容赦下さい</p>
       <p>返信、ご連絡には数日いただく場合がございますことご理解お願い致します</p>
-      <p>*返信、ご連絡を急がれます方は直接のお電話をお願い致します</p>
+      <p>＊返信、ご連絡を急がれます方は直接のお電話をお願い致します</p>
     </div>
   </div>
 
-  <%= form_with model: @contact, url: homes_path, class:"contact-form", id:"contact-form", local: true do |f|  %>
+  <%= form_with model: @contact, url: homes_path, class:"contact-form", id:"contact-form", local: true do |f| %>
 
-      <div class="contact-box">
+    <div class="contact-form-contents">
 
-        <div class ="contact-box-background">
+      <div class ="contact-form-box">
 
-          <div class="contact-name-box">
+        <div class="contact-common-box">
 
-            <div class="contact-name-title">
-              <p>お名前</p>
-              <span>必須</span>
-            </div>
-
-            <div class="contact-name-form">
-              <div class="contact-name-form-input">
-                <%= f.text_field :name, id:"contact-name" %>
-              </div>
-            </div>
-
+          <div class="contact-common-title">
+            <p>お名前</p>
+            <span class="span">必須</span>
           </div>
 
-          <span class="error" id="contact-name-error">お名前を入力してください</span>
-
-          <div class="contact-mail-box">
-
-            <div class="contact-mail-title">
-              <p>メールアドレス</p>
-            </div>
-
-            <div class="contact-mail-form">
-              <div class="contact-mail-form-input">
-                <%= f.text_field :mail, placeholder:"例)example@example.com", id:"contact-mail" %>
-              </div>
-            </div>
-
-          </div>
-
-          <span class="error" id="contact-mail-error"></span>
-
-
-          <div class="contact-phone-number-box">
-
-            <div class="contact-phone-number-title">
-              <p>電話番号</p>
-            </div>
-
-            <div class="contact-phone-number-form">
-              <div class="contact-phone-number-form-input">
-                <%= f.text_field :phone_number, id:"contact-phone-number" %>
-              </div>
-            </div>
-
-          </div>
-
-          <span class="error" id="contact-phone-number-error"></span>
-
-          <div class="contact-category-box">
-
-            <div class="contact-category-title">
-              <p>ご質問の種類</p>
-              <span>必須</span>
-            </div>
-
-            <div class="contact-category-form">
-              <div class=contact-category-form-input>
-                <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"contact-category-select", id:"contact-category"}) %>
-              </div>
-            </div>
-
-          </div>
-
-          <span class="error" id="contact-category-error">ご質問の種類を選択してください</span>
-
-          <div class="contact-content-box">
-
-            <div class="contact-content-title">
-              <p>内容</p>
-              <span>必須</span>
-            </div>
-
-            <div class="contact-content-form">
-              <div class="contact-content-form-input">
-                <%= f.text_area :content, placeholder:"内容を入力してください", class:"contact-content-textarea", id:"contact-content" %>
-              </div>
-            </div>
-
-          </div>
-
-          <span class="error" id="contact-content-error">内容を入力してください</span>
-
-          <div class="contact-reply-box">
-
-            <div class="contact-reply-title">
-              <p>返信の有無</p>
-              <span>必須</span>
-            </div>
-
-            <div class="contact-reply-form">
-              <div class="contact-reply-form-input">
-                <%= f.collection_select(:reply_id, Reply.all, :id, :name, {}, {class:"contact-reply-select", id:"contact-reply"}) %>
-              </div>
-            </div>
-
-          </div>
-
-          <span class="error" id="contact-reply-error">返信の有無を選択してください</span>
-
-          <div class="contact-btn-box">
-            <div class="contact-btn">
-              <%= f.submit "送信する", class:"contact-btn-text" %>
+          <div class="contact-common-form">
+            <div class="contact-common-form-input">
+              <%= f.text_field :name, id:"contact-name" %>
             </div>
           </div>
 
         </div>
 
+        <span class="error" id="contact-name-error">お名前を入力してください</span>
+
+        <div class="contact-common-box">
+
+          <div class="contact-common-title">
+            <p>メールアドレス</p>
+          </div>
+
+          <div class="contact-common-form">
+            <div class="contact-common-form-input contact-mail">
+              <%= f.text_field :mail, placeholder:"例)example@example.com", id:"contact-mail" %>
+            </div>
+          </div>
+
+        </div>
+
+        <span class="error" id="contact-mail-error"></span>
+
+        <div class="contact-common-box">
+
+          <div class="contact-common-title">
+            <p>電話番号</p>
+          </div>
+
+          <div class="contact-common-form">
+            <div class="contact-common-form-input">
+              <%= f.text_field :phone_number, id:"contact-phone-number" %>
+            </div>
+          </div>
+
+        </div>
+
+        <span class="error" id="contact-phone-number-error"></span>
+
+        <div class="contact-common-box">
+
+          <div class="contact-common-title">
+            <p>ご質問の種類</p>
+            <span class="span">必須</span>
+          </div>
+
+          <div class="contact-common-form">
+            <div class=contact-select-form-input>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"contact-select", id:"contact-category"}) %>
+            </div>
+          </div>
+
+        </div>
+
+        <span class="error" id="contact-category-error">ご質問の種類を選択してください</span>
+
+        <div class="contact-content-box">
+
+          <div class="contact-content-title">
+            <p>内容</p>
+            <span class="span">必須</span>
+          </div>
+
+          <div class="contact-content-form">
+            <div class="contact-content-form-input">
+              <%= f.text_area :content, placeholder:"内容を入力してください", class:"contact-content-textarea", id:"contact-content" %>
+            </div>
+          </div>
+
+        </div>
+
+        <span class="error" id="contact-content-error">内容を入力してください</span>
+
+        <div class="contact-common-box">
+
+          <div class="contact-common-title">
+            <p>返信の有無</p>
+            <span class="span">必須</span>
+          </div>
+
+          <div class="contact-common-form">
+            <div class="contact-select-form-input">
+              <%= f.collection_select(:reply_id, Reply.all, :id, :name, {}, {class:"contact-select", id:"contact-reply"}) %>
+            </div>
+          </div>
+
+        </div>
+
+        <span class="error" id="contact-reply-error">返信の有無を選択してください</span>
+
+        <div class="contact-btn-box">
+          <div class="contact-btn">
+            <%= f.submit "送信する", class:"contact-btn-text" %>
+          </div>
+        </div>
+
       </div>
+
+    </div>
 
   <% end %>
 

@@ -1,40 +1,38 @@
-<head>
-  <%= stylesheet_link_tag 'components/menu' %>
-  <%= stylesheet_link_tag 'colorbox/colorbox' %>
-</head>
+<%= stylesheet_link_tag 'components/menu' %>
+<%= stylesheet_link_tag 'colorbox/colorbox' %>
 
-<div class="menu scrollanime" id="menu">
+<div class="contents scroll-anime" id="menu">
 
-  <div class="menu-title-bar">
+  <div class="title-bar menu-title">
     <h2>MENU</h2>
   </div>
 
   <div class="menu-contents">
 
-    <div class="type">
+    <div class="menu-type">
 
-      <div class="type-name">
+      <div class="menu-type-name">
         <p>ドリンク</p>
       </div>
 
-      <div class="type-content" >
+      <div class="menu-type-box" >
 
         <% if @menus_drink.present? %>
 
-          <div class="item-contents scrollanime slide-right">
+          <div class="menu-item-box scroll-anime slide-right">
 
             <% @menus_drink.each do |drink| %>
 
-              <div class="menu-content">
+              <div class="menu-item">
 
-                <div class="menu-image">
+                <div class="menu-item-image">
                   <%= link_to menu_path(drink.id), class:"iframe" do %>
                     <%= image_tag drink.image %>
                   <% end %>
                 </div>
 
-                <div class="menu-text">
-                  <p class="name-border"><%= drink.name %></p>
+                <div class="menu-item-text">
+                  <p class="border"><%= drink.name %></p>
                   <p><%= "¥#{drink.price}" %><p>
                 </div>
 
@@ -46,7 +44,9 @@
 
         <% else %>
 
-          <p>現在取扱商品がございません</p>
+          <div class="else-sentence">
+            <p>現在取扱商品がございません</p>
+          </div>
 
         <% end%>
 
@@ -54,30 +54,30 @@
 
     </div>
 
-    <div class="type">
+    <div class="menu-type">
 
-      <div class="type-name">
+      <div class="menu-type-name">
         <p>フード</p>
       </div>
 
-      <div class="type-content" >
+      <div class="menu-type-box" >
 
         <% if @menus_food.present? %>
 
-          <div class="item-contents scrollanime slide-left">
+          <div class="menu-item-box scroll-anime slide-left">
 
             <% @menus_food.each do |food| %>
 
-              <div class="menu-content">
+              <div class="menu-item">
 
-                <div class="menu-image">
+                <div class="menu-item-image">
                   <%= link_to menu_path(food.id), class:"iframe" do %>
-                    <%= image_tag food.image, class:"menu-image-tag"%>
+                    <%= image_tag food.image %>
                   <% end %>
                 </div>
 
-                <div class="menu-text">
-                  <p class="name-border"><%= food.name %></p>
+                <div class="menu-item-text">
+                  <p class="border"><%= food.name %></p>
                   <p><%= "¥#{food.price}" %><p>
                 </div>
 
@@ -89,7 +89,9 @@
 
         <% else %>
 
-          <p>現在取扱商品がございません</p>
+          <div class="else-sentence">
+            <p>現在取扱商品がございません</p>
+          </div>
 
         <% end%>
 
@@ -97,30 +99,30 @@
 
     </div>
 
-    <div class="type">
+    <div class="menu-type">
 
-      <div class="type-name">
+      <div class="menu-type-name">
         <p>グッズなど</p>
       </div>
 
-      <div class="type-content" >
+      <div class="menu-type-box" >
 
         <% if @menus_option.present? %>
 
-          <div class="item-contents scrollanime slide-right">
+          <div class="menu-item-box scroll-anime slide-right">
 
             <% @menus_option.each do |option| %>
 
-              <div class="menu-content">
+              <div class="menu-item">
 
-                <div class="menu-image">
+                <div class="menu-item-image">
                   <%= link_to menu_path(option.id), class:"iframe" do %>
-                    <%= image_tag option.image, class:"menu-image-tag"%>
+                    <%= image_tag option.image %>
                   <% end %>
                 </div>
 
-                <div class="menu-text">
-                  <p class="name-border"><%= option.name %></p>
+                <div class="menu-item-text">
+                  <p class="border"><%= option.name %></p>
                   <p><%= "¥#{option.price}" %><p>
                 </div>
 
@@ -132,7 +134,9 @@
 
         <% else %>
 
-          <p>現在取扱商品がございません</p>
+          <div class="else-sentence">
+            <p>現在取扱商品がございません</p>
+          </div>
 
         <% end%>
 

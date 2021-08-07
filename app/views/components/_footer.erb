@@ -16,11 +16,21 @@
       <% end %>
     </div>
 
-    <div class="footer-key">
-      <%= link_to worker_homes_path, class:"worker" do %>
-        <p>従業員専用ページ</p>
-      <% end %>
-    </div>
+    <% if user_signed_in? %>
+      <div class="footer-key">
+        <%= link_to worker_homes_path, class:"worker-access" do %>
+          <p><%= current_user.name %></p>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="footer-key">
+        <%= link_to worker_homes_path, class:"worker-access" do %>
+          <p>従業員専用ページ</p>
+        <% end %>
+      </div>
+    <% end %>
+
+
 
     <div class="footer-key">
       <div class="telephone">

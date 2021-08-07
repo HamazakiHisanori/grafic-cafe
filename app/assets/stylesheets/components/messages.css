@@ -27,7 +27,16 @@
 
 .close-img {
   position: relative;
-  top: -92px;
+  top: -88px;
+  right: 16px;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+}
+
+.edit-close-img {
+  position: relative;
+  top: -77px;
   right: 16px;
   height: 30px;
   width: 30px;
@@ -36,6 +45,12 @@
 
 .close-img:hover {
   opacity: 0.5;
+  cursor: pointer;
+}
+
+.edit-close-img:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 .alert {

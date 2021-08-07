@@ -71,9 +71,11 @@ body {
   font-family: serif;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.new-edit-news {
+.devise {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -81,29 +83,38 @@ body {
   align-items: center;
 }
 
-.background {
+.devise-background {
   margin-top: 10vh;
   margin-bottom: 10vh;
   width: 90%;
-  background-image: url(/images/news.jpeg);
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contents {
+.sign-up {
+  background-image: url(/images/sign-up.jpeg);
+}
+
+.log-in {
+  background-image: url(/images/log-in.jpeg);
+}
+
+.devise-contents {
   margin-top: 10vh;
   margin-bottom: 10vh;
-  width: 90%;
+  width: 60%;
   box-shadow: 0 0 4px gray;
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: lighten;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.title {
+.devise-title {
   height: 10vh;
   width: 100%;
   display: flex;
@@ -111,27 +122,11 @@ body {
   align-items: center;
 }
 
-.title h2 {
+.devise-title h2 {
   font-size: 40px;
 }
 
-.form {
-  height: 70vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content {
-  height: 100%;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-
-.image-select {
-  height: 20%;
+.devise-form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -139,22 +134,8 @@ body {
   align-items: center;
 }
 
-.preview {
-  height: 80%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.preview-size {
-  height: 90%;
-  width: 80%;
-  overflow: hidden;
-}
-
-.news-title {
-  height: 20%;
+.devise-common-box {
+  height: 15vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -162,58 +143,30 @@ body {
   align-items: center;
 }
 
-.title-input {
+.devise-common-input {
   height: 30%;
-  width: 70%;
-  border: solid 1px;
-}
-
-.news-contents {
-  height: 65%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contents-input {
-  border-radius: 5px;
-  height: 70%;
-  width: 90%;
+  width: 40%;
+  border: solid 1px rgb(201, 201, 201);
 }
 
 ::placeholder {
   opacity: 0.5;
 }
 
-.form-btn {
-  height: 15%;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.btn {
-  border: solid 1px black;
-  color: black;
+.devise-form-btn {
+  height: 50%;
+  width: 20%;
+  border: solid 1px rgb(176, 222, 230);
   background: none;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70%;
-  width: 30%;
+  color: rgb(176, 222, 230);
   transition: 0.4s;
 }
 
-.btn:hover {
+.devise-form-btn:hover {
   border: solid 1px white;
-  color: white;
   background-color: rgb(176, 222, 230);
   box-shadow: 0 0 4px gray;
-  transition: 0.4s;
+  color: white;
 }
 
 .error {

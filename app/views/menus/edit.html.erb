@@ -3,72 +3,74 @@
 
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
-    <%= stylesheet_link_tag 'menus/new_edit' %>
+    <%= stylesheet_link_tag 'news_menus/new_edit' %>
   </head>
 
   <body>
 
-    <div class="new-edit-menu">
+    <div class="new-edit">
 
-    <%= render 'components/error_messages', model:@menu %>
+    <%= render 'components/edit_error', model:@menu %>
 
-      <div class="background">
+      <div class="new-edit-background menu-background">
 
-        <div class="contents">
+        <div class="new-edit-contents">
 
-          <div class="title">
+          <div class="new-edit-title">
             <h2>Edit Menu</h2>
           </div>
 
-          <%= form_with model: @menu, url: menu_path(@menu.id), class:"form", local: true do |f| %>
+          <%= form_with model: @menu, url: menu_path(@menu.id), class:"new-edit-form", local: true do |f| %>
 
-            <div class="type-title">
-              <p>メニューの種類を選択</p>
-              <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"select", id:"menu-type"}) %>
-              <span class="error" id="menu-type-error"></span>
+            <div class="menu-type">
+              <div class="menu-type-title">
+                <p>メニューの種類を選択</p>
+                <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"menu-type-select", id:"menu-type"}) %>
+                <span class="error" id="menu-type-error"></span>
+              </div>
             </div>
 
-            <div class="content">
+            <div class="new-edit-box">
 
-              <div class="image">
+              <div class="menu-image">
 
-                <div class="image-select">
+                <div class="menu-image-select">
                   <p>画像選択</p>
                   <%= f.file_field :image, id:"input-image"%>
                 </div>
 
-                <div class="preview">
+                <div class="menu-preview">
                   <div class="preview-size" id="preview">
                   </div>
                 </div>
 
               </div>
 
-              <div class="text">
+              <div class="menu-text">
 
-                <div class="name-price">
+                <div class="menu-common-box">
 
-                  <div class="each">
+                  <div class="menu-common">
                     <p>名前</p>
-                    <%= f.text_field :name, class:"each-input", id:"menu-name" %>
+                    <%= f.text_field :name, class:"menu-common-input", id:"menu-name" %>
                     <span class="error" id="menu-name-error"></span>
                   </div>
 
-                  <div class="each">
+                  <div class="menu-common">
                     <p>値段</p>
-                    <p>¥<%= f.text_field :price, class:"each-input", id:"menu-price"  %></p>
+                    <p>¥<%= f.text_field :price, class:"menu-common-input", id:"menu-price"  %></p>
                     <span class="error" id="menu-price-error"></span>
                   </div>
 
                 </div>
 
-                <div class="description">
+                <div class="menu-description">
                   <p>説明文</p>
-                  <%= f.text_area :description, class:"description-input", id:"menu-description" %>
+                  <%= f.text_area :description, class:"menu-description-input", id:"menu-description" %>
                   <span class="error" id="menu-description-error"></span>
                 </div>
 
-                <div class="form-btn">
+                <div class="new-edit-form-btn">
                   <%= f.submit "編集する", class:"btn" %>
                 </div>
 

@@ -8,32 +8,32 @@
 
   <body>
 
-    <div class="background">
+    <div class="menu-item-background">
 
-      <div class="item">
+      <div class="menu-item">
 
-        <div class="image-box">
-          <div class="image" >
-            <%= image_tag @menu.image, class:"size" %>
+        <div class="menu-item-image-box">
+          <div class="menu-item-image" >
+            <%= image_tag @menu.image, class:"menu-item-image-size" %>
           </div>
         </div>
 
-        <div class="text">
+        <div class="menu-item-text-box">
 
-          <div class="name-price">
+          <div class="menu-item-name-price">
 
-            <div class="name">
+            <div class="menu-item-name">
               <p><%= @menu.name %></p>
             </div>
 
-            <div class="price">
+            <div class="menu-item-price">
               <p><%="¥#{@menu.price}"%></p>
             </div>
 
           </div>
 
-          <div class="description">
-            <div class="flame">
+          <div class="menu-item-description">
+            <div class="menu-item-description-textarea">
               <p><%= @menu.description %></p>
             </div>
           </div>

@@ -15,18 +15,18 @@ Rails.application.config.assets.precompile += %w(
   homes/index.css
   homes/worker.css
   menus/show.css
-  menus/new_edit.css
   news/show.css
-  news/new_edit.css
-  devise/registration.css
-  devise/session.css
+  news_menus/new_edit.css
+  devise/reg_ses.css
+  components/arrow.css
+  components/top.css
+  components/contents_bar.css
   components/access.css
   components/contact.css
   components/homebar.css
   components/menu.css
   components/news.css
   components/footer.css
-  components/footer_second.css
   components/messages.css
   colorbox/colorbox.css
 )

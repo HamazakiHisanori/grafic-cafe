@@ -3,53 +3,53 @@
 
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
-    <%= stylesheet_link_tag 'devise/registration' %>
+    <%= stylesheet_link_tag 'devise/reg_ses' %>
   </head>
 
   <body>
 
     <%= render "components/homebar" %>
 
-    <div class="sign-up">
+    <div class="devise">
 
     <%= render 'components/error_messages_user', model:@user %>
 
-      <div class="background">
+      <div class="devise-background sign-up">
 
-        <div class="contents">
+        <div class="devise-contents">
 
-          <div class="title">
+          <div class="devise-title">
             <h2>Sign up</h2>
           </div>
 
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class:"form"}) do |f| %>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class:"devise-form"}) do |f| %>
 
-            <div class="content">
+            <div class="devise-common-box">
               <p>名前</p>
-              <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"input", placeholder:"10字以内", id:"user-name" %>
+              <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"devise-common-input", placeholder:"10字以内", id:"user-name" %>
               <span class="error" id="user-name-error">お名前を入力してください</span>
             </div>
 
-            <div class="content">
+            <div class="devise-common-box">
               <p>メールアドレス</p>
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input", id:"user-mail" %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"devise-common-input", id:"user-mail" %>
               <span class="error" id="user-mail-error">メールアドレスを入力してください</span>
             </div>
 
-            <div class="content">
+            <div class="devise-common-box">
               <p>パスワード</p>
-              <%= f.password_field :password, autocomplete: "new-password", class:"input", id:"password" %>
+              <%= f.password_field :password, autocomplete: "new-password", class:"devise-common-input", id:"password" %>
               <span class="error" id="password-error">パスワードを入力してください</span>
             </div>
 
-            <div class="content">
+            <div class="devise-common-box">
               <p>パスワード(確認)</p>
-              <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"input", id:"password-confirmation" %>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"devise-common-input", id:"password-confirmation" %>
               <span class="error" id="password-confirmation-error">パスワードの確認をしてください</span>
             </div>
 
-            <div class="content">
-              <%= f.submit "Sign up", class:"form-btn"%>
+            <div class="devise-common-box">
+              <%= f.submit "Sign up", class:"devise-form-btn"%>
             </div>
 
           <% end %>
@@ -60,7 +60,7 @@
 
     </div>
 
-    <%= render "components/footer_second" %>
+    <%= render "components/footer" %>
 
   </body>
 

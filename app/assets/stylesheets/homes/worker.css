@@ -82,7 +82,7 @@ body {
   flex-direction: column;
 }
 
-.title {
+.worker-title {
   height: 40vh;
   width: 100%;
   background-image: url(/images/worker.jpeg);
@@ -93,7 +93,7 @@ body {
   align-items: center;
 }
 
-.title h2 {
+.worker-title h2 {
   font-size: 70px;
   letter-spacing: 5px;
   color: white;
@@ -110,7 +110,7 @@ body {
   align-items: center;
 }
 
-.worker-btn-background {
+.worker-btns {
   height: 60%;
   width: 90%;
   display: flex;

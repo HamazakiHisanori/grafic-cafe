@@ -8,32 +8,32 @@
 
   <body>
 
-    <div class="background">
+    <div class="news-item-background">
 
-      <div class="content">
+      <div class="news-item">
 
-        <div class="text">
+        <div class="news-item-text-box">
 
-          <div class="data">
+          <div class="news-item-data">
             <p><%= "#{@news.created_at.year}.#{@news.created_at.month}.#{@news.created_at.day}" %></p>
           </div>
 
-          <div class="news-title">
+          <div class="news-item-title">
             <p>【<%= @news.title %>】</p>
           </div>
 
-          <div class="description">
-            <div class="description-text">
+          <div class="news-item-contens">
+            <div class="news-item-contents-textarea">
               <p><%= @news.contents %></p>
             </div>
           </div>
 
         </div>
 
-        <div class="image-box">
+        <div class="news-item-image-box">
 
-          <div class="news-image">
-            <%= image_tag @news.image, class:"image" %>
+          <div class="news-item-image">
+            <%= image_tag @news.image, class:"news-item-image-size" %>
           </div>
 
           <% if user_signed_in? %>

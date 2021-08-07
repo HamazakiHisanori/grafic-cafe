@@ -17,65 +17,16 @@
 
   <body id="top">
 
-    <div class="menu-bar">
-      <ul>
-        <li id="top-link"><p>TOP</p></li>
-        <li id="news-link"><p>NEWS</p></li>
-        <li id="menu-link"><p>MENU</p></li>
-        <li id="contact-link"><p>CONTACT</p></li>
-        <li id="access-link"><p>ACCESS</p></li>
-      </ul>
-    </div>
+    <%= render 'components/contents_bar' %>
 
     <%= render 'components/error_messages', model:@contact %>
     <% if flash[:submit] %>
       <%= render 'components/notice_messages' %>
     <% end %>
 
-    <div class="top-background">
+    <%= render 'components/top' %>
 
-      <div class="background-change"></div>
-      <div class="background-change"></div>
-      <div class="background-change"></div>
-
-    </div>
-
-    <div class="top-title-background">
-      <div class="title-background">
-        <%= image_tag "home.png", class:"home-icon" %>
-        <h1>参ぷる</h1>
-      </div>
-    </div>
-
-    <div class="arrow-background">
-      <div class="arrow-block-background">
-
-        <div class="arrow-block">
-          <ul>
-            <li><div class="arrow-a"></div></li>
-            <li><div class="arrow-b"></div></li>
-            <li><div class="arrow-c"></div></li>
-          </ul>
-        </div>
-
-        <div class="arrow-block">
-          <ul>
-            <li><div class="arrow-a"></div></li>
-            <li><div class="arrow-b"></div></li>
-            <li><div class="arrow-c"></div></li>
-          </ul>
-        </div>
-
-        <div class="arrow-block">
-          <ul>
-            <li><div class="arrow-a"></div></li>
-            <li><div class="arrow-b"></div></li>
-            <li><div class="arrow-c"></div></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
+    <%= render 'components/arrow' %>
 
     <%= render "components/news" %>
 

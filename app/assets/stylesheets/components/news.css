@@ -1,27 +1,18 @@
 /* news */
 
-.news {
-  margin-bottom: 20vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.news-title {
+  background-image: url(/images/news.JPG);
 }
 
-.news-title-bar {
-  height: 40vh;
+.news-contents {
+  min-height: 50vh;
   width: 100%;
-  background-image: url(/images/news.JPG);
-  background-position: top;
-  background-size: cover;
-  margin-bottom: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.news-contents {
-  min-height: 75vh;
+.news-box {
   max-height: 75vh;
   width: 90%;
   overflow: scroll;
@@ -29,7 +20,7 @@
   flex-direction: column;
 }
 
-.news-background {
+.news-item {
   height: 15vh;
   min-height: 15vh;
   width: 100%;
@@ -39,7 +30,7 @@
   align-items: center;
 }
 
-.news-content {
+.news-item-text {
   border-bottom: dotted 2px;
   height: 60%;
   width: 60%;
@@ -48,7 +39,7 @@
   align-items: center;
 }
 
-.news-content-date {
+.news-item-date {
   height: 100%;
   width: 30%;
   display: flex;
@@ -56,11 +47,11 @@
   align-items: center;
 }
 
-.news-content-date p {
+.news-item-date p {
   font-weight: bold;
 }
 
-.news-content-title {
+.news-item-title {
   height: 100%;
   width: 70%;
   display: flex;
@@ -68,26 +59,21 @@
   align-items: center;
 }
 
-.iframe {
-  text-decoration: none;
-  border-bottom: solid 1px;
-}
-
-.iframe:hover {
-  opacity: 0.5;
-  color: gray;
+.news-item-title p {
+  border-bottom: solid 1px gray;
 }
 
 /* scrollbar */
 
-.news-contents::-webkit-scrollbar {
+.news-box::-webkit-scrollbar {
   width: 8px;
 }
 
 /*スクロールバーの動く部分*/
-.news-contents::-webkit-scrollbar-thumb {
+.news-box::-webkit-scrollbar-thumb {
 background-color: rgba(0, 0, 50, 0.5);
 border-radius: 10px;
 box-shadow:0 0 0 1px rgba(255, 255, 255, 0.3);
+
 }
 

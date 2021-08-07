@@ -1,22 +1,7 @@
 /* access */
 
-.access {
-  margin-bottom: 10vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.access-title-bar {
-  height: 40vh;
-  width: 100%;
+.access-title {
   background-image: url(/images/access.jpeg);
-  background-position: top;
-  background-size: cover;
-  margin-bottom: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .access-contents {
@@ -27,7 +12,7 @@
   align-items: center;
 }
 
-.access-content-background {
+.access-box {
   height: 90%;
   width: 90%;
   background-color: rgba(250, 236, 219, 0.3);
@@ -75,7 +60,7 @@
   margin-bottom: 5%;
 }
 
-.access-textarea {
+.access-info {
   background-color: white;
   height: 90%;
   width: 45%;
@@ -85,7 +70,7 @@
   align-items: center;
 }
 
-.access-child {
+.access-info-child {
   height: 25%;
   width: 100%;
   display: flex;
@@ -93,7 +78,7 @@
   align-items: center;
 }
 
-.access-title {
+.access-info-title {
   height: 100%;
   width: 20%;
   display: flex;
@@ -101,12 +86,12 @@
   align-items: center;
 }
 
-.access-title h4 {
+.access-info-title h4 {
   font-weight: bold;
   font-size: 18px;
 }
 
-.access-text {
+.access-info-text {
   height: 100%;
   width: 80%;
   display: flex;
@@ -115,7 +100,7 @@
   align-items: center;
 }
 
-.access-text p {
+.access-info-text p {
   text-align: center;
   border-bottom: dotted 2px gray;
   margin-bottom: 3px;
@@ -139,7 +124,7 @@
   align-items: center;
 }
 
-.access-warning-title h4 {
+.access-warning-title h3 {
   border-bottom: solid 2px red;
   font-weight: bold;
   font-size: 25px;
