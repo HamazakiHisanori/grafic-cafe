@@ -94,13 +94,32 @@
 }
 
 @media (max-width: 599px) {
+  .menu-type {
+    margin-bottom: 5vh;
+  }
+
   .menu-type-name {
-    height: 5vh;
+    margin-bottom: 5vh;
+  }
+
+  .menu-type-name p {
+    font-size: 32px;
   }
 
   .menu-item {
-    height: 20vh;
+    height: 40vh;
     width: 45%;
-    margin-bottom: 10vh;
+  }
+
+  .menu-item-image {
+    height: 50%;
+  }
+
+  .menu-item-text {
+    height: 50%;
+  }
+
+  .menu-item-text p {
+    margin-top: 16px;
   }
 }
