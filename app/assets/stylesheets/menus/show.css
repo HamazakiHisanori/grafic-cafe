@@ -195,3 +195,43 @@ body {
   transition: 0.4s;
   color: white;
 }
+
+@media (max-width: 599px) {
+  .menu-item {
+    flex-direction: column;
+  }
+
+  .menu-item-image-box {
+    height: 50%;
+    width: 100%;
+  }
+
+  .menu-item-image {
+    height: 90%;
+  }
+
+  .menu-item-text-box {
+    height: 50%;
+    width: 100%;
+  }
+
+  .menu-item-name-price {
+    height: 20%;
+  }
+
+  .menu-item-name-price p {
+    font-size: 16px;
+  }
+
+  .menu-item-description {
+    height: 60%;
+  }
+
+  .menu-item-description-textarea p {
+    font-size: 16px;
+  }
+
+  .worker-btn {
+    display: none;
+  }
+}

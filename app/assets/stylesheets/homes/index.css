@@ -157,5 +157,26 @@ h2 {
   font-size: 20px;
 }
 
+/* レスポンシブ対応 */
 
+@media (max-width: 599px) {
+  /* title-bar */
 
+  .title-bar {
+    height: 20vh;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  /* else-sentence */
+
+  .else-sentence {
+    height: 20vh;
+  }
+
+  .else-sentence p {
+    font-size: 16px;
+  }
+}

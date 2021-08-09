@@ -224,3 +224,40 @@
   color: white;
 }
 
+@media (max-width: 599px) {
+  .contact-warning {
+    height: 50vh;
+  }
+
+  .contact-warning-text p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .contact-form-box  {
+    width: 90%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+
+  .contact-common-box {
+    height: 10vh;
+  }
+
+  .contact-common-form-input {
+    width: 80%;
+  }
+
+  .contact-select-form-input {
+    width: 60%;
+  }
+
+  .contact-content-textarea {
+    width: 90%;
+  }
+
+  .contact-btn {
+    width: 40%;
+  }
+}
+

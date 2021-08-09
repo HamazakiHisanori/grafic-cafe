@@ -92,3 +92,15 @@
 .border {
   border-bottom: solid 1px rgb(3, 211, 226);
 }
+
+@media (max-width: 599px) {
+  .menu-type-name {
+    height: 5vh;
+  }
+
+  .menu-item {
+    height: 20vh;
+    width: 45%;
+    margin-bottom: 10vh;
+  }
+}

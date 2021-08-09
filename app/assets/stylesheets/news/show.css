@@ -198,3 +198,49 @@ body {
   transition: 0.4s;
   color: white;
 }
+
+/* レスポンシブ対応 */
+
+@media (max-width: 599px) {
+
+  .news-item {
+    flex-direction: column;
+  }
+
+  .news-item-text-box {
+    height: 40%;
+    width: 100%;
+  }
+
+  .news-item-data p {
+    font-size: 16px;
+  }
+
+  .news-item-title p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .news-item-contents-textarea {
+    width: 90%;
+  }
+
+  .news-item-image-box {
+    height: 60%;
+    width: 100%;
+  }
+
+  .news-item-image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .news-item-image-size {
+    height: 100%;
+    width: 100%;
+  }
+
+  .worker-btn {
+    display: none;
+  }
+}

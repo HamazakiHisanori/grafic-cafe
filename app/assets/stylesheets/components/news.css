@@ -73,6 +73,43 @@
 background-color: rgba(0, 0, 50, 0.5);
 border-radius: 10px;
 box-shadow:0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+/* レスポンシブ対応 */
+
+@media (max-width: 599px) {
+  .news-box {
+    max-height: 50vh;
+  }
+
+  .news-item {
+    height: 10vh;
+    min-height: 10vh;
+  }
+
+  .news-item-text {
+    border-bottom: dotted 2px;
+    height: 60%;
+    width: 90%;
+  }
+
+  .news-item-date {
+    width: 30%;
+  }
+
+  .news-item-date p {
+    font-weight: normal;
+  }
+
+  .news-item-title p {
+    border-bottom: solid 1px gray;
+  }
+
+  /* scrollbar */
+
+  .news-box::-webkit-scrollbar {
+    width: 4px;
+  }
 
 }
 
