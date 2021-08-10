@@ -26,3 +26,11 @@ h1 {
   font-weight: bold;
   color: rosybrown;
 }
+
+/* レスポンシブ対応 */
+
+@media (max-width : 1024px) {
+  body {
+    display: none;
+  }
+}

@@ -149,3 +149,13 @@ body {
   transition: 0.4s;
 }
 
+/* レスポンシブ対応 */
+
+@media (max-width : 1024px) {
+  body {
+    display: none;
+  }
+}
+
+
+

@@ -172,3 +172,11 @@ body {
 .error {
   color: red;
 }
+
+/* レスポンシブ対応 */
+
+@media (max-width : 1024px) {
+  body {
+    display: none;
+  }
+}

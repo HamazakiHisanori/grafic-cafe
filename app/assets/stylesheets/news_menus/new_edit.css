@@ -337,5 +337,10 @@ body {
   border-radius: 10px;
 }
 
+/* レスポンシブ対応 */
 
-
+@media (max-width : 1024px) {
+  body {
+    display: none;
+  }
+}

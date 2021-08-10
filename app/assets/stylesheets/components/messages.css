@@ -68,4 +68,39 @@
   border-bottom: dotted 1px red;
 }
 
+/* レスポンシブ対応 */
+
+@media (max-width: 599px) {
+  .messages {
+    height: 30vh;
+  }
+
+  .message {
+    height: 80%;
+    width: 80%;
+  }
+
+  .warning {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .close-img {
+    top: -86px;
+  }
+
+  .each-error {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .each-error h5 {
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+}
+
 
