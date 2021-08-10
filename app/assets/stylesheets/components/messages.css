@@ -1,7 +1,7 @@
 /* messages */
 
 .messages {
-  margin-top: 70px;
+  margin-top: 75px;
   height: 30vh;
   width: 100%;
   display: flex;
@@ -27,7 +27,7 @@
 
 .close-img {
   position: relative;
-  top: -88px;
+  top: -97px;
   right: 16px;
   height: 30px;
   width: 30px;
@@ -36,7 +36,7 @@
 
 .edit-close-img {
   position: relative;
-  top: -77px;
+  top: -86px;
   right: 16px;
   height: 30px;
   width: 30px;
