@@ -101,6 +101,10 @@ box-shadow:0 0 0 1px rgba(255, 255, 255, 0.3);
     font-weight: normal;
   }
 
+  .news-item-title {
+    overflow: hidden;
+  }
+
   .news-item-title p {
     border-bottom: solid 1px gray;
   }
@@ -110,6 +114,30 @@ box-shadow:0 0 0 1px rgba(255, 255, 255, 0.3);
   .news-box::-webkit-scrollbar {
     width: 4px;
   }
+}
 
+@media (orientation: landscape) and (max-width: 900px) {
+  .news-box {
+    max-height: 80vh;
+  }
+
+  .news-item {
+    height: 20vh;
+    min-height: 20vh;
+  }
+
+  .news-item-text {
+    height: 50%;
+  }
+
+  .news-item-title {
+    overflow: hidden;
+  }
+
+  /* scrollbar */
+
+  .news-box::-webkit-scrollbar {
+    width: 4px;
+  }
 }
 

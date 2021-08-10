@@ -103,4 +103,46 @@
   }
 }
 
+@media (orientation: landscape) and (max-width: 900px) {
+  /* messages */
+
+.messages {
+  margin-top: 60px;
+  height: 20vh;
+  font-size: 12px;
+}
+
+.message {
+  border: dotted 1px red;
+  margin-left: 24px;
+  width: 90%;
+}
+
+.warning {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.close-img {
+  position: relative;
+  top: -32px;
+  right: 13px;
+  height: 24px;
+  width: 24px;
+  background-color: white;
+}
+
+.each-error {
+  margin-bottom: 4px;
+  display: flex;
+}
+
+.each-error h5 {
+  margin-right: 16px;
+  color: red;
+  border-bottom: dotted 1px red;
+}
+}
+
+
 

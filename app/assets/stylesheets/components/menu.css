@@ -126,3 +126,30 @@
     margin-top: 16px;
   }
 }
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .menu-type-name {
+    height: 20vh;
+  }
+
+  .menu-type-name p {
+    font-size: 32px;
+  }
+
+  .menu-item {
+    margin-bottom: 10vh;
+    height: 70vh;
+  }
+
+  .menu-item-image {
+    height: 60%;
+  }
+
+  .menu-item-text {
+    height: 40%;
+  }
+
+  .menu-item-text p {
+    margin-top: 8px;
+  }
+}

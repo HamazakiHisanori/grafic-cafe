@@ -212,3 +212,38 @@
     align-items: center;
   }
 }
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .access-item {
+    height: 250vh;
+    flex-direction: column;
+  }
+
+  .access-image {
+    height: 50%;
+    width: 100%;
+  }
+
+  .access-info {
+    height: 50%;
+    width: 100%;
+  }
+
+  .access-info-title h4 {
+    font-size: 16px;
+  }
+
+  .access-warning {
+    height: 70vh;
+  }
+
+  .access-warning-title h3 {
+    border-bottom: solid 2px red;
+    font-weight: bold;
+    font-size: 24px;
+  }
+}
+
+
+
+

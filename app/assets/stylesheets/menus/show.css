@@ -239,3 +239,19 @@ body {
     display: none;
   }
 }
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .menu-item-name-price {
+    border-bottom: dotted 2px aqua;
+    overflow: hidden;
+  }
+
+  .menu-item-name-price p {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .menu-item-description-textarea p {
+    font-size: 16px;
+  }
+}

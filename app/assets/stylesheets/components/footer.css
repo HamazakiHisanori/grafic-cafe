@@ -125,8 +125,8 @@
   }
 
   .icon {
-    height: 30px;
-    width: 30px;
+    height: 24px;
+    width: 24px;
   }
 }
 
@@ -136,4 +136,44 @@
     display: none;
   }
 }
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .footer {
+    height: 30vh;
+  }
+
+  .icons {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-key {
+    height: 90%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-link {
+    margin-right: 16px;
+  }
+
+  .telephone p {
+    margin-left: 8px;
+  }
+
+  .icon {
+    height: 32px;
+    width: 32px;
+  }
+
+  .responsive-worker {
+    display: none;
+  }
+}
+
 
