@@ -77,4 +77,61 @@
   color: rgb(176, 222, 230);
 }
 
+/* レスポンシブ対応 */
+
+@media (max-width: 599px) {
+  .footer {
+    height: 30vh;
+  }
+
+  .icons {
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .footer-key {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .responsive-icon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .icon-link {
+    margin-right: 16px;
+  }
+
+  .responsive-worker {
+    display: none;
+  }
+
+  .responsive-telephone {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .telephone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .telephone p {
+    margin-left: 8px;
+  }
+
+  .icon {
+    height: 30px;
+    width: 30px;
+  }
+}
+
 

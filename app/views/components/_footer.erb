@@ -4,7 +4,7 @@
 
   <div class="icons">
 
-    <div class="footer-key">
+    <div class="footer-key responsive-icon">
       <%= link_to "#", class:"icon-link" do %>
         <%= image_tag "twitter.png", class:"icon" %>
       <% end %>
@@ -17,13 +17,13 @@
     </div>
 
     <% if user_signed_in? %>
-      <div class="footer-key">
+      <div class="footer-key responsive-worker">
         <%= link_to worker_homes_path, class:"worker-access" do %>
           <p><%= current_user.name %></p>
         <% end %>
       </div>
     <% else %>
-      <div class="footer-key">
+      <div class="footer-key responsive-worker">
         <%= link_to worker_homes_path, class:"worker-access" do %>
           <p>従業員専用ページ</p>
         <% end %>
@@ -32,7 +32,7 @@
 
 
 
-    <div class="footer-key">
+    <div class="footer-key responsive-telephone">
       <div class="telephone">
         <%= image_tag "telephone.png", class:"icon" %>
         <p>000-0000-0000</p>

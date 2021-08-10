@@ -150,17 +150,70 @@
   margin-bottom: 8px;
 }
 
+/* レスポンシブ対応 */
 @media (max-width: 599px) {
-  .access-box {
+  .access-contents {
+    margin-bottom: 5vh;
+  }
+
+  .access-item {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 120vh;
     flex-direction: column;
   }
+
   .access-image {
-    height: 45%;
+    height: 30%;
+    width: 100%;
+  }
+
+  .access-info {
+    height: 70%;
+    width: 100%;
+  }
+
+  .access-info-child {
+    flex-direction: column;
+  }
+
+  .access-info-title {
+    height: 20%;
+    width: 40%;
+  }
+
+  .access-info-title h4 {
+    font-size: 16px;
+  }
+
+  .access-info-text {
+    height: 80%;
     width: 90%;
   }
-  .access-info {
-    height: 45%;
-    width: 90%;
 
+  .access-info-text p {
+    text-align: center;
+    border-bottom: dotted 2px gray;
+    margin-bottom: 3px;
+  }
+
+  .access-warning {
+    height: 40vh;
+  }
+
+  .access-warning-title {
+    height: 10%;
+    width: 50%;
+  }
+
+  .access-warning-title h3 {
+    font-size: 16px;
+  }
+
+  .access-warning-text {
+    height: 90%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -196,6 +196,8 @@ body {
   color: white;
 }
 
+/* レスポンシブ対応 */
+
 @media (max-width: 599px) {
   .menu-item {
     flex-direction: column;

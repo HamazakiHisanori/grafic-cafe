@@ -224,6 +224,8 @@
   color: white;
 }
 
+/* レスポンシブ対応 */
+
 @media (max-width: 599px) {
   .contact-warning {
     height: 50vh;
@@ -234,7 +236,7 @@
     margin-bottom: 5px;
   }
 
-  .contact-form-box  {
+  .contact-form-box {
     width: 90%;
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -245,11 +247,11 @@
   }
 
   .contact-common-form-input {
-    width: 80%;
+    width: 90%;
   }
 
   .contact-select-form-input {
-    width: 60%;
+    width: 70%;
   }
 
   .contact-content-textarea {
