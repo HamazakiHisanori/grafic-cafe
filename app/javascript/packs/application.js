@@ -17,7 +17,6 @@ require("../modal.js")
 require("../check.js")
 require("../fadeIn.js")
 require("../render.js")
-require("../hamburger.js")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
