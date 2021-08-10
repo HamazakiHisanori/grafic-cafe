@@ -255,8 +255,8 @@ body {
 }
 
 .menu-type-title {
-  border-top: double 4px rgb(189, 175, 155);
-  border-bottom: double 4px rgb(189, 175, 155);
+  border-top: double 4px #D2B48C;
+  border-bottom: double 4px #D2B48C;
   height: 80%;
   width: 20%;
   display: flex;

@@ -27,10 +27,10 @@
 }
 
 .menu-type-name p {
-  border-top: double 4px rgba(189, 175, 155);
-  border-bottom: double 4px rgba(189, 175, 155);
+  border-top: double 4px #D2B48C;
+  border-bottom: double 4px #D2B48C;
   font-size: 40px;
-  color: rgba(189, 175, 155);
+  color: #D2B48C;
 }
 
 .menu-type-box {
@@ -90,7 +90,8 @@
 }
 
 .border {
-  border-bottom: solid 1px rgb(3, 211, 226);
+  border-bottom: solid 2px rgb(176, 222, 230);
+  ;
 }
 
 /* レスポンシブ対応 */

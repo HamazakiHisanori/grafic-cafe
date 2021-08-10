@@ -191,12 +191,6 @@
     width: 90%;
   }
 
-  .access-info-text p {
-    text-align: center;
-    border-bottom: dotted 2px gray;
-    margin-bottom: 3px;
-  }
-
   .access-warning {
     height: 40vh;
   }

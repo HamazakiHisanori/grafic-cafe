@@ -69,7 +69,7 @@ body {
   height: 100vh;
   width: 100%;
   font-family: serif;
-  background-color: rgb(3, 211, 226);
+  background-color: #2C7CFF;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,7 +111,7 @@ body {
   font-family: "Gill Sans", sans-serif;
   font-size: 20px;
   font-weight: 200;
-  border-bottom: solid 1px rgb(3, 211, 226);
+  border-bottom: solid 1px #2C7CFF;
 }
 
 .news-item-title {

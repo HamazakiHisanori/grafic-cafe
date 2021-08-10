@@ -31,7 +31,7 @@
 }
 
 .contents-bar ul li:hover {
-  background-color: rgb(221, 139, 194);
+  background-color: #FF99CC;
   transition: 0.5s;
 }
 
@@ -54,7 +54,7 @@
   }
 
   .contents-bar ul li p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
