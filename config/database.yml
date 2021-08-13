@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: grafic_cafe_production
-  username: grafic_cafe
-  password: <%= ENV['GRAFIC_CAFE_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
