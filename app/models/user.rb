@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :menus
+  has_many :news
 
   with_options presence: { message: '' } do
     validates :name, length: { maximum: 10, message: '' }
