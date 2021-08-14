@@ -11,6 +11,8 @@
 
 今回はインフルエンサーをターゲットにしたオシャレで映えるカフェをイメージして作りました。
 
+[![Image from Gyazo](https://i.gyazo.com/8eda42ebc9a28161b4072f52072eb200.gif)](https://gyazo.com/8eda42ebc9a28161b4072f52072eb200)
+
 # URL
 http://35.74.144.46/
 
@@ -124,4 +126,9 @@ password   **【secretcode】**
 [![Image from Gyazo](https://i.gyazo.com/7b2fc619a40dc9270cd3904a95a18a76.png)](https://gyazo.com/7b2fc619a40dc9270cd3904a95a18a76)
 
 
-# ローカルでの動作方法	git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記述。この時、アプリケーション開発に使用した環境を併記することを忘れないこと（パッケージやRubyのバージョンなど）。
+# ローカルでの動作方法
+git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記述。この時、アプリケーション開発に使用した環境を併記することを忘れないこと（パッケージやRubyのバージョンなど）。
+
+# 作者
+Twitter(https://twitter.com/hamazaki1996o)
+Qiita(https://qiita.com/hamazaki1996o)
