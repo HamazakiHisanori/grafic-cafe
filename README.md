@@ -127,8 +127,54 @@ password   **【secretcode】**
 
 
 # ローカルでの動作方法
-git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記述。この時、アプリケーション開発に使用した環境を併記することを忘れないこと（パッケージやRubyのバージョンなど）。
+```
+$ git clone https://github.com/HamazakiHisanori/grafic-cafe.git
+$ cd grafic-cafe
+$ yarn install --check-files
+$ rails s
+
+↓
+
+http://localhost:3000/
+```
+
+# 開発環境
+## バックエンド
+Ruby(2.6.5),
+Ruby on Rails
+
+## フロントエンド
+JavaScript,
+JQuery(3.6.0)
+
+## データベース
+MySQL
+
+## インフラ
+AWS(EC2),
+Capistrano
+
+## Webサーバ(本番環境)
+nginx
+
+## アプリケーションサーバ(本番環境)
+unicorn
+
+## ソース管理
+GitHub,
+GitHubDesktop
+
+## テスト
+RSpec
+
+## エディタ
+Visual Studio Code
 
 # 作者
-Twitter(https://twitter.com/hamazaki1996o)
+Twitter(https://twitter.com/hamazaki1996o)*毎日更新しています！
+
 Qiita(https://qiita.com/hamazaki1996o)
+
+目を通していただけると幸いです！
+
+ご連絡お待ちしております！
