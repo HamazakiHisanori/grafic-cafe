@@ -71,7 +71,7 @@ password   **【secretcode】**
 
 ---
 
-[![Image from Gyazo](https://i.gyazo.com/8eda42ebc9a28161b4072f52072eb200.gif)](https://gyazo.com/8eda42ebc9a28161b4072f52072eb200)
+[![Image from Gyazo](https://i.gyazo.com/46911648c0772acf709f375da3b7ef02.gif)](https://gyazo.com/46911648c0772acf709f375da3b7ef02)
 
 今回はSNS映えするカフェをイメージしていることもあり、ユーザーがアクセスした瞬間に「このカフェ、オシャレそう！」と思わせるように工夫しました。
 
@@ -95,7 +95,7 @@ password   **【secretcode】**
 
 ---
 
-[![Image from Gyazo](https://i.gyazo.com/f3b5995002a60452491e5191b2ca5b9d.gif)](https://gyazo.com/f3b5995002a60452491e5191b2ca5b9d)
+[![Image from Gyazo](https://i.gyazo.com/c1f805317e2183e0f9d562718878e752.gif)](https://gyazo.com/c1f805317e2183e0f9d562718878e752)
 
 ユーザーがいつでもこのサイトにはどのような情報があるのかを確認できるようにメニューバーは常時、画面上部に表示されるデザインにしました。
 
