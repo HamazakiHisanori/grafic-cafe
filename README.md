@@ -95,7 +95,7 @@ password   **【secretcode】**
 
 ---
 
-[![Image from Gyazo](https://i.gyazo.com/1ad646fadf6d881a889fb0e6b81d8916.gif)](https://gyazo.com/1ad646fadf6d881a889fb0e6b81d8916)
+![1ad646fadf6d881a889fb0e6b81d8916](https://user-images.githubusercontent.com/81221219/130138816-2740acd1-126d-412f-9557-0f4d39242ce4.gif)
 
 ユーザーがいつでもこのサイトにはどのような情報があるのかを確認できるようにメニューバーは常時、画面上部に表示されるデザインにしました。
 
