@@ -71,7 +71,7 @@ password   **【secretcode】**
 
 ---
 
-[![Image from Gyazo](https://i.gyazo.com/9727b7b50cfd07b39cffeb059f6b22b7.gif)](https://gyazo.com/9727b7b50cfd07b39cffeb059f6b22b7)
+![FQGRklCNqD7c5b1a8Akv1629404000-1629404272](https://user-images.githubusercontent.com/81221219/130138148-ccb3a0a3-7b68-42b8-96ac-f35e58b6e3be.gif)
 
 今回はSNS映えするカフェをイメージしていることもあり、ユーザーがアクセスした瞬間に「このカフェ、オシャレそう！」と思わせるように工夫しました。
 
