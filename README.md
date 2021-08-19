@@ -71,7 +71,7 @@ password   **【secretcode】**
 
 ---
 
-![FQGRklCNqD7c5b1a8Akv1629404000-1629404272](https://user-images.githubusercontent.com/81221219/130138148-ccb3a0a3-7b68-42b8-96ac-f35e58b6e3be.gif)
+![66058084b12ab9f9bfe6ba5792b96068](https://user-images.githubusercontent.com/81221219/130139509-1768d7cd-2889-42ec-9ded-8ae698e55c11.gif)
 
 今回はSNS映えするカフェをイメージしていることもあり、ユーザーがアクセスした瞬間に「このカフェ、オシャレそう！」と思わせるように工夫しました。
 
