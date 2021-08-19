@@ -291,7 +291,9 @@ Visual Studio Code
 
 # 作者
 ## SNS
-Twitter(https://twitter.com/hamazaki1996o)*毎日更新しています！
+Twitter(https://twitter.com/hamazaki1996o)
+
+*毎日更新しています！
 
 Qiita(https://qiita.com/hamazaki1996o)
 
